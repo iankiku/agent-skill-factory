@@ -1,0 +1,13 @@
+{
+  "eval_id": 2,
+  "eval_name": "commit-message-drafter",
+  "prompt": "Before I commit anything I always reread my own diff and write the commit message by hand following our team's format (type(scope): summary, imperative mood, under 72 chars on the subject line, body explains why not what). I want a skill that reviews my staged diff and drafts a commit message in that format so I just have to sanity-check it, not write it from scratch every time.",
+  "assertions": [
+    "Output has a valid SKILL.md with YAML frontmatter containing name and description",
+    "Uses the staged git diff explicitly as the input",
+    "Validation bar matches the team's exact format: type(scope) subject, imperative mood, subject line under 72 chars, body explains why not what",
+    "Names an explicit failure mode for an empty/missing staged diff",
+    "Is transparent about template provenance — states whether it used the blank template or a related catalog template, since this task has no close catalog match",
+    "No API keys, tokens, or credential values anywhere in the output"
+  ]
+}

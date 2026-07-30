@@ -1,0 +1,48 @@
+{
+  "skill_name": "build-skill",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Every Monday morning I manually pull last week's closed-won deals from HubSpot, cross-reference them against the sales numbers our RevOps person posts in the #sales-metrics Slack channel, and write up a short summary post in #sales-leadership for my VP before our 9am standup. It's maybe 45 minutes of copy-pasting and I always forget a deal or two. Can you make this into a skill I can just run Monday mornings?",
+      "expected_output": "A drafted SKILL.md (build-skill's own output, not the target automation itself) for a weekly deal-summary skill that names HubSpot and Slack as connectors by name only (no credentials), defines the Monday trigger, the artifact (Slack post to #sales-leadership), inputs (HubSpot closed-won deals, #sales-metrics numbers), a concrete 'bar' for a good run, validation steps, failure modes (e.g. missing RevOps post, HubSpot auth failure), and a delegation plan.",
+      "files": [],
+      "expectations": [
+        "Output has a valid SKILL.md with YAML frontmatter containing name and description",
+        "Names HubSpot and Slack as connectors by name only — no API keys, tokens, or credential values anywhere in the output",
+        "Defines a concrete Monday-morning trigger",
+        "States an explicit success bar distinguishing a good run from a technically-complete one",
+        "Names at least one concrete failure mode (e.g. missing RevOps Slack post, HubSpot auth failure, zero closed-won deals)",
+        "Includes a delegation plan (primary vs. sub-agent execution per step)"
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "I've got a folder called vendor-invoices with about 30 PDF invoices dumped in it every month from different vendors. I need to go through each one, pull out the vendor name, invoice number, amount due, and due date, and put it all into one CSV so our bookkeeper can reconcile it. Right now I open each PDF by hand. Also if an invoice doesn't have a PO number on it I need to flag it separately since those need manager approval before they get paid.",
+      "expected_output": "A drafted SKILL.md for a pure file-processing skill (no external connectors needed, just folder/file access) that names the folder input, the CSV output schema (vendor name, invoice number, amount due, due date, PO number/flag), the trigger (user runs it against the folder), validation (e.g. every row has required fields or is flagged), the PO-number flagging rule as an explicit failure/exception path, and a delegation plan appropriate for pure file processing.",
+      "files": [],
+      "expectations": [
+        "Output has a valid SKILL.md with YAML frontmatter containing name and description",
+        "Defines a CSV output schema including vendor name, invoice number, amount due, and due date",
+        "Explicitly handles invoices missing a PO number as a separate flagged/approval path, not silently dropped or silently paid",
+        "Does not invent unnecessary external connectors (HubSpot/Slack/etc.) for what is a local folder/file task",
+        "Includes a validation step (e.g. every CSV row has required fields or is flagged)",
+        "Names at least one concrete failure mode (e.g. unreadable/scanned PDF, ambiguous vendor name)",
+        "No API keys, tokens, or credential values anywhere in the output"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Before I commit anything I always reread my own diff and write the commit message by hand following our team's format (type(scope): summary, imperative mood, under 72 chars on the subject line, body explains why not what). I want a skill that reviews my staged diff and drafts a commit message in that format so I just have to sanity-check it, not write it from scratch every time.",
+      "expected_output": "A drafted SKILL.md for a dev-workflow skill with no obvious match in the 94-use-case catalog (should fall back to the blank template or a loosely-related one), naming git/staged-diff as the input, the drafted commit message as the artifact, the team's exact format as the validation bar (conventional-commit type/scope, imperative mood, 72-char subject limit, why-not-what body), a failure mode for empty/no staged diff, and a delegation plan.",
+      "files": [],
+      "expectations": [
+        "Output has a valid SKILL.md with YAML frontmatter containing name and description",
+        "Uses the staged git diff explicitly as the input",
+        "Validation bar matches the team's exact format: type(scope) subject, imperative mood, subject line under 72 chars, body explains why not what",
+        "Names an explicit failure mode for an empty/missing staged diff",
+        "Is transparent about template provenance — states whether it used the blank template or a related catalog template, since this task has no close catalog match",
+        "No API keys, tokens, or credential values anywhere in the output"
+      ]
+    }
+  ]
+}

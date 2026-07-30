@@ -1,0 +1,13 @@
+{
+  "expectations": [
+    {"text": "Output has a valid SKILL.md with YAML frontmatter containing name and description", "passed": false, "evidence": "No SKILL.md was produced at all — output is weekly_digest.py, a standalone Python CLI script, plus .env.example, sample_data/, and a shell wrapper."},
+    {"text": "Names HubSpot and Slack as connectors by name only — no API keys, tokens, or credential values anywhere in the output", "passed": false, "evidence": "No credential VALUES leaked (pass on that narrow point), but the design uses raw API tokens read from .env (HUBSPOT_ACCESS_TOKEN, SLACK_BOT_TOKEN) rather than platform connectors — the assertion's premise (a skill naming connectors) doesn't apply since no skill artifact exists."},
+    {"text": "Defines a concrete Monday-morning trigger", "passed": true, "evidence": "run_weekly_digest.sh is framed as a cron/launchd wrapper for scheduled Monday runs; RUN_NOTES.md assumes a Mon-Sun week."},
+    {"text": "States an explicit success bar distinguishing a good run from a technically-complete one", "passed": false, "evidence": "No equivalent 'good vs technically complete' framing exists anywhere in the script, comments, or RUN_NOTES.md."},
+    {"text": "Names at least one concrete failure mode (e.g. missing RevOps Slack post, HubSpot auth failure, zero closed-won deals)", "passed": true, "evidence": "Script implements 4 cross-reference buckets including 'in-HubSpot-but-not-mentioned' and an 'unparseable line' fallback; defaults to draft-only unless --post is passed."},
+    {"text": "Includes a delegation plan (primary vs. sub-agent execution per step)", "passed": false, "evidence": "No delegation concept — it's a single monolithic script with no sub-agent/model-routing plan."}
+  ],
+  "summary": {"passed": 2, "failed": 4, "total": 6, "pass_rate": 0.33},
+  "timing": {"executor_duration_seconds": 258.2, "total_duration_seconds": 258.2},
+  "execution_metrics": {"total_tool_calls": 12}
+}

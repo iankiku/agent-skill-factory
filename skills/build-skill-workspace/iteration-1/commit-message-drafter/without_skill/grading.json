@@ -1,0 +1,13 @@
+{
+  "expectations": [
+    {"text": "Output has a valid SKILL.md with YAML frontmatter containing name and description", "passed": true, "evidence": "Baseline independently chose to draft a SKILL.md (name: commit-message-drafter) with valid frontmatter — Claude's general knowledge of the skill format, not build-skill's process, produced this."},
+    {"text": "Uses the staged git diff explicitly as the input", "passed": true, "evidence": "'Step 1 — Gather the staged diff' runs git diff --staged --stat and git diff --staged via a bundled scripts/gather-staged-diff.sh."},
+    {"text": "Validation bar matches the team's exact format: type(scope) subject, imperative mood, subject line under 72 chars, body explains why not what", "passed": false, "evidence": "The format is described narratively in the intro code block, but there is no dedicated Validation section with mechanical checks (regex, char-count, mood word-list) — grep confirms no '## Validation' header exists anywhere in the file."},
+    {"text": "Names an explicit failure mode for an empty/missing staged diff", "passed": true, "evidence": "'Edge cases' section covers nothing-staged and other cases (confirmed by RUN_NOTES: 'fails loudly if not' on the gather script)."},
+    {"text": "Is transparent about template provenance — states whether it used the blank template or a related catalog template, since this task has no close catalog match", "passed": false, "evidence": "N/A — this run had no access to build-skill or its catalog at all, so there is no provenance statement to make; the assertion doesn't apply to a baseline run and is marked failed since the required statement is absent."},
+    {"text": "No API keys, tokens, or credential values anywhere in the output", "passed": true, "evidence": "Only touches local git; grep across output files found no credential-like values."}
+  ],
+  "summary": {"passed": 4, "failed": 2, "total": 6, "pass_rate": 0.67},
+  "timing": {"executor_duration_seconds": 122.9, "total_duration_seconds": 122.9},
+  "execution_metrics": {"total_tool_calls": 10}
+}

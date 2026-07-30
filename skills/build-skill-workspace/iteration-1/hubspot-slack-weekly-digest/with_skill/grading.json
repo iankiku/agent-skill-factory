@@ -1,0 +1,13 @@
+{
+  "expectations": [
+    {"text": "Output has a valid SKILL.md with YAML frontmatter containing name and description", "passed": true, "evidence": "SKILL.md frontmatter has name: hubspot-slack-weekly-digest and a full description with triggering phrases and negative scope."},
+    {"text": "Names HubSpot and Slack as connectors by name only — no API keys, tokens, or credential values anywhere in the output", "passed": true, "evidence": "'Tools, connectors, APIs & authentication' section names HubSpot and Slack connector OAuth explicitly; grep across all output files found zero credential-like values."},
+    {"text": "Defines a concrete Monday-morning trigger", "passed": true, "evidence": "Outcome: 'Every Monday morning (on request, or an optional scheduled run before the 9am standup)...'"},
+    {"text": "States an explicit success bar distinguishing a good run from a technically-complete one", "passed": true, "evidence": "'The bar this replaces: 45 minutes of manual copy-pasting that regularly missed a deal or two. Good = zero missed deals, a mechanical reconciliation, not a prettier report.'"},
+    {"text": "Names at least one concrete failure mode (e.g. missing RevOps Slack post, HubSpot auth failure, zero closed-won deals)", "passed": true, "evidence": "Failure modes section lists 5 concrete cases: zero-deals empty-success trap, HubSpot auth failure, missing RevOps post (degrade path), Slack post failure, validation failing twice."},
+    {"text": "Includes a delegation plan (primary vs. sub-agent execution per step)", "passed": true, "evidence": "Delegation table delegates HubSpot fetch + RevOps extraction (parallel, independent), keeps reconciliation/composition/posting on the primary agent, with full 4-field contracts."}
+  ],
+  "summary": {"passed": 6, "failed": 0, "total": 6, "pass_rate": 1.0},
+  "timing": {"executor_duration_seconds": 221.6, "total_duration_seconds": 221.6},
+  "execution_metrics": {"total_tool_calls": 16, "output_chars": 13212}
+}

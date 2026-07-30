@@ -1,0 +1,30 @@
+[
+  {
+    "id": "40001",
+    "name": "Acme Corp - Platform License",
+    "amount": 42000.0,
+    "close_date": "2026-07-22",
+    "owner": "Dana Reyes"
+  },
+  {
+    "id": "40002",
+    "name": "Brightline Logistics - Annual Renewal",
+    "amount": 18500.0,
+    "close_date": "2026-07-23",
+    "owner": "Marcus Webb"
+  },
+  {
+    "id": "40003",
+    "name": "Cobalt Health Systems - Expansion",
+    "amount": 9750.0,
+    "close_date": "2026-07-24",
+    "owner": "Dana Reyes"
+  },
+  {
+    "id": "40004",
+    "name": "Driftwood Robotics - New Business",
+    "amount": 27500.0,
+    "close_date": "2026-07-25",
+    "owner": "Priya Nair"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "expectations": [
+    {"text": "Output has a valid SKILL.md with YAML frontmatter containing name and description", "passed": false, "evidence": "No SKILL.md was produced — output is extract_invoices.py, a standalone Python script, plus RUN_NOTES.md."},
+    {"text": "Defines a CSV output schema including vendor name, invoice number, amount due, and due date", "passed": true, "evidence": "Script docstring and columns cover vendor name, invoice number, amount due, due date, PO number, plus confidence/notes columns."},
+    {"text": "Explicitly handles invoices missing a PO number as a separate flagged/approval path, not silently dropped or silently paid", "passed": true, "evidence": "Produces invoices_needs_approval.csv as a filtered subset, plus a needs_manager_approval column; parse_po_number() with documented caveats about false negatives."},
+    {"text": "Does not invent unnecessary external connectors (HubSpot/Slack/etc.) for what is a local folder/file task", "passed": true, "evidence": "Script only touches local PDF libraries (PyMuPDF/pypdf/pdfplumber/pdftotext) and the filesystem — no external connectors."},
+    {"text": "Includes a validation step (e.g. every CSV row has required fields or is flagged)", "passed": true, "evidence": "Confidence scoring + low-confidence flagging present, verified by the agent against 5 synthetic test PDFs including a blank/scanned one."},
+    {"text": "Names at least one concrete failure mode (e.g. unreadable/scanned PDF, ambiguous vendor name)", "passed": true, "evidence": "Scanned/no-text PDF case explicitly handled ('enter manually' fallback) and tested."},
+    {"text": "No API keys, tokens, or credential values anywhere in the output", "passed": true, "evidence": "Pure local file processing; grep across output files found no credential-like values."}
+  ],
+  "summary": {"passed": 6, "failed": 1, "total": 7, "pass_rate": 0.86},
+  "timing": {"executor_duration_seconds": 252.5, "total_duration_seconds": 252.5},
+  "execution_metrics": {"total_tool_calls": 24}
+}

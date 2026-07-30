@@ -1,0 +1,7 @@
+{
+  "_comment": "Simulated #sales-metrics channel history for the same week as hubspot_deals_sample.json. Deliberately includes a mismatch (Brightline), a deal RevOps hasn't mentioned yet (Cobalt + Driftwood), a deal RevOps mentions that isn't in HubSpot yet (Fenwick), and one unparseable line — so --sample exercises every branch of the cross-reference logic.",
+  "messages": [
+    "Weekly closed-won update :tada:\n\nAcme Corp - $42,000\nBrightline Logistics - $18,000\nFenwick Systems - $5,000\n\nTotal closed-won: $95,000",
+    "$$$ reminder -- comp plan changes go live Aug 1 $$$"
+  ]
+}

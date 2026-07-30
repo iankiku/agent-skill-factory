@@ -2,20 +2,38 @@
 
 ## Install the build-skill skill
 
-**Claude.ai / Cowork (recommended):** zip the `skills/build-skill/` folder and upload
-it as a skill (Settings → Capabilities → Skills, or ask Claude in a Cowork session to
-install it). The folder is self-contained — `SKILL.md` plus `references/` and
-`examples/` travel with it.
+Three ways in, from least to most involved:
 
-**Claude Code:** copy `skills/build-skill/` into your project's `.claude/skills/`
-directory (or `~/.claude/skills/` for all projects). Invoke with `/build-skill` or by
-asking to "build a skill for …".
+**No GitHub account, no terminal — copy-paste:** open the public gist
+(https://gist.github.com/iankiku/0366d5701cf8268ee05c24cd30fa366b), click **Raw**,
+select all, copy. That's [`skills/build-skill/build-skill.gist.md`](../skills/build-skill/build-skill.gist.md)
+in this repo — a single self-contained file with the skill body and all four
+reference files inlined. Paste it in as `SKILL.md`:
+- **Claude.ai / Claude Desktop / Cowork:** Settings → Capabilities → Skills → upload
+  (wrap as `build-skill.zip` containing `SKILL.md` if the upload flow requires a zip).
+- **Claude Code:** save to `~/.claude/skills/build-skill/SKILL.md` (all projects) or
+  `.claude/skills/build-skill/SKILL.md` (one project).
+
+**Have Node.js — CLI install:**
+```bash
+npx skills add iankiku/agent-skill-factory --skill build-skill
+```
+Pulls the full version from this repo (complete 94-entry template index, both
+worked examples) via the [`skills` CLI](https://skills.sh). Add `-g` for a global
+install; `npx skills update build-skill` to refresh later.
+
+**Have git — clone and copy/symlink by hand:** zip `skills/build-skill/` and upload
+it for Claude.ai/Cowork, or copy/symlink the folder into your project's
+`.claude/skills/` directory (or `~/.claude/skills/` for all projects) for Claude
+Code. Invoke with `/build-skill` or by asking to "build a skill for …". The folder is
+self-contained — `SKILL.md` plus `references/` and `examples/` travel with it.
 
 Note: `build-skill` reads `references/template-index.md` and template files by
-relative path. In claude.ai the bundled `references/` are always available; template
-bodies under `templates/` are only readable when the repo itself is present (Claude
-Code checkout, or a Cowork session with this repo cloned/connected). Without them,
-build-skill still works — it falls back to `references/blank-skill-template.md`.
+relative path. In the gist/copy-paste bundle those references are inlined directly
+in the same file. In claude.ai the bundled `references/` are always available;
+template bodies under `templates/` are only readable when the repo itself is present
+(Claude Code checkout, or a Cowork session with this repo cloned/connected). Without
+them, build-skill still works — it falls back to `references/blank-skill-template.md`.
 
 ## Use a catalog template directly
 

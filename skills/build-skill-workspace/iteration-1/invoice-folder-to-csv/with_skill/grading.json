@@ -1,0 +1,14 @@
+{
+  "expectations": [
+    {"text": "Output has a valid SKILL.md with YAML frontmatter containing name and description", "passed": true, "evidence": "SKILL.md frontmatter has name: invoice-folder-to-csv, full triggering description with negative scope (no payments, no ERP writes)."},
+    {"text": "Defines a CSV output schema including vendor name, invoice number, amount due, and due date", "passed": true, "evidence": "Outcome + Required context define invoices.csv with vendor, invoice_number, amount_due, due_date, po_number, needs_approval columns, plus precedence rules for amount_due and due_date."},
+    {"text": "Explicitly handles invoices missing a PO number as a separate flagged/approval path, not silently dropped or silently paid", "passed": true, "evidence": "needs_approval column + separate flagged-for-approval.csv; PO-number rule and 'uncertain PO counts as no PO' fail-safe assumption; Permissions explicitly blocks approving a flagged invoice without a human manager."},
+    {"text": "Does not invent unnecessary external connectors (HubSpot/Slack/etc.) for what is a local folder/file task", "passed": true, "evidence": "'Tools, connectors...' section states explicitly: 'No external connectors... this is a local file task only, and none should be added.'"},
+    {"text": "Includes a validation step (e.g. every CSV row has required fields or is flagged)", "passed": true, "evidence": "Validation section has 5 mechanical checks: zero-unaccounted row count, flag consistency, field sanity, no-silent-approvals, duplicate surfacing."},
+    {"text": "Names at least one concrete failure mode (e.g. unreadable/scanned PDF, ambiguous vendor name)", "passed": true, "evidence": "Failure modes section covers unreadable/corrupt PDFs, missing vendor/invoice fields, missing folder, >20% needs-review circuit breaker, already-processed files, repeated validation failure."},
+    {"text": "No API keys, tokens, or credential values anywhere in the output", "passed": true, "evidence": "Explicitly states 'No authentication of any kind is required... no API keys, tokens, or credentials'; grep across output files found none."}
+  ],
+  "summary": {"passed": 7, "failed": 0, "total": 7, "pass_rate": 1.0},
+  "timing": {"executor_duration_seconds": 309.6, "total_duration_seconds": 309.6},
+  "execution_metrics": {"total_tool_calls": 22, "output_chars": 15799}
+}

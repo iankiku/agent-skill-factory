@@ -1,0 +1,13 @@
+{
+  "eval_id": 0,
+  "eval_name": "hubspot-slack-weekly-digest",
+  "prompt": "Every Monday morning I manually pull last week's closed-won deals from HubSpot, cross-reference them against the sales numbers our RevOps person posts in the #sales-metrics Slack channel, and write up a short summary post in #sales-leadership for my VP before our 9am standup. It's maybe 45 minutes of copy-pasting and I always forget a deal or two. Can you make this into a skill I can just run Monday mornings?",
+  "assertions": [
+    "Output has a valid SKILL.md with YAML frontmatter containing name and description",
+    "Names HubSpot and Slack as connectors by name only — no API keys, tokens, or credential values anywhere in the output",
+    "Defines a concrete Monday-morning trigger",
+    "States an explicit success bar distinguishing a good run from a technically-complete one",
+    "Names at least one concrete failure mode (e.g. missing RevOps Slack post, HubSpot auth failure, zero closed-won deals)",
+    "Includes a delegation plan (primary vs. sub-agent execution per step)"
+  ]
+}

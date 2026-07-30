@@ -1,0 +1,13 @@
+{
+  "expectations": [
+    {"text": "Output has a valid SKILL.md with YAML frontmatter containing name and description", "passed": true, "evidence": "SKILL.md frontmatter has name: commit-message-drafter, description with triggering phrases and explicit negative scope (no git add/commit/push, no PR descriptions)."},
+    {"text": "Uses the staged git diff explicitly as the input", "passed": true, "evidence": "Inputs section: 'Staged diff: git diff --staged (full patch) and git diff --staged --stat... Required. If empty, this is a stop condition — never falls back to unstaged changes.'"},
+    {"text": "Validation bar matches the team's exact format: type(scope) subject, imperative mood, subject line under 72 chars, body explains why not what", "passed": true, "evidence": "Validation section has a regex check for subject shape, a ≤72-char mechanical check, an imperative-mood spot check against a disallowed-form list, and a 'body is not a diff echo' content check."},
+    {"text": "Names an explicit failure mode for an empty/missing staged diff", "passed": true, "evidence": "Failure modes: 'Nothing staged (git diff --staged empty) → stop immediately; tell the user to git add the intended files first. Never fall back...'"},
+    {"text": "Is transparent about template provenance — states whether it used the blank template or a related catalog template, since this task has no close catalog match", "passed": true, "evidence": "RUN_NOTES.md explicitly documents falling back to blank-skill-template.md after checking all 13 catalog categories had no dev/git match; SKILL.md itself has no Attribution section (consistent with no template reuse), unlike the other two eval outputs which do."},
+    {"text": "No API keys, tokens, or credential values anywhere in the output", "passed": true, "evidence": "Only dependency is the local git CLI already configured by the user; grep across output files found no credential-like values."}
+  ],
+  "summary": {"passed": 6, "failed": 0, "total": 6, "pass_rate": 1.0},
+  "timing": {"executor_duration_seconds": 245.6, "total_duration_seconds": 245.6},
+  "execution_metrics": {"total_tool_calls": 14, "output_chars": 13958}
+}

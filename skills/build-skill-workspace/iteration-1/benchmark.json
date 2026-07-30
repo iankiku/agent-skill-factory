@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "skill_name": "build-skill",
+    "skill_path": "skills/build-skill",
+    "executor_model": "claude-sonnet-5",
+    "analyzer_model": "claude-sonnet-5",
+    "timestamp": "2026-07-30T13:40:00Z",
+    "evals_run": [0, 1, 2],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "eval_name": "hubspot-slack-weekly-digest",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 1.0, "passed": 6, "failed": 0, "total": 6, "time_seconds": 221.6, "tokens": 95734, "tool_calls": 16, "errors": 0},
+      "expectations": [
+        {"text": "Output has a valid SKILL.md with YAML frontmatter containing name and description", "passed": true, "evidence": "name: hubspot-slack-weekly-digest, full triggering description with negative scope."},
+        {"text": "Names HubSpot and Slack as connectors by name only — no credential values", "passed": true, "evidence": "Connector OAuth named explicitly; no credential-like strings found anywhere in outputs."},
+        {"text": "Defines a concrete Monday-morning trigger", "passed": true, "evidence": "Outcome section: 'Every Monday morning...'"},
+        {"text": "States an explicit success bar distinguishing a good run from a technically-complete one", "passed": true, "evidence": "'Good = zero missed deals, a mechanical reconciliation, not a prettier report.'"},
+        {"text": "Names at least one concrete failure mode", "passed": true, "evidence": "5 failure modes listed with retry/degrade/stop policy."},
+        {"text": "Includes a delegation plan", "passed": true, "evidence": "Delegation table with 4-field contracts for the two parallelizable fetch steps."}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 0,
+      "eval_name": "hubspot-slack-weekly-digest",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 0.33, "passed": 2, "failed": 4, "total": 6, "time_seconds": 258.2, "tokens": 83839, "tool_calls": 12, "errors": 0},
+      "expectations": [
+        {"text": "Output has a valid SKILL.md with YAML frontmatter containing name and description", "passed": false, "evidence": "Produced weekly_digest.py, a standalone script — no SKILL.md."},
+        {"text": "Names HubSpot and Slack as connectors by name only — no credential values", "passed": false, "evidence": "Uses raw API tokens via .env, not platform connectors; assertion premise (a skill artifact) doesn't hold, though no credential values leaked."},
+        {"text": "Defines a concrete Monday-morning trigger", "passed": true, "evidence": "cron/launchd wrapper for scheduled Monday runs."},
+        {"text": "States an explicit success bar distinguishing a good run from a technically-complete one", "passed": false, "evidence": "No such framing anywhere in the script or notes."},
+        {"text": "Names at least one concrete failure mode", "passed": true, "evidence": "4-bucket cross-reference logic + unparseable-line fallback."},
+        {"text": "Includes a delegation plan", "passed": false, "evidence": "Single monolithic script, no delegation concept."}
+      ],
+      "notes": ["No skill artifact was produced at all — the baseline solved the immediate automation problem directly (a script), which is a different and reasonable response, but not the reusable/governed artifact build-skill is designed to produce."]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "invoice-folder-to-csv",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 1.0, "passed": 7, "failed": 0, "total": 7, "time_seconds": 309.6, "tokens": 110596, "tool_calls": 22, "errors": 0},
+      "expectations": [
+        {"text": "Output has a valid SKILL.md with YAML frontmatter containing name and description", "passed": true, "evidence": "name: invoice-folder-to-csv, negative scope excludes payments/ERP writes."},
+        {"text": "Defines a CSV output schema including vendor name, invoice number, amount due, and due date", "passed": true, "evidence": "invoices.csv schema fully specified with precedence rules."},
+        {"text": "Explicitly handles invoices missing a PO number as a separate flagged/approval path", "passed": true, "evidence": "needs_approval column + flagged-for-approval.csv + fail-safe uncertain-PO rule."},
+        {"text": "Does not invent unnecessary external connectors for a local folder/file task", "passed": true, "evidence": "'No external connectors... this is a local file task only, and none should be added.'"},
+        {"text": "Includes a validation step", "passed": true, "evidence": "5 mechanical checks including zero-unaccounted and flag-consistency."},
+        {"text": "Names at least one concrete failure mode", "passed": true, "evidence": "6 failure modes including unreadable PDFs and a 20% needs-review circuit breaker."},
+        {"text": "No API keys, tokens, or credential values anywhere in the output", "passed": true, "evidence": "Explicit 'no authentication of any kind is required'; confirmed by grep."}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "invoice-folder-to-csv",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 0.86, "passed": 6, "failed": 1, "total": 7, "time_seconds": 252.5, "tokens": 85883, "tool_calls": 24, "errors": 0},
+      "expectations": [
+        {"text": "Output has a valid SKILL.md with YAML frontmatter containing name and description", "passed": false, "evidence": "Produced extract_invoices.py, a standalone script — no SKILL.md."},
+        {"text": "Defines a CSV output schema including vendor name, invoice number, amount due, and due date", "passed": true, "evidence": "Script produces all required columns plus confidence/notes."},
+        {"text": "Explicitly handles invoices missing a PO number as a separate flagged/approval path", "passed": true, "evidence": "needs_approval column + separate invoices_needs_approval.csv."},
+        {"text": "Does not invent unnecessary external connectors for a local folder/file task", "passed": true, "evidence": "Pure local PDF-library processing, no connectors."},
+        {"text": "Includes a validation step", "passed": true, "evidence": "Confidence scoring, tested against 5 synthetic PDFs including a scanned one."},
+        {"text": "Names at least one concrete failure mode", "passed": true, "evidence": "Scanned/unreadable PDF handled with an explicit 'enter manually' fallback."},
+        {"text": "No API keys, tokens, or credential values anywhere in the output", "passed": true, "evidence": "Pure local processing; confirmed by grep."}
+      ],
+      "notes": ["This is the eval where the baseline scores closest to with-skill — a pure local file-processing task plays to general Claude capability even without build-skill's scaffold; the remaining gap is entirely the missing reusable SKILL.md/delegation artifact, not task competence."]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "commit-message-drafter",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 1.0, "passed": 6, "failed": 0, "total": 6, "time_seconds": 245.6, "tokens": 92396, "tool_calls": 14, "errors": 0},
+      "expectations": [
+        {"text": "Output has a valid SKILL.md with YAML frontmatter containing name and description", "passed": true, "evidence": "name: commit-message-drafter, explicit negative scope (no git add/commit/push)."},
+        {"text": "Uses the staged git diff explicitly as the input", "passed": true, "evidence": "Inputs section requires git diff --staged; empty diff is an explicit stop condition."},
+        {"text": "Validation bar matches the team's exact format", "passed": true, "evidence": "Regex subject-shape check, ≤72-char check, imperative-mood word-list check, 'not a diff echo' body check."},
+        {"text": "Names an explicit failure mode for an empty/missing staged diff", "passed": true, "evidence": "'Nothing staged → stop immediately... never fall back to unstaged changes.'"},
+        {"text": "Is transparent about template provenance (blank template vs. catalog match)", "passed": true, "evidence": "RUN_NOTES.md documents checking all 13 catalog categories, none matched, fell back to blank-skill-template.md; no Attribution section present, consistent with that."},
+        {"text": "No API keys, tokens, or credential values anywhere in the output", "passed": true, "evidence": "Only dependency is the local git CLI; confirmed by grep."}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "commit-message-drafter",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {"pass_rate": 0.67, "passed": 4, "failed": 2, "total": 6, "time_seconds": 122.9, "tokens": 68376, "tool_calls": 10, "errors": 0},
+      "expectations": [
+        {"text": "Output has a valid SKILL.md with YAML frontmatter containing name and description", "passed": true, "evidence": "Baseline independently drafted a plausible SKILL.md from general knowledge of the format."},
+        {"text": "Uses the staged git diff explicitly as the input", "passed": true, "evidence": "Bundled gather-staged-diff.sh runs git diff --staged."},
+        {"text": "Validation bar matches the team's exact format", "passed": false, "evidence": "Format is described narratively but there is no dedicated Validation section with mechanical checks — no '## Validation' header exists in the file."},
+        {"text": "Names an explicit failure mode for an empty/missing staged diff", "passed": true, "evidence": "'Edge cases' section covers nothing-staged."},
+        {"text": "Is transparent about template provenance (blank template vs. catalog match)", "passed": false, "evidence": "This run had no access to build-skill's catalog at all, so no provenance statement exists — required statement absent."},
+        {"text": "No API keys, tokens, or credential values anywhere in the output", "passed": true, "evidence": "Only touches local git; confirmed by grep."}
+      ],
+      "notes": ["Notably the fastest and cheapest run of all six (122.9s, 68k tokens) — a reasonable-looking skill draft with no forced structure is quick to produce, but it skips the mechanical-validation and delegation rigor build-skill enforces."]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0},
+      "time_seconds": {"mean": 258.93, "stddev": 45.49, "min": 221.6, "max": 309.6},
+      "tokens": {"mean": 99575, "stddev": 9690, "min": 92396, "max": 110596}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.619, "stddev": 0.2652, "min": 0.33, "max": 0.86},
+      "time_seconds": {"mean": 211.2, "stddev": 76.5, "min": 122.9, "max": 258.2},
+      "tokens": {"mean": 79366, "stddev": 9572, "min": 68376, "max": 85883}
+    },
+    "delta": {
+      "pass_rate": "+0.38",
+      "time_seconds": "+47.7",
+      "tokens": "+20209"
+    }
+  },
+  "notes": [
+    "build-skill's win is concentrated on artifact type and rigor, not raw task competence: on the pure file-processing eval (invoice-folder-to-csv) the baseline scored 86% even without the skill, because Claude can solve that class of task well unassisted. The delta is much bigger on the connector-heavy eval (hubspot-slack-weekly-digest, 100% vs 33%) and the no-catalog-match eval (commit-message-drafter, 100% vs 67%), where the missing delegation plan, mechanical validation section, and transparent template provenance are exactly what a generic response skips.",
+    "The 'Validation bar matches the team's exact format' assertion (eval 2) is the cleanest with/without split: with-skill produced 4 concrete mechanical checks (regex, char-count, mood-list, diff-echo heuristic); without-skill described the same format in prose with nothing to mechanically check it against. This is build-skill's Phase 3 'at least one check must be mechanical, not vibes' rule working as intended.",
+    "without_skill is faster and cheaper on average (211s/79k tokens vs 259s/100k tokens) — expected, since it skips the interview/template-selection/dry-run/checklist phases entirely. The cost delta (+21%) buys a completely different, reusable artifact type, not just a better version of the same one-off answer.",
+    "Both with_skill and without_skill passed every 'no credential values leaked' check across all 6 runs — the secrets ground rule holds regardless of whether build-skill is used, likely because none of the three tasks required a genuinely novel unsupported credential type.",
+    "Only 1 run per configuration per eval (not the usual 3) — stddev of 0 on with_skill's pass_rate reflects perfect-3-for-3 agreement across evals, not per-eval repeat-run variance. Treat these as directional results from a first pass, not a statistically tight benchmark."
+  ]
+}
