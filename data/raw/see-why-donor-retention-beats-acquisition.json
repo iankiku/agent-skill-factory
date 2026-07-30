@@ -1,0 +1,27 @@
+{
+  "slug": "see-why-donor-retention-beats-acquisition",
+  "title": "See why donor retention beats acquisition, in chat with Claude",
+  "source_url": "https://claude.com/resources/use-cases/see-why-donor-retention-beats-acquisition",
+  "category": "Nonprofits",
+  "model": "Sonnet 4.6",
+  "features": [
+    "Custom visuals"
+  ],
+  "surface": "Claude.ai chat",
+  "description": "Claude builds a five-year donor projection with sliders for retention and acquisition. Drag either one and the curve redraws, and it becomes clear fairly quickly why a modest retention bump does more than doubling the acquisition spend.",
+  "prompt": "Everyone keeps telling me donor retention matters more than acquisition and I understand the argument but I don't really get it. Show me. Start with 100 donors and let me play with the numbers. I want to drag things and watch what happens.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts"
+  ],
+  "prerequisites": [
+    "No files required to upload",
+    "Optional: your real retention rate and annual acquisition count"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

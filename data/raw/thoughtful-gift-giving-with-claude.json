@@ -1,0 +1,27 @@
+{
+  "slug": "thoughtful-gift-giving-with-claude",
+  "title": "Thoughtful gift giving with Claude",
+  "source_url": "https://claude.com/resources/use-cases/thoughtful-gift-giving-with-claude",
+  "category": "Personal",
+  "model": "Opus 4.5",
+  "features": ["Web Search", "Connectors", "Extended Thinking"],
+  "surface": "Claude.ai chat (Claude for Desktop mentioned for connector access)",
+  "description": "Turn last-minute gift panic into thoughtful, personalized presents. Claude can suggest items, search your notes for forgotten hints, find specific products you can buy locally, and help you coordinate the actual shopping.",
+  "prompt": "I always forget stocking stuffers until the last minute and end up panic-buying junk. This year I want to fill stockings with small things people will actually use or enjoy. Help me think through good stocking stuffer ideas for my family that I can find locally this week:\n\n- Wife (38) — really into skincare lately, drinks a lot of tea, always cold\n- Son (12) — obsessed with basketball, just started getting into music\n- Daughter (9) — loves art projects, reads constantly, very into her pet hamster\n- Dad (67) — impossible to buy for, likes golf and grilling, diabetic so no candy\n- Mom (65) — does crossword puzzles every morning, into bird watching, practical about gifts\n\nCan you put this together in a shopping list I can reference?",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "Web Search (optional)",
+    "iOS Connectors (Notes, iMessages)",
+    "Extended Thinking"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

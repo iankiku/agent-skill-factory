@@ -1,0 +1,25 @@
+{
+  "slug": "turn-emails-into-an-event-tracker",
+  "title": "Turn emails into an event tracker",
+  "source_url": "https://claude.com/resources/use-cases/turn-emails-into-an-event-tracker",
+  "category": "Professional",
+  "model": "Sonnet 4.5",
+  "features": ["Extended Thinking", "Connectors"],
+  "surface": "Claude.ai chat",
+  "description": "Build an event tracker by extracting dates, locations, and logistics from email threads.",
+  "prompt": "Search my Gmail for speaker confirmations and extract their name and company, what session topic they confirmed, time preference if mentioned, A/V needs, travel arrangements if they brought it up, whether they've sent their bio and headshot. We're locking in the agenda next week. Build me a tracker with formulas, color-coded cells, and clear sections. Make the spreadsheet look like a boutique design studio created a data visualization piece, not like someone filled out an Excel template. The typography and color should look editorial and refined with modern professionalism. Include professional spreadsheet elements like frozen headers, sortable columns, and working formulas.",
+  "steps": [
+    "Describe the task (search Gmail and extract speaker data)",
+    "Give Claude context (enable Gmail integration and Extended Thinking)",
+    "Claude creates structured spreadsheet with speaker directory, production overview, technical notes, and materials tracking",
+    "Follow up prompts available for calendar events, follow-up messages, and dynamic formulas"
+  ],
+  "prerequisites": [
+    "Gmail connector (enabled in Settings > Connectors)",
+    "Extended Thinking (optional but recommended)"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

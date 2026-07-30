@@ -1,0 +1,26 @@
+{
+  "slug": "design-a-local-foraging-guide",
+  "title": "Design a local foraging guide",
+  "source_url": "https://claude.com/resources/use-cases/design-a-local-foraging-guide",
+  "category": "Personal",
+  "model": "Opus 4.5",
+  "features": ["Extended Thinking"],
+  "surface": "Claude.ai chat (Artifacts)",
+  "description": "Build artifacts where the map is the menu. Select your state on an interactive map browse by category and export a printable reference.",
+  "prompt": "I want to build a foraging guide for someone new to wild edibles and unsure where to start.\n\nWhat it should do:\n\n- Let users click their state on an interactive US map to see regional foraging data (fetch map data from the us-atlas TopoJSON CDN at https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json and render with D3's geoAlbersUsa projection)\n- Browse edible plants by category and show a 12-month season bar for each species so users see harvest windows at a glance\n- Let users tap any plant to expand details, then let users add plants to a personal foraging list and export a printable field guide with their selected species and safety reminders\n\nDesign: Quiet and organic. Warm cream, muted sage, soft olive. Think field journal meets editorial magazine—sophisticated but approachable. Smooth transitions, rounded corners, good type hierarchy.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "Enable Artifacts in settings",
+    "Extended Thinking for complex apps (optional)"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

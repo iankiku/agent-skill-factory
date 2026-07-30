@@ -1,0 +1,29 @@
+{
+  "slug": "operate-any-computer-app-from-your-phone-with-dispatch",
+  "title": "Operate any computer app from your phone with Dispatch",
+  "source_url": "https://claude.com/resources/use-cases/operate-any-computer-app-from-your-phone-with-dispatch",
+  "category": "Cowork",
+  "model": "Sonnet 4.6",
+  "features": [
+    "Connectors",
+    "Cowork"
+  ],
+  "surface": "Cowork (Dispatch) + Claude mobile app",
+  "description": "In Claude Cowork, Dispatch with computer use lets Claude control your computer's mouse and keyboard from the Claude mobile app to work in apps that have no other interface Claude could reach.",
+  "prompt": "Open my accounting app and pull the outstanding invoices report for March. List every invoice over 60 days past due with the client name, invoice number, and amount. Send me the totals by client.",
+  "steps": [
+    "Describe the task — enable computer use in Dispatch settings; Claude asks for approval before controlling applications",
+    "Give Claude context — confirm the desktop application is open and computer use is enabled; no connectors required",
+    "What Claude creates — Claude opens the app, navigates to reports, runs the report, and delivers results",
+    "Follow up prompts — check web portals in Chrome, review reports at your desk, or email results to your team"
+  ],
+  "prerequisites": [
+    "Computer use toggle enabled in Dispatch settings",
+    "Desktop accounting application open or pinned to taskbar/Dock",
+    "Optional: Gmail or Slack connector for routing results"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

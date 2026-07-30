@@ -1,0 +1,27 @@
+{
+  "slug": "pull-metrics-from-analytics-dashboards",
+  "title": "Pull metrics from analytics dashboards",
+  "source_url": "https://claude.com/resources/use-cases/pull-metrics-from-analytics-dashboards",
+  "category": "Claude in Chrome",
+  "model": "Haiku 4.5",
+  "features": ["Browser Use"],
+  "surface": "Claude in Chrome",
+  "description": "Claude in Chrome can navigate your analytics dashboards, extract the numbers you need, and compile them into a summary. No exports, no tab-switching, no manual copying.",
+  "prompt": "Pull my weekly metrics from both my Amplitude and Mixpanel open tabs.\n\nFrom Amplitude:\n- Weekly active users (WAU) — past 4 weeks\n- New user signups — this week vs. last week\n- Retention (Day 1, Day 7, Day 30) — for the cohort from 30 days ago\n\nFrom Mixpanel:\n- Feature adoption rate for new dashboard (% of WAU who used it)\n- Conversion rate through onboarding flow\n- Top 5 events by volume this week\n\nOutput: Format as a summary I can paste into our weekly product update.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "Logged into Amplitude in Chrome before starting",
+    "Logged into Mixpanel in Chrome before starting",
+    "Saved dashboards or reports by name (optional)"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

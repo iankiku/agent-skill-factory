@@ -1,0 +1,26 @@
+{
+  "slug": "preclinical-study-analysis",
+  "title": "Preclinical study analysis",
+  "source_url": "https://claude.com/resources/use-cases/preclinical-study-analysis",
+  "category": "Life Sciences",
+  "model": "Sonnet 4.5",
+  "features": ["Connectors"],
+  "surface": "Claude for Desktop (via connectors)",
+  "description": "Build study reports by connecting to research platforms and compiling data across experiments.",
+  "prompt": "Summarize the study designs for ST042 and ST043 and how they're different, including a table indicating key differences. Link all my notebook entries and sources.",
+  "steps": [
+    "Describe the task: tell Claude what studies to compare and what to understand about them",
+    "Give Claude context: connect Claude to research data management systems like Benchling",
+    "What Claude creates: retrieves study data and synthesizes comprehensive summaries with key differences",
+    "Follow-up prompts: continue conversation to refine, expand, or explore further (example: 'generate a Study Report that I can include in my regulatory submission')"
+  ],
+  "prerequisites": [
+    "Benchling connector (required)",
+    "Claude for Desktop (required to pull data from Benchling workspace)",
+    "Access to electronic lab notebooks, experimental protocols, and study data"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Uses Claude for Desktop with the Benchling connector rather than plain Claude.ai chat."
+}

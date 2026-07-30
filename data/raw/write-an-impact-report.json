@@ -1,0 +1,26 @@
+{
+  "slug": "write-an-impact-report",
+  "title": "Write an impact report",
+  "source_url": "https://claude.com/resources/use-cases/write-an-impact-report",
+  "category": "Nonprofits",
+  "model": "Sonnet 4.5",
+  "features": [],
+  "surface": "Claude.ai chat",
+  "description": "Turn raw program data and participant outcomes into compelling narratives with data visualizations, stakeholder-specific insights, and authentic success stories that demonstrate real impact.",
+  "prompt": "I'm the Program Director at Bright Futures Learning Center, a nonprofit providing after-school tutoring and enrichment programs for middle school students in underserved Seattle neighborhoods. I need to create our annual impact report that will go to our board, major donors, and foundation funders.\n\nI'm uploading our program data: student enrollment and demographics, attendance records, academic assessment results (pre/post test scores), volunteer hours, and our financial summary. We served 347 students this year across three locations.\n\nFor the report, I need:\n\n- An executive summary with our biggest wins and key metrics\n- Compelling data visualizations that show academic growth, attendance trends, and program reach\n- Narrative sections that tell the story of what we accomplished\n- Student demographics and community impact data\n- Financial overview showing how funds were used\n- A forward-looking section on next year's goals\n\nMake this board-ready and donor-worthy. Use sophisticated design that matches the quality of professional nonprofit reports—this goes to foundation program officers who see dozens of these. Include charts and visual elements that make the data immediately clear. The tone should be confident about our achievements while staying authentic and mission-focused.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context (upload raw program data)",
+    "What Claude creates",
+    "Follow up prompts",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "Spreadsheets/databases with program metrics: participant enrollment, demographics, attendance, assessment scores, volunteer hours, financial data, and qualitative feedback",
+    "Three sample XLSX files referenced on the page"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Prompt captured verbatim on a second targeted fetch; bold markers in the source (e.g. 'I'm uploading our program data:') rendered as plain text."
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "contract-redlining-and-negotiation",
+  "title": "Contract redlining and negotiation",
+  "source_url": "https://claude.com/resources/use-cases/contract-redlining-and-negotiation",
+  "category": "Legal",
+  "model": "Opus 4.5",
+  "features": ["Extended Thinking"],
+  "surface": "Claude.ai chat",
+  "description": "Analyze agreements to spot terms affecting your work, with suggested redlines and negotiation points.",
+  "prompt": "I'm reviewing a vendor services agreement for our marketing automation platform. We're a Series B startup with limited budget flexibility. Create a redlined version that protects us from getting locked into something we can't get out of, ensures we keep ownership of our data and any work we pay for, and gives us flexibility to adjust or leave if things don't work out. Create a new file that is an exact copy of the contract with track changes enabled. The redlines should show deletions (strikethrough red text) and insertions (underlined colored text). Use a script to create real comments or suggestions in the margins of the doc for each edit explaining the issue. Flag anything that could bite us later.",
+  "steps": ["Describe the task—provide business context and contract concerns", "Give Claude context—share contract via Google Drive integration or paste link", "What Claude creates—generates redlined contract with tracked changes and margin comments", "Follow up prompts—refine negotiation strategy, create comparison tables"],
+  "prerequisites": ["Google Drive integration enabled", "Extended Thinking feature (recommended)"],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

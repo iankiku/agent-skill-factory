@@ -1,0 +1,17 @@
+{
+  "slug": "process-batches-of-vendors-with-cowork",
+  "title": "Process batches of vendors with Cowork",
+  "source_url": "https://claude.com/resources/use-cases/process-batches-of-vendors-with-cowork",
+  "category": "Professional",
+  "model": "Sonnet 4.5",
+  "features": ["Cowork"],
+  "surface": "Cowork (with Claude in Chrome)",
+  "description": "Onboard several vendors in one session — with Cowork, Claude can read a folder of vendor files, adds each to your tracker, generates their contracts, and fills multiple intake forms in your browser.",
+  "prompt": "I need to onboard several vendors. Their documents spread across my desktop. For each new vendor: Create an NDAs and MSAs from the templates, Fill out an onboarding form, Afterwards, add all information to the vendor tracker spreadsheet. Organize all the new documents on my desktop.",
+  "steps": ["Describe the task and desired end state in a Cowork session", "Provide Claude context by selecting a folder with vendor tracker, contract templates, and vendor details", "Claude works through onboarding in stages: updating spreadsheet, completing portal forms, generating agreements", "Continue conversation to refine or expand (generate additional documents, organize vendor files)"],
+  "prerequisites": ["Claude Desktop with Cowork capability", "Claude in Chrome installed and configured", "Vendor tracker spreadsheet", "Contract templates", "Vendor details documents", "Authenticated procurement portal access"],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

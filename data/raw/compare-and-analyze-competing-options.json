@@ -1,0 +1,26 @@
+{
+  "slug": "compare-and-analyze-competing-options",
+  "title": "Compare and analyze competing options",
+  "source_url": "https://claude.com/resources/use-cases/compare-and-analyze-competing-options",
+  "category": "Professional",
+  "model": "Sonnet 4.5",
+  "features": ["Extended Thinking"],
+  "surface": "Claude.ai chat",
+  "description": "Upload vendor proposals in any format and get a normalized comparison spreadsheet that extracts pricing structures, contract terms, and feature differences",
+  "prompt": "I'm evaluating three payroll providers and need to decide by Friday. I've uploaded proposals from PayFlow Pro, TeamSync HR, and WorkForce Central.\n\nExtract and compare base monthly costs and fees, onboarding timelines, contract lengths and terms, key feature differences, and support options. Create a comparison spreadsheet that shows everything side-by-side. Make it easy to scan—I need to present this to our CFO and we need to make a decision fast. Flag anything important I should know: hidden fees, concerning contract terms, major feature gaps.\n\nThis spreadsheet should be extremely well-designed. Think: professional not playful, expert-grade execution, and surgical precision and craft.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context (upload vendor proposals)",
+    "What Claude creates (analysis and spreadsheet)",
+    "Follow up prompts (draft decision memo, create vendor call questions, calculate costs)",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "Vendor proposal documents (multiple formats supported)",
+    "Extended Thinking feature (optional, recommended for complex proposals)"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

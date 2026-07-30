@@ -1,0 +1,28 @@
+{
+  "slug": "visualize-program-data",
+  "title": "Visualize program data",
+  "source_url": "https://claude.com/resources/use-cases/visualize-program-data",
+  "category": "Nonprofits",
+  "model": "Sonnet 4.5",
+  "features": ["Extended Thinking"],
+  "surface": "Claude.ai chat",
+  "description": "Transform spreadsheets of program statistics into presentation-ready charts, infographics, and dashboards that tell your impact story visually and help demonstrate program satisfaction to stakeholders.",
+  "prompt": "The uploaded CSV contains quarterly metrics for six programs: Youth Nutrition Workshop, Adult Wellness Seminar, Senior Health Education, Community CPR Training, Mental Health First Aid, and Diabetes Prevention Program.\n\nThe data includes: participants enrolled and completed, completion rates, satisfaction scores (1-5 scale), Net Promoter Scores, pre/post-test averages, knowledge gains, repeat participants, referrals, volunteer hours, and cost per participant.\n\nI need to create a comprehensive visualization suite for our board meeting next week. Create:\n\n1. An Excel dashboard with multiple analysis sheets showing program satisfaction trends, learning outcomes, and quarterly comparisons. Use sophisticated formatting with professional color schemes, frozen headers, and clear data hierarchies. Include summary metrics and trend indicators.\n2. A PowerPoint presentation (8-10 slides) that tells our impact story visually. Show satisfaction rankings, participation trends, knowledge gains by program, and key insights. Use premium design with charts that are immediately readable.\n\nThe board cares most about program satisfaction, completion rates, and demonstrable learning outcomes. They want to see which programs perform best and where we're improving quarter over quarter. Make the visualizations clear enough for quick comprehension but detailed enough to support strategic decisions.\n\nDesign these with consulting-firm quality and use colors that feel professional but warm (we're a health nonprofit, not a corporate consultancy).",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts"
+  ],
+  "prerequisites": [
+    "Excel/XLSX or CSV data file with quarterly program metrics",
+    "Google Drive integration (recommended for accessing master files)",
+    "Extended Thinking feature enabled",
+    "Code execution and file creation enabled in settings",
+    "Gmail/Slack connectors, historical reports or templates (optional)"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Extractor prepended a paragraph of page intro copy ('Bring your data to life...') to the prompt box; that intro copy was excluded here as it is page prose, not part of the example prompt."
+}

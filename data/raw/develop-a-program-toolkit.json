@@ -1,0 +1,27 @@
+{
+  "slug": "develop-a-program-toolkit",
+  "title": "Develop a program toolkit",
+  "source_url": "https://claude.com/resources/use-cases/develop-a-program-toolkit",
+  "category": "Nonprofits",
+  "model": "Sonnet 4.5",
+  "features": ["Extended Thinking"],
+  "surface": "Claude.ai chat",
+  "description": "Generate complete program design frameworks for new initiatives with logic models, evaluation plans, and resource guides that transform concepts into implementation-ready programs.",
+  "prompt": "I'm designing a tech workforce preparation program for young adults ages 18-26 from underserved Detroit communities. We'll serve 120 participants annually, helping them prepare for entry-level IT careers.\n\nProgram Structure:\n\n- 6-hour virtual course covering IT career pathways, resume building, interview skills, and professional networking\n- 4 one-on-one career coaching sessions to support job search and applications\n\nTarget Outcomes: 80% course completion, 60% job placement within 90 days, $40K average starting salary.\n\nCreate a comprehensive program design toolkit in Excel with: program description with mission and goals, logic model (inputs → activities → outputs → outcomes), SWOT analysis with recommendations, evaluation framework with indicators and data collection methods, resource planning (staffing, budget), and executive dashboard.\n\nMake this consulting-grade with premium formatting, sophisticated design, and advanced Excel features. Use a professional color scheme—avoid default Excel colors.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "Extended Thinking feature (recommended to enable in conversation settings)",
+    "Excel software (for the output file)",
+    "Theory of Change documentation, current program materials, organizational strategy documents (optional)"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

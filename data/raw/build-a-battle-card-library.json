@@ -1,0 +1,28 @@
+{
+  "slug": "build-a-battle-card-library",
+  "title": "Build a battle card library",
+  "source_url": "https://claude.com/resources/use-cases/build-a-battle-card-library",
+  "category": "Sales",
+  "model": "Sonnet 4.5",
+  "features": ["Web Search", "Connectors"],
+  "surface": "Claude.ai chat",
+  "description": "Turn sales losses and competitive data into ready-to-use battlecards with winning talk tracks, objection handlers, and differentiation strategies your team can use during actual calls.",
+  "prompt": "Pull our HubSpot closed-lost deals from the last 6 months where DataGuard, BackupPro, or SecureVault appear in the competitor field. Read the deal notes for each competitor and tell me what patterns you see for each one. Search the web for their websites, G2 reviews, and recent positioning to find additional information.\n\nThen, build a React-based competitive intelligence dashboard with a list view showing all three competitors and detailed battlecards for each. Build it like a modern analytics dashboard - clean, flat, metric-dense, with that tech meets creative minimalism. Think calculator app but for competitive intelligence.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "HubSpot connector (CRM integration)",
+    "Web Search enabled",
+    "Optional: Extended Thinking feature",
+    "Optional: website screenshot/sales materials upload"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

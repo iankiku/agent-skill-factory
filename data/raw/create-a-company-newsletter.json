@@ -1,0 +1,27 @@
+{
+  "slug": "create-a-company-newsletter",
+  "title": "Create a company newsletter",
+  "source_url": "https://claude.com/resources/use-cases/create-a-company-newsletter",
+  "category": "Professional",
+  "model": "Sonnet 4.5",
+  "features": ["Extended Thinking"],
+  "surface": "Claude.ai chat",
+  "description": "Stay informed with a publication-style digest that synthesizes company news from all your channels.",
+  "prompt": "Create a weekly digest for Oct 14-20 for my company. Pull information from relevant channels in my Slack, such as #company-announcements, #product-updates, #leadership, and any other channels where major decisions happened. Include data visualizations where useful. Use a dense but readable layout. Pack information efficiently and use sophisticated typography and spacing. Go for a British newspaper aesthetic: no gradients, shadows, rounded corners, or bright colors. Print-like typography with tight leading. Include institutional publishing elements—standfirsts, pull quotes with left borders, desk attributions, sourced charts using Chart.js. This should look hand-crafted by an editorial designer. Include substantive developments formatted like a real publication I'd read on Sunday evening.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context (enable required integrations)",
+    "Claude creates the digest output",
+    "Follow up with additional prompts to expand or refine"
+  ],
+  "prerequisites": [
+    "Enable Slack connector",
+    "Enable Google Drive integration",
+    "Enable Gmail integration",
+    "Enable Extended Thinking feature"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

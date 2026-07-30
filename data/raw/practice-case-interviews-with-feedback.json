@@ -1,0 +1,26 @@
+{
+  "slug": "practice-case-interviews-with-feedback",
+  "title": "Practice case interviews with feedback",
+  "source_url": "https://claude.com/resources/use-cases/practice-case-interviews-with-feedback",
+  "category": "Education",
+  "model": "Sonnet 4.5",
+  "features": ["Extended Thinking"],
+  "surface": "Claude.ai chat",
+  "description": "Work through consulting cases with structured frameworks, guidance, and intelligent feedback",
+  "prompt": "I'm practicing for consulting interviews. Set up this practice scenario for me—using case I've uploaded, extract the data into an spreadsheet model with formulas and frameworks. Then, tell me what questions I should focus on.\n\nAfter I finish my analysis and write my recommendation, I'll share it for feedback. Review it like a senior partner would: check my numbers, evaluate my logic, and tell me specifically what needs improvement.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context (upload practice study files)",
+    "What Claude creates (financial analysis model and practice guide)",
+    "Follow up prompts (compare approaches, dive deeper into frameworks, request reviews)",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "Upload practice case study files (PDF)",
+    "Optional: Extended Thinking feature for detailed feedback"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Prompt contains apparent source typos ('using case I've uploaded', 'an spreadsheet'), reproduced as extracted."
+}

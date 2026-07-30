@@ -1,0 +1,26 @@
+{
+  "slug": "create-health-and-exercise-notes",
+  "title": "Create health and exercise notes",
+  "source_url": "https://claude.com/resources/use-cases/create-health-and-exercise-notes",
+  "category": "Personal",
+  "model": "Sonnet 4.5",
+  "features": ["Web Search", "Connectors"],
+  "surface": "Claude for desktop",
+  "description": "Research specific exercises and save organized notes directly to your Notes app.",
+  "prompt": "I've been dealing with knee pain, and my doctor recommended I strengthen the muscles around it. I'd like to research appropriate exercises and create a routine I can do on my own.\n\nSave this to my Notes app as \"Knee Strengthening Routine\" so I can pull it up on my phone while I'm exercising. I want to show it to my physical therapist next week to make sure I'm on the right track.\n\nFormat for Apple Notes on my phone. Use HTML <br> tags in order to create natural line breaks. Use abbreviations and keep it scannable - clear headers, quick reference info only, cut verbose explanations. Optimize for mobile, not desktop.",
+  "steps": [
+    "Describe the task (provide health goals and constraints)",
+    "Give Claude context (enable Notes connector and Web Search)",
+    "Receive structured output saved to Notes app",
+    "Explore follow-up options (progress tracking, anatomical explanations, routine progression)"
+  ],
+  "prerequisites": [
+    "Claude for desktop app",
+    "Notes connector enabled in Settings > Connectors",
+    "Web Search feature enabled"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Uses the desktop app's Apple Notes connector; output is viewed on phone via Notes sync."
+}

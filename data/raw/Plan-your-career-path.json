@@ -1,0 +1,26 @@
+{
+  "slug": "Plan-your-career-path",
+  "title": "Plan your career path",
+  "source_url": "https://claude.com/resources/use-cases/Plan-your-career-path",
+  "category": "Education",
+  "model": "Sonnet 4.5",
+  "features": ["Connectors", "Research"],
+  "surface": "Claude.ai chat",
+  "description": "Map the jobs you want to a career plan—skill gaps, timelines, people to contact, and specific next steps.",
+  "prompt": "I'm a sophomore at UC Berkeley targeting these roles:\n\n- Associate Product Manager at a music streaming company - https://musicstreaming.com/careers/apm\n- Product Designer at a design collaboration platform - https://designplatform.com/careers/designer\n- UX Researcher at a travel platform - https://travelplatform.com/careers/researcher\n\nAfter analyzing my resume against these roles, build:\n\nAction Tracker (Google Doc): Forward-looking planner showing what to do next. Include skill gaps with projects to build, timeline with semester/year/grad milestones, networking targets, learning roadmap, and local resources. Tight spacing, scannable, built for weekly planning.\n\nSkills Portfolio Log (Excel): Backward-looking evidence bank showing what I've done. Log completed projects with metrics, skills inventory with proof points, quantified achievements, learning completions, and STAR stories tagged by competency. Built for mining resume bullets and cover letters.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "Google Drive integration (to access resume)",
+    "Optional: Extended Thinking and Web Search features enabled"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Slug uses capital P as published."
+}

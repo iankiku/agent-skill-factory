@@ -1,0 +1,26 @@
+{
+  "slug": "prepare-and-plan-from-your-calendar",
+  "title": "Prepare and plan from your calendar",
+  "source_url": "https://claude.com/resources/use-cases/prepare-and-plan-from-your-calendar",
+  "category": "Claude in Chrome",
+  "model": "Haiku 4.5",
+  "features": ["Browser Use"],
+  "surface": "Claude in Chrome",
+  "description": "Claude in Chrome reads your calendar, pulls context from email threads, flags which meetings need prep, and books rooms for the ones missing them.",
+  "prompt": "Look at my calendar and help me get ready for tomorrow. For each meeting: Tell me if it's internal or external (check the attendee domains). Find any recent email threads with those attendees about this topic. Flag if the meeting is missing a room (for in-person) or a video link (for remote). If it is, assign one to the meeting. For external meetings, note anything I should review beforehand, like relevant docs attached to the meeting or related emails. Give me a quick prep summary for the day, finding what needs my attention before I show up.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "Google Calendar open showing tomorrow's date, logged in",
+    "Gmail open in another tab, logged in"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

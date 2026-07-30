@@ -1,0 +1,26 @@
+{
+  "slug": "quickly-prep-for-your-week",
+  "title": "Quickly prep for your week",
+  "source_url": "https://claude.com/resources/use-cases/quickly-prep-for-your-week",
+  "category": "Professional",
+  "model": "Sonnet 4.5",
+  "features": ["Extended Thinking", "Connectors"],
+  "surface": "Claude.ai chat",
+  "description": "Prepare and prioritize for your upcoming week through connecting your calendar and mail platforms.",
+  "prompt": "Help me plan my upcoming week: October 27-31.\n\nUsing my M365 connector look at my Outlook calendar and find all meetings that need prep, or where I'm making decisions. Show me where I'm overbooked, where I have real focus time, and any scheduling problems I need to fix now.\n\nFrom my Outlook inbox and summarize any weekend emails I need to handle, any threads from last week that become urgent this week if ignored, and anyone blocked waiting for my response.\n\nCreate an overview document of my must-dos, daily structure, preparation I still need to do, blocks of time I need for deep work, and email triage of high-priority vs can-wait.",
+  "steps": [
+    "Describe the task (user provides dates, scope, and output format)",
+    "Give Claude context (enable Microsoft 365 connector in Settings > Connectors)",
+    "What Claude creates (generates calendar analysis and email triage)",
+    "Follow up prompts (draft responses, create prep materials, adjust output)"
+  ],
+  "prerequisites": [
+    "Microsoft 365 connector (Outlook calendar and inbox access)",
+    "Extended Thinking feature",
+    "Connectors feature"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

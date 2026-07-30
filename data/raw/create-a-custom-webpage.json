@@ -1,0 +1,17 @@
+{
+  "slug": "create-a-custom-webpage",
+  "title": "Create a custom webpage",
+  "source_url": "https://claude.com/resources/use-cases/create-a-custom-webpage",
+  "category": "Personal",
+  "model": "Sonnet 4.5",
+  "features": ["Extended Thinking"],
+  "surface": "Claude.ai chat",
+  "description": "Build a portfolio site to showcase your work and learn how to deploy it live without writing a line of code.",
+  "prompt": "Help me create a professional portfolio HTML page to showcase my professional career and accomplishments. I've uploaded my resume, project descriptions, and some design inspiration files. Use those to understand my background and aesthetic preferences.\n\nFor the design direction, I want something sophisticated and editorial—think high-end creative agency, not corporate template. Avoid generic layouts, AI-looking gradients, or too much symmetry. The sites I admire (in the uploads) have an organic, hand-crafted quality with unexpected details.\n\nAfter you create it, walk me through publishing it live on the internet. Assume I've never deployed a website—I need exact steps that don't require any coding knowledge.",
+  "steps": ["Describe the task", "Give Claude context", "What Claude creates", "Follow up prompts", "Tricks, tips, and troubleshooting"],
+  "prerequisites": ["Resume (PDF upload)", "Project descriptions (3-5 detailed examples)", "Design inspiration files", "Extended Thinking (optional)", "Netlify connector (for deployment)"],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

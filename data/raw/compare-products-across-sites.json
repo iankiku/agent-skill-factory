@@ -1,0 +1,28 @@
+{
+  "slug": "compare-products-across-sites",
+  "title": "Compare products across sites",
+  "source_url": "https://claude.com/resources/use-cases/compare-products-across-sites",
+  "category": "Claude in Chrome",
+  "model": "Haiku 4.5",
+  "features": ["Browser Use"],
+  "surface": "Claude in Chrome",
+  "description": "Claude in Chrome reads the specs from multiple product pages you have open, normalizes the data, and creates a comparison table in Google Sheets.",
+  "prompt": "I'm trying to decide between a few laptops and I have the product pages open in different tabs. Can you look at each one, pull out the specs, and put them in a Google Doc so I can compare them side by side? I care most about: processor, RAM, storage, screen size, battery life, and weight. Let me know which one wins on each category.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "Claude in Chrome extension installed",
+    "Paid plan subscription required",
+    "Product pages open in separate browser tabs",
+    "Google Docs/Sheets login for output creation"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

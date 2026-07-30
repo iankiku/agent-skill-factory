@@ -1,0 +1,27 @@
+{
+  "slug": "track-discovery-timelines-and-analyze-patterns",
+  "title": "Track discovery timelines and analyze patterns",
+  "source_url": "https://claude.com/resources/use-cases/track-discovery-timelines-and-analyze-patterns",
+  "category": "Legal",
+  "model": "Sonnet 4.5",
+  "features": ["Extended Thinking", "Connectors"],
+  "surface": "Claude.ai chat",
+  "description": "Build chronologies and identify document patterns across large discovery productions.",
+  "prompt": "I'm representing a small software company in a contract dispute with a vendor. We hired them to build a custom inventory management system, but the project failed and we're in litigation. I've got about 40 discovery documents—contracts, change orders, email threads, project status reports, invoices, and technical documentation from the 12-month project timeline. Create a chronological timeline with document citations, analyze patterns around scope changes and deliverables, and identify our strongest evidence and key witnesses for depositions. Generate a professional legal memo with clear sections, proper citations to source documents, and formatting suitable for sharing with co-counsel. This needs to be a top of class legal document with exceptional formatting and structure. Opt for elevated, elegant typography, tight spacing, and muted color instead of using your default styling. Take your time developing an extremely high quality legal document that has coherent structure, and articulate legal expertise throughout.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "Gmail and Google Drive integrations enabled",
+    "PDF, Word files, Excel spreadsheets, or email uploads",
+    "Optional: Extended Thinking (recommended)"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

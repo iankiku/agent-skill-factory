@@ -1,0 +1,25 @@
+{
+  "slug": "create-a-volunteer-management-system",
+  "title": "Create a volunteer management system",
+  "source_url": "https://claude.com/resources/use-cases/create-a-volunteer-management-system",
+  "category": "Nonprofits",
+  "model": "Sonnet 4.5",
+  "features": [],
+  "surface": "Claude.ai chat",
+  "description": "Create comprehensive volunteer documentation including role descriptions, onboarding processes, communication templates, and tracking tools that professionalize volunteer management and scale your program effectively.",
+  "prompt": "I run a nonprofit that provides tutoring and reading programs to elementary students in underserved communities. We currently have 45 volunteers but our systems are fragmented—role descriptions are outdated, onboarding is inconsistent, and we track volunteers in scattered spreadsheets.\n\nI need a complete volunteer program infrastructure that includes:\n\nRole descriptions for:\n- Reading Tutors (work one-on-one with students weekly)\n- Reading Buddies (lead small group reading circles)\n- Event Coordinators (organize book fairs and literacy events)\n- Administrative Volunteers (data entry, scheduling, communications support)\n\nOnboarding system including:\n- Welcome packet with program overview\n- Step-by-step onboarding process document\n- Training requirements and timelines\n- Background check procedures\n- Volunteer handbook with policies\n\nCommunication templates for:\n- Initial welcome email\n- Training reminders\n- Monthly volunteer newsletters\n- Recognition and appreciation messages\n- Check-in and feedback requests\n\nTracking system:\n- Volunteer database with contact info, roles, hours, certifications\n- Hours tracking and reporting\n- Training completion tracker\n- Impact metrics (students served, hours contributed)\n\nOur volunteers range from college students to retirees. Most commit 2-4 hours per week. We require background checks for all roles and role-specific training. We serve 200 students across 3 schools.\n\nCreate professional, comprehensive documents that make our volunteer program feel organized and legitimate. Use clear formatting, maintain a warm but professional tone, and include practical guidance that both volunteers and staff can follow easily. Make these documents detailed enough to use immediately without extensive revision.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts"
+  ],
+  "prerequisites": [
+    "Optional: Google Drive and Gmail integrations",
+    "No mandatory file uploads shown"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Prompt captured verbatim on a second targeted fetch after the first fetch elided sections."
+}

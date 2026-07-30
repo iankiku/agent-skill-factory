@@ -1,0 +1,25 @@
+{
+  "slug": "create-interactive-pdf-forms",
+  "title": "Create interactive PDF forms",
+  "source_url": "https://claude.com/resources/use-cases/create-interactive-pdf-forms",
+  "category": "Professional",
+  "model": "Sonnet 4.5",
+  "features": ["Extended Thinking"],
+  "surface": "Claude.ai chat",
+  "description": "Turn forms from static documents into professional, interactive forms that people fill out right in their PDF reader.",
+  "prompt": "I'm organizing a three-day conference in June (Innovation Summit 2025) and need a professional registration form that attendees can fill out digitally.\n\nCreate an interactive PDF registration form with these sections:\n\n- Attendee Information: Full name, email (required fields), company/organization and job title (optional)\n- Registration Details: Dropdown for ticket type: Full Conference Pass ($899), Single Day Pass ($349), Virtual Access ($199), Student Pass ($99); Dietary preferences with checkboxes: Vegetarian, Vegan, Gluten-Free, Other; Text field for additional dietary requirements\n- Session Interests: Checkboxes for conference tracks (AI & Machine Learning, Sustainability, Leadership, Product Innovation, Design & UX, Data Science)\n- Communication Preferences: Checkbox for event updates, checkbox for sharing info with sponsors\n\nUse a professional color scheme with a branded header. The event is \"2025 Innovation Summit\" at San Francisco Convention Center, June 15-17. Include contact info: [email protected].",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts"
+  ],
+  "prerequisites": [
+    "Extended Thinking (optional)",
+    "Brand materials or style preference files (optional)"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Contact email in prompt appeared as '[email protected]' in fetched content, likely an email-obfuscation artifact of the page renderer."
+}

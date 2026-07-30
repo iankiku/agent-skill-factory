@@ -1,0 +1,29 @@
+{
+  "slug": "plan-your-syllabus-see-which-weeks-are-locked",
+  "title": "Plan your syllabus",
+  "source_url": "https://claude.com/resources/use-cases/plan-your-syllabus-see-which-weeks-are-locked",
+  "category": "Education",
+  "model": "Sonnet 4.6",
+  "features": [
+    "Custom visuals"
+  ],
+  "surface": "Claude.ai chat",
+  "description": "Attach your syllabus and Claude shows which weeks are locked by real prerequisites and which you're free to rearrange — right in chat as you work through the order.",
+  "prompt": "I'm building a 15-week Intro to Macro syllabus and I keep second-guessing the order. Can you map out which topics actually depend on which — like, what do they need to get first before the later stuff makes sense? I want to see where I have flexibility and where the sequence is locked. If I click a topic, tell me if there's another common way to order it.",
+  "steps": [
+    "Describe the task (identify topics with dependencies vs. flexible ordering)",
+    "Give Claude context (attach working syllabus; optionally specify textbook)",
+    "Claude creates visual output (dependency graph with locked/flexible tags)",
+    "Follow-up prompts (request reorderings; generate revised syllabus)",
+    "Tips and troubleshooting (phrasing matters; validate against course knowledge)"
+  ],
+  "prerequisites": [
+    "Syllabus (PDF or document)",
+    "Optional: Google Drive integration",
+    "Optional: Projects for semester-to-semester refinement"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

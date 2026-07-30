@@ -1,0 +1,17 @@
+{
+  "slug": "organize-files-by-whats-in-them",
+  "title": "Organize files across your desktop",
+  "source_url": "https://claude.com/resources/use-cases/organize-files-by-whats-in-them",
+  "category": "Personal",
+  "model": "Opus 4.5",
+  "features": ["Cowork"],
+  "surface": "Cowork",
+  "description": "Grant Cowork access to your cluttered desktop and walk away. It reads your files, figures out what they are, and sorts them into folders while you do something else.",
+  "prompt": "Please help organize my desktop. Evaluate all of the scattered files and organize based on the contents inside of them.",
+  "steps": ["Describe the task: Grant Claude desktop access; it evaluates scattered files and sorts them into clean folder structures", "Give Claude context: Download Claude Desktop, start a Cowork session, grant desktop/folder access", "What Claude creates: Scans desktop, categorizes files, creates folder structure with progress updates", "Follow up prompts: Reorganize by custom logic, find lost files, create ongoing systems"],
+  "prerequisites": ["Claude Desktop app download", "Cowork feature access", "Desktop or folder access permissions", "Optional folder structure preferences and keep/archive/delete rules"],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Slug differs from page title (page titled 'Organize files across your desktop')."
+}

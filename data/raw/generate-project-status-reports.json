@@ -1,0 +1,26 @@
+{
+  "slug": "generate-project-status-reports",
+  "title": "Generate project status reports",
+  "source_url": "https://claude.com/resources/use-cases/generate-project-status-reports",
+  "category": "Professional",
+  "model": "Sonnet 4.5",
+  "features": ["Connectors"],
+  "surface": "Claude.ai chat",
+  "description": "Pull status updates from your emails, Slack channels, meeting notes, and project tools to create a tracker that shows who's working on what, what's blocked, and where things stand—all in one place.",
+  "prompt": "I need to consolidate project status from multiple sources into a task tracker.\n\nPull information from:\n\n- Gmail (past 2 weeks, search \"Project Hermes\")\n- Slack #hermes-sprint channel\n- Google Drive \"Project Hermes\" folder\n- Recent calendar meetings\n\nFor each task, I need to see:\n\n- Who owns it and what they're working on\n- Current status (not started, in progress, blocked, done)\n- Any blockers and how long they've been stuck\n- Notes from their updates about plans and challenges\n\nCreate an Excel tracker and include these features: visual status indicators, cell comments with context from sources (so I can hover and see the details), dropdown menus for status and priority (to make updates easy), and data bars showing progress visually.\n\nThe tracker should make it obvious at a glance where the problems are and who needs help.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts"
+  ],
+  "prerequisites": [
+    "Connectors: Google Drive, Gmail, Google Calendar, Slack",
+    "Optional: Extended Thinking (for better Word/Excel/PowerPoint results)",
+    "Excel file creation"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

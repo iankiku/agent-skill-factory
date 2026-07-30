@@ -1,0 +1,29 @@
+{
+  "slug": "source-insights-from-your-tools-to-build-a-deck",
+  "title": "Source insights from your tools to build a deck",
+  "source_url": "https://claude.com/resources/use-cases/source-insights-from-your-tools-to-build-a-deck",
+  "category": "Professional",
+  "model": "Opus 4.6",
+  "features": ["Extended Thinking", "Browser Use"],
+  "surface": "Cowork (Claude Desktop), with optional Claude in Chrome and connectors",
+  "description": "Claude Opus 4.6 chases leads across scattered sources, surfaces what no single source shows on its own, and builds a presentation around the through-line.",
+  "prompt": "I'm prepping for board meeting Friday. Q3 was the quarter where everything happened at once: we shipped the platform consolidation, closed the Apex partnership, and lost two enterprise accounts.\n\nStart with the Q3 project tracker in my local files — it has the key people, channels, and documents. Follow each person across their channels, emails, and documents they reference. When you find data, check it against other sources — the revenue numbers probably don't agree. Figure out which is current.\n\nThe board needs to understand whether the consolidation bet is paying off despite the churn. Create a PowerPoint deck (12–15 slides) with speaker notes, an Excel data appendix, and a two-page Word brief. Make an argument, not a summary.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "Cowork with local file access (supported formats required)",
+    "Connected source: Slack, Gmail, or Google Suite",
+    "Extended Thinking enabled",
+    "Claude in Chrome (optional)",
+    "Previous quarter's deck (optional)"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

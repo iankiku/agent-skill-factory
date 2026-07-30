@@ -1,0 +1,27 @@
+{
+  "slug": "see-what-your-campaign-goal-actually-requires",
+  "title": "See what your campaign goal actually requires",
+  "source_url": "https://claude.com/resources/use-cases/see-what-your-campaign-goal-actually-requires",
+  "category": "Nonprofits",
+  "model": "Sonnet 4.6",
+  "features": [
+    "Custom visuals"
+  ],
+  "surface": "Claude.ai chat",
+  "description": "Type a campaign goal and Claude draws the gift pyramid inline, tiered from the lead gift down, with each tier showing how many gifts you need and how many qualified prospects that realistically takes.",
+  "prompt": "We're thinking about a $2M capital campaign. Show me what the gift pyramid needs to look like, meaning how many donors at each tier and how many qualified prospects I'd realistically need behind each one. Let me drag the goal and watch the shape change, and flag the tiers where I'm probably thin.",
+  "steps": [
+    "Describe the task — input campaign goal number",
+    "Give Claude context — type numbers directly; optional prospect list upload",
+    "Claude creates interactive pyramid visualization with gift ranges and prospect requirements",
+    "Follow-up interactions (click tiers for details, redraw with constraints, create cultivation timelines)"
+  ],
+  "prerequisites": [
+    "No files required to start",
+    "Optional: prospect list (XLSX) or wealth screening export for comparison against actual pipeline"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

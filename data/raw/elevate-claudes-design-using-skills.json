@@ -1,0 +1,17 @@
+{
+  "slug": "elevate-claudes-design-using-skills",
+  "title": "Elevate Claude's design using skills",
+  "source_url": "https://claude.com/resources/use-cases/elevate-claudes-design-using-skills",
+  "category": "Personal",
+  "model": "Sonnet 4.5",
+  "features": ["Skills"],
+  "surface": "Claude.ai chat",
+  "description": "Design a skill that automatically activates design principles into Claude's outputs.",
+  "prompt": "I create a lot of visual outputs with Claude—presentations, dashboards, reports, HTML pages. They're functional but always feel generic, like first drafts rather than polished work. I want them to look like they've been through multiple rounds of professional design refinement.\n\nI'd like to create a skill that automatically applies design thinking to any visual output I request. Something that makes Claude interrogate design choices, reference best practices, and push for excellence before delivering anything.\n\nThe skill should activate whenever I ask for presentations, spreadsheets, HTML artifacts, PDFs, or anything visual. Claude should:\n\n- Start with a functional version, then elevate it\n- Question every design choice (typography, color, layout, spacing)\n- Draw from professional design references (Stripe, Linear, Apple, Bauhaus, Swiss design)\n- Apply specific visual techniques rather than generic defaults\n- Balance bold choices with tasteful restraint\n- Ensure the final output looks hand-crafted, not template-based\n\nI want the skill to have reference files that Claude consults:\n\n- A design interrogation checklist (questions to ask before delivering)\n- A technique catalog (specific visual moves organized by what they achieve)\n- A reference library (design exemplars and principles to draw from)\n- An elevation protocol (systematic process for refinement)\n- A design philosophy (principles for balancing expertise with restraint)\n\nThe goal is that when I ask \"create a sales dashboard\" or \"make a presentation deck,\" Claude automatically thinks like a design director who wouldn't accept generic output. The user sees only the polished result unless they specifically ask to see the design thinking process. Help me create this skill with all the necessary reference files.",
+  "steps": ["Enable code execution and file creation in Settings > Capabilities > Skills", "Add the design-elevation folder to your skills directory", "Claude will automatically consult reference files for visual outputs", "Receive elevated outputs without repeating design requirements"],
+  "prerequisites": ["Code execution and file creation enabled in Claude Settings > Capabilities > Skills", "Extended Thinking feature (optional)"],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

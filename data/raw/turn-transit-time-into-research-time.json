@@ -1,0 +1,26 @@
+{
+  "slug": "turn-transit-time-into-research-time",
+  "title": "Turn transit time into research time",
+  "source_url": "https://claude.com/resources/use-cases/turn-transit-time-into-research-time",
+  "category": "Research",
+  "model": "Opus 4.5",
+  "features": ["Research", "Web Search", "Extended Thinking"],
+  "surface": "Claude mobile app and Claude.ai desktop (cross-device continuity)",
+  "description": "Capture rough thoughts by voice on mobile, then let Claude research your ideas and produce polished deliverables at your desk.",
+  "prompt": "I just had a thought for the product meeting later. I want to look into what our competitors are doing with their onboarding flows. I feel like everybody's moving towards a simpler experience.\n\nCan you pull in our Q1 planning doc because I need to remember where we landed on roadmap priorities. I think we might be overcomplicating our onboarding flow, and I want to make sure that if I make that case in the meeting, I have the data to back it up.\n\nCan you please look through the doc, do some competitor research on their onboarding flows, find any good onboarding stats, and prep me for later? Thanks.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts"
+  ],
+  "prerequisites": [
+    "Enable web search",
+    "Enable Extended Thinking (optional)",
+    "Upload Q1 planning document or reference documents on mobile"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Example prompt is a voice-dictated note captured on the mobile app."
+}

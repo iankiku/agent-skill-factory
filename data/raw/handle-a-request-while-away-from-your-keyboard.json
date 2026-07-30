@@ -1,0 +1,32 @@
+{
+  "slug": "handle-a-request-while-away-from-your-keyboard",
+  "title": "Handle a request while away from your keyboard",
+  "source_url": "https://claude.com/resources/use-cases/handle-a-request-while-away-from-your-keyboard",
+  "category": "Cowork",
+  "model": "Sonnet 4.6",
+  "features": [
+    "Connectors",
+    "Cowork"
+  ],
+  "surface": "Cowork (Dispatch) + Claude mobile app",
+  "description": "Use Dispatch in Claude Cowork to respond to requests from the Claude mobile app using everything on your computer.",
+  "prompt": "Jamie just asked me on Slack for the latest Q2 budget spreadsheet. Find it in my Documents/Finance folder on my computer — the file with \"Q2\" and \"budget\" in the name. Post it to Jamie in the #proj-planning Slack channel. Add a note that the tab labeled \"Revised\" has the current numbers.",
+  "steps": [
+    "Describe the task — explain what you need Claude to handle",
+    "Give Claude context — provide access to local files and necessary connectors",
+    "Claude creates the output — locates files, prepares messages, awaits approval",
+    "Follow up prompts — refine or expand the conversation",
+    "Continue on laptop — pick up the same conversation when returning to desktop"
+  ],
+  "prerequisites": [
+    "Claude desktop app running with keep-awake toggle enabled",
+    "Claude mobile app",
+    "Local file access (Documents/Finance folder)",
+    "Slack connector (required for posting)",
+    "Gmail connector (optional, for email drafting)"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

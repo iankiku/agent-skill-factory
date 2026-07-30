@@ -1,0 +1,26 @@
+{
+  "slug": "log-sales-calls-to-your-crm",
+  "title": "Log sales calls to your CRM",
+  "source_url": "https://claude.com/resources/use-cases/log-sales-calls-to-your-crm",
+  "category": "Claude in Chrome",
+  "model": "Haiku 4.5",
+  "features": ["Browser Use"],
+  "surface": "Claude in Chrome",
+  "description": "Claude in Chrome can read your calendar, match attendees to Salesforce contacts, and draft activity logs for each call. You add notes and approve before anything gets created.",
+  "prompt": "Log my calls from today in Salesforce.\n\nSteps:\n1. Go to my Google Calendar and find today's external meetings (skip internal)\n2. For each meeting, look up the attendees in Salesforce\n3. Create an activity log for each call—I'll provide a quick summary of what was discussed\n4. Format each log with next steps included\n\nDo not submit. Show me everything for review before saving to Salesforce.",
+  "steps": [
+    "Go to my Google Calendar and find today's external meetings (skip internal)",
+    "For each meeting, look up the attendees in Salesforce",
+    "Create an activity log for each call—I'll provide a quick summary of what was discussed",
+    "Format each log with next steps included"
+  ],
+  "prerequisites": [
+    "Google Calendar login in Chrome",
+    "Salesforce login in Chrome",
+    "Accessible call notes in a doc, notepad, or bullet points (optional)"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "The numbered steps are part of the example prompt itself."
+}

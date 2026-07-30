@@ -1,0 +1,17 @@
+{
+  "slug": "understand-and-extend-an-inherited-spreadsheet",
+  "title": "Understand and extend an inherited spreadsheet",
+  "source_url": "https://claude.com/resources/use-cases/understand-and-extend-an-inherited-spreadsheet",
+  "category": "Finance",
+  "model": "Opus 4.5",
+  "features": ["Extended Thinking"],
+  "surface": "Claude.ai chat",
+  "description": "Understand existing formulas and structure then add new data while preserving the original logic.",
+  "prompt": "I inherited this SaaS revenue model when Marcus left. Finance needs Q1-Q3 2026 projections by Thursday. There's a Legend tab with some basics, and a few cell comments on formulas. Can you read through those, then help me understand the rest? Specifically:\n\n- How the four tabs connect to each other\n- What the seasonality adjustment and CAC Payback formulas are actually doing\n- Anything important that isn't documented\n\nAdd some visual elements so I can see the trends at a glance—data bars on the margins, or a column showing growth from baseline. And add comments explaining any complex formulas. Then extend the model through Q3 2026, following Marcus's patterns.",
+  "steps": ["Describe the task", "Give Claude context (upload spreadsheet)", "Review what Claude creates", "Follow up with additional prompts (changelog, variance analysis)"],
+  "prerequisites": ["File creation must be enabled in settings", "Extended Thinking (recommended)", "Spreadsheet file upload required"],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

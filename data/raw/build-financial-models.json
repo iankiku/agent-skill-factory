@@ -1,0 +1,28 @@
+{
+  "slug": "build-financial-models",
+  "title": "Build financial models",
+  "source_url": "https://claude.com/resources/use-cases/build-financial-models",
+  "category": "Finance",
+  "model": "Sonnet 4.5",
+  "features": ["Extended Thinking", "Web Search", "Connectors"],
+  "surface": "Claude.ai chat",
+  "description": "Create investment analyses with complete financial models, scenario planning, and risk evaluation.",
+  "prompt": "I'm evaluating MediTech Solutions (healthcare SaaS) and need a complete investment analysis.\n\nDeal structure: $75M growth equity stake at 3.6x ARR entry, exit at 7.0x in year 5. Current metrics are $50M ARR growing 35% with 18% EBITDA margin.\n\nGet the company financials from Daloopa - search for MediTech Solutions and pull their historical revenue, EBITDA margins, customer metrics, and growth rates.\n\nPull healthcare SaaS comparables from S&P Global - find public companies in the sector and get their current trading multiples, growth rates, and margin profiles. I need this to validate our 7.0x exit assumption.\n\nSearch the web for healthcare SaaS customer concentration benchmarks - the company mentioned their top 3 customers represent about 40% of revenue and I need to know if that's typical or concerning for this sector. Also look up recent healthcare SaaS growth trends to stress-test the 35% growth assumption.\n\nRetrieve our IC template from Box - search the \"IC Templates\" folder and use the private equity model format as the structure.\n\nKey questions to address: How do returns look if growth slows to 25% or 20%? What does the customer concentration risk mean for our downside scenario? How does our 7.0x exit assumption compare to where public healthcare SaaS companies are trading today?\n\nCreate an Excel model with scenarios (base, upside, downside), sensitivity analysis on growth and exit multiple, risk assessment focusing on customer concentration, and a comps table showing where public companies trade. Use sophisticated private equity formatting with premium visual quality, an intentional color scheme, working formulas, frozen panes, and conditional formatting.",
+  "steps": [
+    "Describe the task: specify investment opportunity details and partner requirements",
+    "Give Claude context: connect data platforms (Daloopa, S&P Global, Box); enable Extended Thinking and Web Search",
+    "What Claude creates: multi-sheet model with Executive Summary, Financial Model, Scenario Analysis, Risk Assessment, and Comps & Valuation",
+    "Follow up prompts: create IC memo, validate growth assumptions, research exit multiples",
+    "Tricks, tips, and troubleshooting: keep comps fresh, work in Excel with Claude, unlock further capabilities"
+  ],
+  "prerequisites": [
+    "Connectors: Daloopa, S&P Global, Box",
+    "Features: Extended Thinking, Web Search",
+    "Excel for downloading and editing models",
+    "Optional: Claude for Excel (beta)"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Bold markdown markers in the source prompt (e.g. around 'Get the company financials from Daloopa') rendered as plain text here."
+}

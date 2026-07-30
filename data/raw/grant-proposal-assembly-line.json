@@ -1,0 +1,28 @@
+{
+  "slug": "grant-proposal-assembly-line",
+  "title": "Grant proposal assembly line",
+  "source_url": "https://claude.com/resources/use-cases/grant-proposal-assembly-line",
+  "category": "Nonprofits",
+  "model": "Sonnet 4.5",
+  "features": ["Connectors"],
+  "surface": "Claude.ai chat",
+  "description": "Build a modular content library from your successful proposals and organizational materials then produce foundation-ready submissions in a fraction of the usual time.",
+  "prompt": "I need to build a grant proposal assembly line system to handle our 20+ annual grant applications more efficiently. We apply to foundations, government agencies, and corporate funders for youth programs, workforce development, and education initiatives. Start by creating a modular content library from the materials I'm providing: 3 recent successful proposals, our annual report, program one-pagers, and outcome data spreadsheets.\n\nStep 1: Build the Content Library\n\nOrganize reusable modules including:\n\n- Program descriptions (3 versions: brief/standard/detailed for each program)\n- Need statements with current statistics and community data\n- Organizational capacity sections (history, leadership, fiscal health)\n- Evaluation methodologies and past outcome results\n- Standard attachments (board list, audit, IRS letter)\n\nSave everything to Google Drive in a \"Grant Content Library\" folder with clear naming conventions.\n\nStep 2: Create First Proposal\n\nNow generate a proposal for the Morrison Foundation Youth Innovation Grant ($75,000) using the library. The RFP requires:\n\n- Executive summary (1 page)\n- Problem statement linking to community needs (2 pages)\n- Proposed program and innovation approach (3 pages)\n- Budget with detailed narrative (2 pages)\n- Logic model showing theory of change\n- Evaluation plan with specific metrics\n\nPull relevant modules from the library, customize language to emphasize \"innovation\" and \"youth voice\" (their key priorities), and create new content where needed.\n\nStep 3: Set Up the Assembly System\n\nCreate templates and tracking tools:\n\n- Master tracking spreadsheet for all grants (deadlines, requirements, amounts, status)\n- Funder research template to capture priorities before writing\n- Module selection guide showing which content blocks work for different funder types\n- Budget template that auto-calculates indirect costs and matches funder categories\n- Email templates for submitting proposals and following up\n\nMake this a true assembly line where I can produce proposals 60% faster by mixing and matching proven content.",
+  "steps": [
+    "Step 1: Build the Content Library",
+    "Step 2: Create First Proposal",
+    "Step 3: Set Up the Assembly System"
+  ],
+  "prerequisites": [
+    "Google Drive integration",
+    "Gmail integration",
+    "Past successful proposals",
+    "Program descriptions",
+    "Organizational background documents",
+    "Outcome data / impact reports"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "The three steps are embedded in the example prompt itself."
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "debate-practice-with-feedback",
+  "title": "Debate practice with feedback",
+  "source_url": "https://claude.com/resources/use-cases/debate-practice-with-feedback",
+  "category": "Personal",
+  "model": "Sonnet 4.5",
+  "features": ["Extended Thinking"],
+  "surface": "Claude.ai chat",
+  "description": "Test your ideas against opposing views through an interactive tool where you defend your position and get real-time pushback.",
+  "prompt": "I have a debate coming up and need to prepare. I want to be able to state my topic and position, then get challenged with real counterarguments and evidence so I can test my responses.\n\nCan you create an artifact where I can practice debating any topic against the strongest possible opponent? Make it genuinely tough - I need practice against the best case for the other side, not weak strawman arguments.\n\nThe artifact's design should be offwhite with grayscale foundation with desaturated watercolor punctuation and analog fidelity through blueprint grids and paper textures. Think editorial refinement meets architectural drawing with transparency modulation, atmospheric zoning, and layered warmth.",
+  "steps": [
+    "Describe the task — state debate topic and position; request interactive simulator with strong counterarguments and feedback",
+    "Give Claude context — enable AI-powered artifacts in Settings under Capabilities; optionally enable Extended Thinking",
+    "What Claude creates — interactive practice simulator analyzing opposing arguments and evaluating responses in real-time",
+    "Follow-up prompts — analyze weaknesses, create response cards, handle rhetorical tactics"
+  ],
+  "prerequisites": [
+    "AI-powered artifacts enabled (required)",
+    "Extended Thinking (optional, for higher-quality output)"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

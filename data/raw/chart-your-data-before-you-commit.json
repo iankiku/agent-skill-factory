@@ -1,0 +1,17 @@
+{
+  "slug": "chart-your-data-before-you-commit",
+  "title": "Chart your data in conversation with Claude before you commit to a reading",
+  "source_url": "https://claude.com/resources/use-cases/chart-your-data-before-you-commit",
+  "category": "Education",
+  "model": "Sonnet 4.6",
+  "features": ["Custom visuals"],
+  "surface": "Claude.ai chat",
+  "description": "Upload a CSV and Claude builds the correlation grid inline, flagging the patterns worth a second look. The flags are a starting point — you click into what's interesting and the conversation goes from there.",
+  "prompt": "Show me what this data is telling me. I'm looking for the strongest relationships in here. Can you give me a correlation matrix and let me click into any pair to see the scatter? Flag anything that surprises you. Don't hold back on making this readable; I'm presenting this to a committee.",
+  "steps": ["Describe the task: Upload data and ask Claude to show relationships", "Give Claude context: Upload the CSV file as required context", "What Claude creates: Builds correlation grid with flagged patterns", "Follow up prompts: Click into visuals for deeper analysis, ask Claude to write reports, quiz yourself on findings"],
+  "prerequisites": ["CSV file upload", "Google Drive connector (optional, for Google Sheets access)"],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Prompt shown on page; custom visuals (correlation matrix/scatter) generated inline in chat."
+}

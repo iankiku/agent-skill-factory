@@ -1,0 +1,26 @@
+{
+  "slug": "build-customer-personas",
+  "title": "Build customer personas",
+  "source_url": "https://claude.com/resources/use-cases/build-customer-personas",
+  "category": "Marketing",
+  "model": "Sonnet 4.5",
+  "features": ["Connectors", "Extended Thinking"],
+  "surface": "Claude.ai chat",
+  "description": "Create personas with demographics, goals, and pain points synthesized from your research data.",
+  "prompt": "I've uploaded customer feedback from different sources—could be sales call notes, support conversations, survey responses, whatever we've collected. Figure out what types of customers we have based on their actual behavior and problems.\n\nCreate an interactive artifact where I can explore each persona and see their journey. Show their goals, what frustrates them, and include actual quotes from customers. Make the artifact professionally and elegantly designed, as it will be shared with others. Focus on creating analytical and helpful content. Take time to analyze thoroughly, outline carefully, and validate your work.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts (create written report, identify revenue opportunity, find quick wins)"
+  ],
+  "prerequisites": [
+    "Upload customer research files (sales call notes, interview transcripts, survey responses)",
+    "Optional connectors: HubSpot, Intercom",
+    "Extended Thinking feature enabled"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

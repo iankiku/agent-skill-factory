@@ -1,0 +1,27 @@
+{
+  "slug": "create-a-sales-proposal-presentation",
+  "title": "Create a sales proposal presentation",
+  "source_url": "https://claude.com/resources/use-cases/create-a-sales-proposal-presentation",
+  "category": "Sales",
+  "model": "Opus 4.5",
+  "features": ["Extended Thinking", "Connectors"],
+  "surface": "Claude.ai chat",
+  "description": "Create a polished client proposal deck with professional layouts data visualizations and cohesive design—then refine through feedback until it matches your standards.",
+  "prompt": "I'm putting together a proposal deck for Midwest Regional Health, a healthcare network we've been in conversations with about our patient engagement platform.\n\nSearch my Google Drive for documents with \"Midwest Regional\" in the title—there should be discovery call notes, their RFP, and a competitive analysis we did.\n\nPull the relevant information to build out these slides: Make sure to include executive summary, their challenges, our solution and how it addresses their specific situation, implementation approach, pricing, case study (find a similar healthcare client we can reference), timeline and next steps.\n\nDesign direction: Clean and professional, but not sterile. I want something modern and approachable while still appropriate for hospital executives. Use premium typography (not default fonts) and our brand colors from the logo I'm uploading. Make sure text is conservatively sized so nothing gets cut off, and verify that no elements overlap.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "Google Drive integration enabled",
+    "Company logo upload",
+    "Extended Thinking feature enabled (optional but recommended)"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

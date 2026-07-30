@@ -1,0 +1,25 @@
+{
+  "slug": "clean-up-promotional-emails",
+  "title": "Clean up promotional emails",
+  "source_url": "https://claude.com/resources/use-cases/clean-up-promotional-emails",
+  "category": "Claude in Chrome",
+  "model": "Haiku 4.5",
+  "features": ["Browser Use"],
+  "surface": "Claude in Chrome",
+  "description": "Claude in Chrome can scan your inbox, identify promotional and marketing emails, and flag them for your review. You decide what to delete in bulk rather than clicking through one by one.",
+  "prompt": "Find emails I likely don't need so I can review and bulk delete.\n\nFlag these:\n- Promotional emails from retailers/brands\n- Newsletters I haven't opened in 3+ months\n- Automated notifications (delivered shipping updates, expired calendar reminders)\n- Marketing emails from SaaS products\n\nDon't flag:\n- Emails from actual people (not automated)\n- Anything with attachments\n- Anything from [my company domain]\n\nOutput: Show me the list organized by sender so I can review before deleting.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "Logged into your Gmail account before starting the Claude in Chrome session"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

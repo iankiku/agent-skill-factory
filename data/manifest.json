@@ -1,0 +1,881 @@
+{
+  "source": "https://claude.com/resources/use-cases",
+  "retrieved_at": "2026-07-26",
+  "attribution": "All use-case titles, descriptions, and prompts are published by Anthropic at claude.com/resources/use-cases. Copyright Anthropic PBC.",
+  "count": 94,
+  "use_cases": [
+    {
+      "slug": "audit-a-folder-of-visual-assets-against-your-guidelines",
+      "title": "Audit a folder of visual assets against your guidelines",
+      "category": "Cowork",
+      "model": "Opus 4.7",
+      "features": [
+        "Cowork"
+      ]
+    },
+    {
+      "slug": "adapt-a-standard-textbook-page-to-every-reading-level",
+      "title": "Adapt a standard textbook page to every reading level",
+      "category": "Cowork",
+      "model": "Opus 4.7",
+      "features": [
+        "Cowork"
+      ]
+    },
+    {
+      "slug": "remote-control-your-computer-with-dispatch",
+      "title": "Remote control your computer with Dispatch",
+      "category": "Cowork",
+      "model": "Sonnet 4.6",
+      "features": [
+        "Cowork",
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "kick-off-long-running-computer-tasks-from-the-claude-mobile-app",
+      "title": "Kick off long-running computer tasks from the Claude mobile app",
+      "category": "Cowork",
+      "model": "Sonnet 4.6",
+      "features": [
+        "Cowork"
+      ]
+    },
+    {
+      "slug": "handle-a-request-while-away-from-your-keyboard",
+      "title": "Handle a request while away from your keyboard",
+      "category": "Cowork",
+      "model": "Sonnet 4.6",
+      "features": [
+        "Connectors",
+        "Cowork"
+      ]
+    },
+    {
+      "slug": "operate-any-computer-app-from-your-phone-with-dispatch",
+      "title": "Operate any computer app from your phone with Dispatch",
+      "category": "Cowork",
+      "model": "Sonnet 4.6",
+      "features": [
+        "Connectors",
+        "Cowork"
+      ]
+    },
+    {
+      "slug": "draft-a-credit-memo-from-spreads-and-statements-with-claude-for-excel",
+      "title": "Draft a credit memo from spreads and statements with Claude for Excel",
+      "category": "Finance",
+      "model": "Sonnet 4.6",
+      "features": [
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "validate-reserves-and-draft-filing-narrative-with-claude-for-excel",
+      "title": "Validate reserves and draft filing narrative with Claude for Excel",
+      "category": "Finance",
+      "model": "Sonnet 4.6",
+      "features": [
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "see-your-theory-of-change-in-chat-with-claude",
+      "title": "See your theory of change in chat with Claude",
+      "category": "Nonprofits",
+      "model": "Sonnet 4.6",
+      "features": [
+        "Custom visuals"
+      ]
+    },
+    {
+      "slug": "plan-your-syllabus-see-which-weeks-are-locked",
+      "title": "Plan your syllabus",
+      "category": "Education",
+      "model": "Sonnet 4.6",
+      "features": [
+        "Custom visuals"
+      ]
+    },
+    {
+      "slug": "work-through-grant-options-in-chat-with-claude",
+      "title": "Work through grant options in chat",
+      "category": "Education",
+      "model": "Sonnet 4.6",
+      "features": [
+        "Custom visuals"
+      ]
+    },
+    {
+      "slug": "apply-a-formula-as-you-learn-it-in-chat-with-claude",
+      "title": "Apply a formula as you learn it",
+      "category": "Education",
+      "model": "Sonnet 4.6",
+      "features": [
+        "Custom visuals"
+      ]
+    },
+    {
+      "slug": "bring-your-whiteboard-lesson-to-life",
+      "title": "Bring your whiteboard lesson to life",
+      "category": "Education",
+      "model": "Sonnet 4.6",
+      "features": [
+        "Custom visuals"
+      ]
+    },
+    {
+      "slug": "visualize-the-mechanism-behind-an-explanation-mid-chat",
+      "title": "Visualize the mechanism behind an explanation mid-chat",
+      "category": "Education",
+      "model": "Sonnet 4.6",
+      "features": [
+        "Custom visuals"
+      ]
+    },
+    {
+      "slug": "update-your-financial-model-after-earnings",
+      "title": "Update your financial model after earnings",
+      "category": "Finance",
+      "model": "Opus 4.6",
+      "features": [
+        "Connectors",
+        "Skills"
+      ]
+    },
+    {
+      "slug": "see-what-your-campaign-goal-actually-requires",
+      "title": "See what your campaign goal actually requires",
+      "category": "Nonprofits",
+      "model": "Sonnet 4.6",
+      "features": [
+        "Custom visuals"
+      ]
+    },
+    {
+      "slug": "see-budget-futures-side-by-side",
+      "title": "See budget futures side by side, in chat with Claude",
+      "category": "Nonprofits",
+      "model": "Sonnet 4.6",
+      "features": [
+        "Custom visuals"
+      ]
+    },
+    {
+      "slug": "see-why-donor-retention-beats-acquisition",
+      "title": "See why donor retention beats acquisition, in chat with Claude",
+      "category": "Nonprofits",
+      "model": "Sonnet 4.6",
+      "features": [
+        "Custom visuals"
+      ]
+    },
+    {
+      "slug": "map-your-lit-review-mid-conversation",
+      "title": "Map your lit review mid-conversation to surface the underlying debate",
+      "category": "Education",
+      "model": "Sonnet 4.6",
+      "features": [
+        "Custom visuals"
+      ]
+    },
+    {
+      "slug": "chart-your-data-before-you-commit",
+      "title": "Chart your data in conversation with Claude before you commit to a reading",
+      "category": "Education",
+      "model": "Sonnet 4.6",
+      "features": [
+        "Custom visuals"
+      ]
+    },
+    {
+      "slug": "Create-brand-assets",
+      "title": "Create brand assets",
+      "category": "Professional",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Web Search"
+      ]
+    },
+    {
+      "slug": "create-a-custom-webpage",
+      "title": "Create a custom webpage",
+      "category": "Personal",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "contract-redlining-and-negotiation",
+      "title": "Contract redlining and negotiation",
+      "category": "Legal",
+      "model": "Opus 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "elevate-claudes-design-using-skills",
+      "title": "Elevate Claude's design using skills",
+      "category": "Personal",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Skills"
+      ]
+    },
+    {
+      "slug": "turn-research-into-presentations",
+      "title": "Turn research into presentations",
+      "category": "Education",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "build-interactive-diagram-tools",
+      "title": "Build interactive diagram tools",
+      "category": "Personal",
+      "model": "Opus 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "package-your-brand-guidelines-in-a-skill",
+      "title": "Package your brand guidelines in a skill",
+      "category": "Professional",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Skills"
+      ]
+    },
+    {
+      "slug": "understand-and-extend-an-inherited-spreadsheet",
+      "title": "Understand and extend an inherited spreadsheet",
+      "category": "Finance",
+      "model": "Opus 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "explore-what-claude-can-do-for-you",
+      "title": "Explore what Claude can do for you",
+      "category": "Professional",
+      "model": "Opus 4.5",
+      "features": [
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "workflow-improvement-planner",
+      "title": "Workflow improvement planner",
+      "category": "Nonprofits",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "organize-files-by-whats-in-them",
+      "title": "Organize files across your desktop",
+      "category": "Personal",
+      "model": "Opus 4.5",
+      "features": [
+        "Cowork"
+      ]
+    },
+    {
+      "slug": "build-analysis-from-browser-charts-and-folder-data",
+      "title": "Build analysis from browser charts and folder data",
+      "category": "Professional",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Cowork"
+      ]
+    },
+    {
+      "slug": "prep-scattered-documents-for-a-compliance-audit",
+      "title": "Prep scattered documents for a compliance audit",
+      "category": "Legal",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Cowork"
+      ]
+    },
+    {
+      "slug": "reconcile-transactions-across-your-accounts",
+      "title": "Reconcile transactions across your accounts",
+      "category": "Finance",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Cowork"
+      ]
+    },
+    {
+      "slug": "surface-themes-from-all-your-feedback-channels",
+      "title": "Surface themes from all your feedback channels",
+      "category": "Research",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Cowork"
+      ]
+    },
+    {
+      "slug": "build-a-daily-briefing-across-your-tools",
+      "title": "Build a daily briefing across your tools",
+      "category": "Professional",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Cowork"
+      ]
+    },
+    {
+      "slug": "process-batches-of-vendors-with-cowork",
+      "title": "Process batches of vendors with Cowork",
+      "category": "Professional",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Cowork"
+      ]
+    },
+    {
+      "slug": "size-a-market-using-your-research",
+      "title": "Size a market using your research",
+      "category": "Professional",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Cowork"
+      ]
+    },
+    {
+      "slug": "map-your-understanding-and-build-lessons-from-the-gaps",
+      "title": "Map your understanding and build lessons from the gaps",
+      "category": "Personal",
+      "model": "Opus 4.6",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "stress-test-your-financial-plan-across-scenarios",
+      "title": "Stress-test your financial plan across scenarios",
+      "category": "Personal",
+      "model": "Opus 4.6",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "source-insights-from-your-tools-to-build-a-deck",
+      "title": "Source insights from your tools to build a deck",
+      "category": "Professional",
+      "model": "Opus 4.6",
+      "features": [
+        "Extended Thinking",
+        "Browser Use"
+      ]
+    },
+    {
+      "slug": "evaluate-a-company-from-the-science-to-the-balance-sheet",
+      "title": "Evaluate a company from the science to the balance sheet",
+      "category": "Professional",
+      "model": "Opus 4.6",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "thoughtful-gift-giving-with-claude",
+      "title": "Thoughtful gift giving with Claude",
+      "category": "Personal",
+      "model": "Opus 4.5",
+      "features": [
+        "Web Search",
+        "Connectors",
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "log-sales-calls-to-your-crm",
+      "title": "Log sales calls to your CRM",
+      "category": "Claude in Chrome",
+      "model": "Haiku 4.5",
+      "features": [
+        "Browser Use"
+      ]
+    },
+    {
+      "slug": "compare-products-across-sites",
+      "title": "Compare products across sites",
+      "category": "Claude in Chrome",
+      "model": "Haiku 4.5",
+      "features": [
+        "Browser Use"
+      ]
+    },
+    {
+      "slug": "prepare-and-plan-from-your-calendar",
+      "title": "Prepare and plan from your calendar",
+      "category": "Claude in Chrome",
+      "model": "Haiku 4.5",
+      "features": [
+        "Browser Use"
+      ]
+    },
+    {
+      "slug": "clean-up-promotional-emails",
+      "title": "Clean up promotional emails",
+      "category": "Claude in Chrome",
+      "model": "Haiku 4.5",
+      "features": [
+        "Browser Use"
+      ]
+    },
+    {
+      "slug": "pull-metrics-from-analytics-dashboards",
+      "title": "Pull metrics from analytics dashboards",
+      "category": "Claude in Chrome",
+      "model": "Haiku 4.5",
+      "features": [
+        "Browser Use"
+      ]
+    },
+    {
+      "slug": "organize-files-in-google-drive",
+      "title": "Organize files in Google Drive",
+      "category": "Claude in Chrome",
+      "model": "Haiku 4.5",
+      "features": [
+        "Browser Use"
+      ]
+    },
+    {
+      "slug": "turn-transit-time-into-research-time",
+      "title": "Turn transit time into research time",
+      "category": "Research",
+      "model": "Opus 4.5",
+      "features": [
+        "Research",
+        "Web Search",
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "organize-your-legal-workflows-using-projects",
+      "title": "Organize your legal workflows using Projects",
+      "category": "Legal",
+      "model": "Opus 4.5",
+      "features": [
+        "Projects"
+      ]
+    },
+    {
+      "slug": "grant-proposal-assembly-line",
+      "title": "Grant proposal assembly line",
+      "category": "Nonprofits",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "create-a-sales-proposal-presentation",
+      "title": "Create a sales proposal presentation",
+      "category": "Sales",
+      "model": "Opus 4.5",
+      "features": [
+        "Extended Thinking",
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "build-a-custom-bucket-list-app",
+      "title": "Build a custom bucket list",
+      "category": "Personal",
+      "model": "Opus 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "design-a-local-foraging-guide",
+      "title": "Design a local foraging guide",
+      "category": "Personal",
+      "model": "Opus 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "develop-a-program-toolkit",
+      "title": "Develop a program toolkit",
+      "category": "Nonprofits",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "visualize-program-data",
+      "title": "Visualize program data",
+      "category": "Nonprofits",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "create-a-volunteer-management-system",
+      "title": "Create a volunteer management system",
+      "category": "Nonprofits",
+      "model": "Sonnet 4.5",
+      "features": []
+    },
+    {
+      "slug": "analyze-fundraising-performance",
+      "title": "Analyze fundraising performance",
+      "category": "Nonprofits",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "generate-an-ai-policy",
+      "title": "Generate an AI policy",
+      "category": "Nonprofits",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Web Search"
+      ]
+    },
+    {
+      "slug": "write-an-impact-report",
+      "title": "Write an impact report",
+      "category": "Nonprofits",
+      "model": "Sonnet 4.5",
+      "features": []
+    },
+    {
+      "slug": "build-financial-models",
+      "title": "Build financial models",
+      "category": "Finance",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking",
+        "Web Search",
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "draft-investment-memos",
+      "title": "Draft investment memos",
+      "category": "Finance",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking",
+        "Web Search",
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "preclinical-study-analysis",
+      "title": "Preclinical study analysis",
+      "category": "Life Sciences",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "genomic-data-analysis",
+      "title": "Genomic data analysis",
+      "category": "Life Sciences",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Connectors",
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "generate-project-status-reports",
+      "title": "Generate project status reports",
+      "category": "Professional",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "adapt-content-across-platforms",
+      "title": "Adapt content across platforms",
+      "category": "Marketing",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking",
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "verify-statistics-from-raw-data",
+      "title": "Verify statistics from raw data",
+      "category": "Research",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "analyze-patterns-in-user-feedback",
+      "title": "Analyze patterns in user feedback",
+      "category": "Professional",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "turn-text-threads-to-researched-notes",
+      "title": "Turn text threads to researched notes",
+      "category": "Personal",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Connectors",
+        "Web Search"
+      ]
+    },
+    {
+      "slug": "organize-your-business-finances",
+      "title": "Organize your business finances",
+      "category": "Finance",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "plan-your-literature-review",
+      "title": "Plan your literature review",
+      "category": "Research",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "analyze-campaign-performance",
+      "title": "Analyze campaign performance",
+      "category": "Marketing",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "track-discovery-timelines-and-analyze-patterns",
+      "title": "Track discovery timelines and analyze patterns",
+      "category": "Legal",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking",
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "create-new-hire-onboarding-guides",
+      "title": "Create new hire onboarding guides",
+      "category": "HR",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "prepare-for-sales-deals",
+      "title": "Prepare for sales deals",
+      "category": "Sales",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Connectors",
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "quickly-prep-for-your-week",
+      "title": "Quickly prep for your week",
+      "category": "Professional",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking",
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "create-custom-course-materials",
+      "title": "Create custom course materials",
+      "category": "Education",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "compare-and-analyze-competing-options",
+      "title": "Compare and analyze competing options",
+      "category": "Professional",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "create-sales-reports",
+      "title": "Create sales reports",
+      "category": "Sales",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking",
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "create-interactive-pdf-forms",
+      "title": "Create interactive PDF forms",
+      "category": "Professional",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "create-a-process-flowchart",
+      "title": "Create a process flowchart",
+      "category": "Professional",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "turn-emails-into-an-event-tracker",
+      "title": "Turn emails into an event tracker",
+      "category": "Professional",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking",
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "build-a-battle-card-library",
+      "title": "Build a battle card library",
+      "category": "Sales",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Web Search",
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "create-a-company-newsletter",
+      "title": "Create a company newsletter",
+      "category": "Professional",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "turn-inspiration-to-design-plans",
+      "title": "Turn inspiration into design plans",
+      "category": "Personal",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Web Search"
+      ]
+    },
+    {
+      "slug": "build-customer-personas",
+      "title": "Build customer personas",
+      "category": "Marketing",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Connectors",
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "create-health-and-exercise-notes",
+      "title": "Create health and exercise notes",
+      "category": "Personal",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Web Search",
+        "Connectors"
+      ]
+    },
+    {
+      "slug": "create-digital-recipe-cards",
+      "title": "Create digital recipe cards",
+      "category": "Personal",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "create-a-daily-travel-itinerary",
+      "title": "Create a daily travel itinerary",
+      "category": "Personal",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Web Search",
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "debate-practice-with-feedback",
+      "title": "Debate practice with feedback",
+      "category": "Personal",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "research-and-compare-travel-destinations",
+      "title": "Research and compare travel destinations",
+      "category": "Personal",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Web Search",
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "practice-case-interviews-with-feedback",
+      "title": "Practice case interviews with feedback",
+      "category": "Education",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Extended Thinking"
+      ]
+    },
+    {
+      "slug": "Plan-your-career-path",
+      "title": "Plan your career path",
+      "category": "Education",
+      "model": "Sonnet 4.5",
+      "features": [
+        "Connectors",
+        "Research"
+      ]
+    }
+  ],
+  "field_notes": {
+    "extraction_status": "ok = boxed example prompt captured verbatim; partial = page showed no boxed prompt, task text from its steps used; failed = page unreachable at retrieval"
+  }
+}

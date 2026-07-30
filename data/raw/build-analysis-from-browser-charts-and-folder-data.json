@@ -1,0 +1,17 @@
+{
+  "slug": "build-analysis-from-browser-charts-and-folder-data",
+  "title": "Build analysis from browser charts and folder data",
+  "source_url": "https://claude.com/resources/use-cases/build-analysis-from-browser-charts-and-folder-data",
+  "category": "Professional",
+  "model": "Sonnet 4.5",
+  "features": ["Cowork"],
+  "surface": "Cowork (with Claude in Chrome)",
+  "description": "Pull your quarterly revenue from scattered board decks, then grab GDP and inflation data from FRED. Cowork creates a comparison chart showing how your growth stacks up against the macro environment.",
+  "prompt": "I'm preparing for our board meeting and need to show how our growth compares to the broader economy. Pull our revenue figures Q1-Q4 2025 board decks. Using Claude in Chrome to open FRED in my browser and grab GDP growth and inflation for the same quarters. Create a chart comparing our revenue growth to these economic indicators. Save the chart and a summary to my desktop folder.",
+  "steps": ["Download Claude Desktop and start a Cowork session", "Select \"Work in a folder\" and choose folder containing PowerPoint files", "Install Claude in Chrome and add it as a connector to pull live data from FRED", "Claude extracts revenue data and pulls economic indicators, producing comparison charts and analysis", "Files save directly to your working folder"],
+  "prerequisites": ["Claude Desktop", "Cowork feature", "Claude in Chrome extension", "PowerPoint board decks in a folder", "Access to FRED website"],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

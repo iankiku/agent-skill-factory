@@ -1,0 +1,17 @@
+{
+  "slug": "turn-research-into-presentations",
+  "title": "Turn research into presentations",
+  "source_url": "https://claude.com/resources/use-cases/turn-research-into-presentations",
+  "category": "Education",
+  "model": "Sonnet 4.5",
+  "features": ["Connectors"],
+  "surface": "Claude.ai chat",
+  "description": "Learn how to turn research into presentations that stick. Claude helps translate findings into slide outlines and speaker notes.",
+  "prompt": "I'm uploading our group paper on sleep quality and academic performance. We have 12 minutes to present to a mixed audience of professors and students, with 4 presenters sharing the time. Analyze this research to:\n\n- Extract the 3-4 most compelling findings that will resonate with our audience\n- Create a logical narrative flow that builds from problem to insights to implications\n- Design visual slides that simplify complex data without losing accuracy\n\nThen create:\n\nA Canva slide deck outline with clean visuals, data charts, and transitions—we'll open this in Canva to refine and add our own style\n\nSpeaker notes document with minimalist design, box structures, muted color palette, and clean sans-serif hierarchy. Add elements like a split workspace/reference column layout and use a functional modernist aesthetic so this document is easy to use while preparing.",
+  "steps": ["Describe the task", "Give Claude context", "What Claude creates", "Follow up prompts"],
+  "prerequisites": ["Research paper (PDF upload)", "Data files (if separate)", "Canva connector", "Google Drive integration (optional)", "Extended Thinking feature (optional)"],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Bold markdown emphasis in original prompt (Canva slide deck / Speaker notes document) rendered as plain text."
+}

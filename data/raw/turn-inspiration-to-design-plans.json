@@ -1,0 +1,26 @@
+{
+  "slug": "turn-inspiration-to-design-plans",
+  "title": "Turn inspiration into design plans",
+  "source_url": "https://claude.com/resources/use-cases/turn-inspiration-to-design-plans",
+  "category": "Personal",
+  "model": "Sonnet 4.5",
+  "features": ["Web Search"],
+  "surface": "Claude.ai chat",
+  "description": "Turn your saved design inspirations into a personalized cost-effective renovation plan with a balanced investment strategy.",
+  "prompt": "I'm planning a kitchen reno and I've saved images of kitchens I love, but I'm overwhelmed by the choices. Figure out what style I'm going for and help me make smart purchase decisions about where to spend and where to invest.\n\nAnalyze my images and identify the style. Break down what defines it and how it differs from similar styles. Research materials across countertops, cabinets, flooring, backsplash, and hardware. Find 3-5 options per category at budget, mid-range, and premium levels with brands, pricing, quality ratings, and investment priorities.\n\nCreate a workbook with: Style guide—color palette with hex codes, signature materials, style distinctions, shopping strategy; Material database—all options with pricing, quality scores, investment priorities color-coded; Three packages with material selections and auto-calculating formulas; ROI sheet with financial projections, splurge-vs-save guidance color-coded, implementation timeline",
+  "steps": [
+    "Describe the task",
+    "Give Claude context (upload inspiration images)",
+    "What Claude creates (delivers spreadsheet)",
+    "Follow-up prompts (conduct further research, adjust format, implement ideas)",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "Design inspiration images (mood boards, screenshots, or photos)",
+    "Web Search feature enabled"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

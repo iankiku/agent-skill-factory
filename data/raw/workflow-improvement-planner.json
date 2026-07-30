@@ -1,0 +1,17 @@
+{
+  "slug": "workflow-improvement-planner",
+  "title": "Workflow improvement planner",
+  "source_url": "https://claude.com/resources/use-cases/workflow-improvement-planner",
+  "category": "Nonprofits",
+  "model": "Sonnet 4.5",
+  "features": ["Extended Thinking"],
+  "surface": "Claude.ai chat",
+  "description": "Turn process pain points into structured improvement plans. Claude helps nonprofits define workflow challenges and design AI-powered solutions that save time and increase capacity.",
+  "prompt": "I need help defining a workflow improvement opportunity at my nonprofit. Can you create a detailed artifact that asks me questions to capture all the important context about a process we want to improve?\n\nThe artifact should help me think through:\n\n- What the current workflow looks like\n- Where the pain points and bottlenecks are\n- What inputs and outputs are involved\n- What success would look like\n- Any constraints we're working within\n\nMake this comprehensive enough that when I complete it, it provides me with a file that I can give back to Claude with all the information needed to design a practical solution. Include clear instructions at the end for how to use the completed template with Claude.\n\nFormat this as a well-designed artifact that's easy to fill out—with clear sections, fill-in-the-blank areas, and helpful prompts that make sure I don't miss important details.",
+  "steps": ["Describe the task - request a comprehensive planning template with questions", "Give Claude context - upload relevant files (optional)", "What Claude creates - generates multi-section assessment artifact", "Follow up prompts - refine recommendations, create implementation materials, adjust for constraints"],
+  "prerequisites": ["Extended Thinking (recommended)", "Optional file uploads (PDFs)", "Access to Claude"],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

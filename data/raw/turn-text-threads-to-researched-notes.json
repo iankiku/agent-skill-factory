@@ -1,0 +1,27 @@
+{
+  "slug": "turn-text-threads-to-researched-notes",
+  "title": "Turn text threads to researched notes",
+  "source_url": "https://claude.com/resources/use-cases/turn-text-threads-to-researched-notes",
+  "category": "Personal",
+  "model": "Sonnet 4.5",
+  "features": ["Connectors", "Web Search"],
+  "surface": "Claude for Desktop",
+  "description": "Search messages for information, research answers, and create organized notes directly in your Notes app.",
+  "prompt": "I just got a text from Sarah asking me to bring dessert to Saturday's potluck—there will be about 15 people. Can you read my Messages to see the full context, then help me figure out what to make? I need something that's impressive but not too complicated, travels well, and can be made Friday night since Saturday morning I'll be busy. Research dessert options that fit those criteria, save recipe and shopping list to my Notes app—group the shopping list by store section so I'm not running back and forth, and include any technique tips that'll help me nail it. To ensure correct formatting in my notes, using HTML tags to create natural line breaks. Use abbreviations and concise language so the note isn't overly long.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow-up prompts"
+  ],
+  "prerequisites": [
+    "Download Claude for Desktop",
+    "Enable Messages and Notes connectors (Desktop extensions)",
+    "Enable Web Search"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "attribution_note": "",
+  "extraction_status": "ok",
+  "notes": "Uses Claude for Desktop with system-level Messages and Notes connectors."
+}

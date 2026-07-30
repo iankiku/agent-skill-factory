@@ -1,0 +1,27 @@
+{
+  "slug": "organize-your-business-finances",
+  "title": "Organize your business finances",
+  "source_url": "https://claude.com/resources/use-cases/organize-your-business-finances",
+  "category": "Finance",
+  "model": "Sonnet 4.5",
+  "features": ["Extended Thinking"],
+  "surface": "Claude.ai chat",
+  "description": "Create spreadsheets that bring clarity to your finances. Spot trends, filter what matters, and understand what your numbers are telling you.",
+  "prompt": "I need help organizing my freelance invoices from this year. I'm uploading my invoice file. It has the date, client name, what the project was, and how much I invoiced. Formatting is inconsistent because I've been adding to it all year.\n\nCan you create a cleaner version with a dashboard that shows my total income, breaks it down by month, and lists my clients by who's paid me the most. Add sparklines and data visualizations showing trends over time at a glance. I want to be able to filter and sort to find specific invoices when I need them. If you notice nuance in the data, leave cell comments for more context.\n\nMake this a sophisticated financial dashboard with a 'quiet luxury', editorial aesthetic—muted sage green accent, abundant whitespace, restrained typography. You may need to write a Python script using xlsxwriter to get the sparklines and advanced features working.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context (upload spreadsheet/CSV with invoice data)",
+    "What Claude creates (organized data with spreadsheet features)",
+    "Follow-up prompts (request additions/revisions; update with new data)",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "Invoice spreadsheet or CSV file upload",
+    "Optional: Extended Thinking (recommended)",
+    "Python/xlsxwriter capability for advanced features"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

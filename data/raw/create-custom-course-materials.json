@@ -1,0 +1,25 @@
+{
+  "slug": "create-custom-course-materials",
+  "title": "Create custom course materials",
+  "source_url": "https://claude.com/resources/use-cases/create-custom-course-materials",
+  "category": "Education",
+  "model": "Sonnet 4.5",
+  "features": ["Extended Thinking"],
+  "surface": "Claude.ai chat",
+  "description": "Transform handwritten equations and notes into formatted LaTeX documents without manual typesetting.",
+  "prompt": "I'm a math professor converting my handwritten integration notes into a professional course materials. I have:\n\n* Handwritten notes with equations\n* A typed outline of topics\n\nCraft a professional-looking LaTeX document, resembling a published textbook page with colored boxes and precise equations, then convert it to PDF.",
+  "steps": [
+    "Describe the task—specify handwritten notes and course objectives you want converted",
+    "Give Claude context by uploading handwritten notes, equations, or course materials",
+    "Claude creates a complete LaTeX document with professional formatting and compiled PDF",
+    "Follow up with prompts to enhance design, generate problem sets, or expand content"
+  ],
+  "prerequisites": [
+    "Upload handwritten notes (JPEG format) or class syllabus (PDF)",
+    "Extended Thinking enabled for complex mathematical content and LaTeX compilation"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Prompt required a second targeted extraction pass; first pass missed it. Follow-up prompts on page include adding margin notes/visual TOC and creating a homework assignment document with 15 integration by parts problems."
+}

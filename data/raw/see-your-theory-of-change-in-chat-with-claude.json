@@ -1,0 +1,27 @@
+{
+  "slug": "see-your-theory-of-change-in-chat-with-claude",
+  "title": "See your theory of change in chat with Claude",
+  "source_url": "https://claude.com/resources/use-cases/see-your-theory-of-change-in-chat-with-claude",
+  "category": "Nonprofits",
+  "model": "Sonnet 4.6",
+  "features": [
+    "Custom visuals"
+  ],
+  "surface": "Claude.ai chat",
+  "description": "Describe your program and Claude draws the causal chain inline, inputs through impact, with every arrow clickable to show the assumption behind it.",
+  "prompt": "I run a youth mentoring program. We pair high schoolers with adult mentors for weekly meetings over a year, and the goal is higher graduation rates. Show me our theory of change, and I want to be able to click the arrows between boxes to see what assumption each one is riding on. Where are the weak links?",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts"
+  ],
+  "prerequisites": [
+    "No files required to upload",
+    "Optional: formal logic model or grant narrative paragraph"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Uses custom visuals feature in chat."
+}

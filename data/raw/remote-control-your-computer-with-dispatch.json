@@ -1,0 +1,31 @@
+{
+  "slug": "remote-control-your-computer-with-dispatch",
+  "title": "Remote control your computer with Dispatch",
+  "source_url": "https://claude.com/resources/use-cases/remote-control-your-computer-with-dispatch",
+  "category": "Cowork",
+  "model": "Sonnet 4.6",
+  "features": [
+    "Cowork",
+    "Connectors"
+  ],
+  "surface": "Cowork (Dispatch) + Claude mobile app",
+  "description": "Use Dispatch in Claude Cowork to send instructions from your phone. Claude runs the task on your computer — reading files, pulling data, searching the web — and the result is waiting when you sit down.",
+  "prompt": "I need a competitive landscape summary for our Q2 planning meeting. Start with the spreadsheet at in my Sales folder - I think it's called competitor-tracker.xlsx — that has our current list of competitors and their pricing.\nFor each competitor listed there, search the web for any product launches, pricing changes, or funding announcements from the last 90 days.\nPut together a report with one section per competitor: what they have changed since our last update, how their pricing compares to the figures in the spreadsheet, and anything we should flag for the planning meeting. Save the report as a Google Doc in my Strategy folder on Drive.",
+  "steps": [
+    "Describe the task",
+    "Give Claude context (connectors and required/optional integrations)",
+    "Claude creates the output",
+    "Follow up prompts to refine or expand results"
+  ],
+  "prerequisites": [
+    "Google Drive connector (save reports)",
+    "Local file access (read spreadsheets)",
+    "Claude desktop app running on computer",
+    "Keep-awake toggle enabled in Dispatch settings",
+    "Optional: Gmail and Google Calendar connectors"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Prompt contains apparent typo 'at in my Sales folder' as shown on page."
+}

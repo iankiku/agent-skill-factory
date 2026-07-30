@@ -1,0 +1,17 @@
+{
+  "slug": "reconcile-transactions-across-your-accounts",
+  "title": "Reconcile transactions across your accounts",
+  "source_url": "https://claude.com/resources/use-cases/reconcile-transactions-across-your-accounts",
+  "category": "Finance",
+  "model": "Sonnet 4.5",
+  "features": ["Cowork"],
+  "surface": "Cowork",
+  "description": "Hand Cowork your bank exports and ledger files. It matches transactions across sources, flags discrepancies, and outputs an annotated reconciliation report.",
+  "prompt": "I need to reconcile my January 2024 bank statement. I've uploaded my checking account statement export and my current chart of accounts. Can you analyze the transactions, match them to the right accounts, and flag anything that doesn't line up? If there are discrepancies, I'd love journal entries to fix them.",
+  "steps": ["Download Claude Desktop and start a Cowork session", "Select \"Work in a folder\" to give Cowork access to financial files, or use the \"+\" button to add individual files", "Claude analyzes both files, matches transactions to accounts, and surfaces discrepancies", "Review matching results (percentages matched, items needing categorization, discrepancies identified)", "Export journal entries as CSV or create reconciliation summaries as needed"],
+  "prerequisites": ["Claude Desktop app", "Cowork feature", "Bank statement export file", "Chart of accounts file"],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

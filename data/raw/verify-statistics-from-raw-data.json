@@ -1,0 +1,27 @@
+{
+  "slug": "verify-statistics-from-raw-data",
+  "title": "Verify statistics from raw data",
+  "source_url": "https://claude.com/resources/use-cases/verify-statistics-from-raw-data",
+  "category": "Research",
+  "model": "Sonnet 4.5",
+  "features": ["Extended Thinking"],
+  "surface": "Claude.ai chat",
+  "description": "Learn to evaluate published statistics by checking them against raw data.",
+  "prompt": "I'm reading this paper that's central to my literature review, and I want to understand it more deeply before citing it extensively. I've got the published manuscript and their supplementary data files.\n\nCan you help me verify their statistical claims? Go through the paper systematically and pull out every p-value, mean, standard error, sample size, and test result they report. Then run each analysis yourself using their actual data.\n\nFor each statistical claim, show me three things: what the paper states, what you calculated from their data, and whether these match. Flag any problems you notice - things like using wrong tests for the data type, sample sizes that don't add up, or p-values that seem mathematically questionable.\n\nThen build me a detailed Excel workbook where I can see your complete verification. Create separate sheets for each analysis showing your calculations step by step, plus a summary sheet highlighting any issues I should understand before relying on this work.\n\nMake the spreadsheet well-designed and easy to navigate - professional formatting, frozen headers, filtered columns, and clear notes explaining what you found.",
+  "steps": [
+    "Describe the task: provide manuscript and data context",
+    "Give Claude context: upload manuscript and data files",
+    "What Claude creates: comprehensive audit workbook with statistical verification",
+    "Follow up prompts: optional refinements and deeper analysis",
+    "Tricks, tips, and troubleshooting"
+  ],
+  "prerequisites": [
+    "Manuscript (PDF file)",
+    "Data files (XLSX format)",
+    "Optional: Extended Thinking (recommended for thorough verification)"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

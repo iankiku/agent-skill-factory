@@ -1,0 +1,30 @@
+{
+  "slug": "draft-a-credit-memo-from-spreads-and-statements-with-claude-for-excel",
+  "title": "Draft a credit memo from spreads and statements with Claude for Excel",
+  "source_url": "https://claude.com/resources/use-cases/draft-a-credit-memo-from-spreads-and-statements-with-claude-for-excel",
+  "category": "Finance",
+  "model": "Sonnet 4.6",
+  "features": [
+    "Connectors"
+  ],
+  "surface": "Cowork + Claude for Excel + Claude for Word",
+  "description": "Cowork pulls the borrower's filings and spreads through the S&P Capital IQ connector and reads the underwriting workbook from your deal folder. You take the ratios and exceptions into Claude for Excel to update the model, then bring the writeup into Claude for Word for the credit memo.",
+  "prompt": "Acme Manufacturing — $25M revolver renewal, committee Thursday. Walk me through the credit before I touch the spread.",
+  "steps": [
+    "Pull three years of financials and peer spreads from S&P Capital IQ",
+    "Read the underwriting workbook in the deal folder and flag where ratios trip policy",
+    "Tell which assumptions in the model don't match what's in the statements",
+    "Provide a brief to take into Excel with cell references, what to change, and why"
+  ],
+  "prerequisites": [
+    "S&P Capital IQ connector enabled",
+    "Deal folder with underwriting workbook attached",
+    "Credit memo template",
+    "Claude for Excel add-in installed",
+    "Claude for Word add-in installed"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

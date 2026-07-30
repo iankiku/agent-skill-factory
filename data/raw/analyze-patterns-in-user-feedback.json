@@ -1,0 +1,26 @@
+{
+  "slug": "analyze-patterns-in-user-feedback",
+  "title": "Analyze patterns in user feedback",
+  "source_url": "https://claude.com/resources/use-cases/analyze-patterns-in-user-feedback",
+  "category": "Professional",
+  "model": "Sonnet 4.5",
+  "features": ["Connectors"],
+  "surface": "Claude.ai chat",
+  "description": "Find recurring themes and pain points across user feedback to separate meaningful patterns from noise.",
+  "prompt": "Pull all Intercom conversations from the past 90 days. I'm also uploading our Q2 NPS survey responses (CSV) and notes from six user interviews we did last month (PDFs).\n\nRead everything and tell me what patterns you're seeing:\n\n- What issues keep showing up across different feedback sources?\n- When people ask for different things, are they actually pointing to the same underlying need?\n- Which complaints seem most urgent based on how users describe them?\n- What's worth prioritizing vs what's noise?\n\nCreate a data workbook (Excel) organizing all the feedback by theme with filters so I can dig into specific issues. Include the source for each piece of feedback (Intercom, NPS, or interview) and use professional formatting with frozen headers",
+  "steps": [
+    "Describe the task",
+    "Give Claude context",
+    "What Claude creates",
+    "Follow up prompts"
+  ],
+  "prerequisites": [
+    "Intercom connector enabled (Settings > Connectors)",
+    "Upload supplementary feedback files (NPS responses CSV, interview transcripts PDFs)",
+    "Optional: Extended Thinking for deeper pattern recognition"
+  ],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Prompt ends without terminal punctuation as shown on the page ('...frozen headers')."
+}

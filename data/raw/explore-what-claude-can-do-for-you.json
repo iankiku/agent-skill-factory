@@ -1,0 +1,17 @@
+{
+  "slug": "explore-what-claude-can-do-for-you",
+  "title": "Explore what Claude can do for you",
+  "source_url": "https://claude.com/resources/use-cases/explore-what-claude-can-do-for-you",
+  "category": "Professional",
+  "model": "Opus 4.5",
+  "features": ["Connectors"],
+  "surface": "Claude.ai chat",
+  "description": "New to Claude? Start here. Tell Claude your role and get a personalized guide to the capabilities that will matter for your work.",
+  "prompt": "I'm a product manager at a B2B SaaS startup. I mostly work on roadmap prioritization and customer research. I'm new to Claude. How can I use you most efficiently? Can you give me 5 examples I can try right now, ideally things that would actually make a difference in my daily work. Surprise me with one of them! I've given you access to my docs (I think) to help you understand better what I do. Thanks!",
+  "steps": ["Describe the task (tell Claude your role)", "Give Claude context (share documents for more specific suggestions)", "See what Claude creates (receive personalized starter guide with example prompts)", "Follow up prompts (continue conversation to refine or explore further)"],
+  "prerequisites": ["Google Drive connector (optional)", "Extended Thinking (optional)"],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": ""
+}

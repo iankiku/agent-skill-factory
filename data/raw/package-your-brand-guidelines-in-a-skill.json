@@ -1,0 +1,17 @@
+{
+  "slug": "package-your-brand-guidelines-in-a-skill",
+  "title": "Package your brand guidelines in a skill",
+  "source_url": "https://claude.com/resources/use-cases/package-your-brand-guidelines-in-a-skill",
+  "category": "Professional",
+  "model": "Sonnet 4.5",
+  "features": ["Skills"],
+  "surface": "Claude.ai chat",
+  "description": "Package your brand guidelines into a skill to create presentations, spreadsheets, or documents that automatically match your preferred style.",
+  "prompt": "I want to create a skill that applies our company's brand styling to any presentation, document, or spreadsheet I create in Claude. Here's what I need to encode:\n\nColor Palette:\nDark: #141413 (primary text, dark backgrounds)\nLight: #faf9f5 (light backgrounds, text on dark)\nMid Gray: #b0aea5 (secondary elements)\nLight Gray: #e8e6dc (subtle backgrounds)\nOrange: #d97757 (primary accent for important elements)\nBlue: #6a9bcc (secondary accent)\nGreen: #788c5d (tertiary accent)\n\nTypography:\nHeadings (24pt and larger): Poppins font, bold weight\nBody text: Lora font, regular weight\nFallbacks: Arial for headings if Poppins unavailable, Georgia for body if Lora unavailable\n\nApplication Rules:\n- Apply Poppins to all slide titles and document headings\n- Apply Lora to body text and paragraphs\n- Use accent colors (orange, blue, green) for shapes, charts, and visual elements\n- Cycle through accent colors to maintain visual interest\n- Use dark color for primary text on light backgrounds\n- Use light color for text on dark backgrounds\n\nCreate a complete skill with proper structure that I can use whenever I need brand-consistent presentations. Include the SKILL.md file with clear instructions for when to use it and how it applies the styling.",
+  "steps": ["Describe the task", "Give Claude context", "What Claude creates", "Follow up prompts"],
+  "prerequisites": ["Skills feature enabled", "File creation enabled", "Google Drive integration (optional)", "Extended Thinking (optional)"],
+  "retrieved_at": "2026-07-26",
+  "attribution": "© Anthropic PBC — published at claude.com/resources/use-cases",
+  "extraction_status": "ok",
+  "notes": "Bold/heading markdown labels (Color Palette, Typography, Application Rules) in original prompt rendered as plain text."
+}
