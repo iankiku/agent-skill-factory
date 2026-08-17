@@ -286,6 +286,96 @@ def emit_indexes(items):
     with open(os.path.join(ROOT, "INDEX.md"), "w") as f:
         f.write("\n".join(lines))
 
+# ---------- README field-prompt section ----------
+# The README is hand-written EXCEPT the block between these markers, which is
+# regenerated from data/raw/ so the 94 copy-paste prompts can never drift from the
+# catalog. Edit the emitter below, not the README body between the markers.
+README_BEGIN = "<!-- BEGIN GENERATED: field prompts (scripts/generate.py) -->"
+README_END = "<!-- END GENERATED: field prompts -->"
+REPO_BLOB = "https://github.com/iankiku/agent-skill-factory/blob/main"
+
+# Fields first (what someone picks by industry), then the two delivery surfaces.
+CATEGORY_ORDER = ["Marketing", "Sales", "Finance", "Legal", "HR", "Professional",
+                  "Education", "Research", "Life Sciences", "Nonprofits", "Personal",
+                  "Claude in Chrome", "Cowork"]
+CATEGORY_KIND = {"Claude in Chrome": "surface", "Cowork": "surface"}
+CATEGORY_BLURB = {
+    "Marketing": "Campaign analysis, personas, and cross-platform content.",
+    "Sales": "Deal prep, proposals, battle cards, and pipeline reporting.",
+    "Finance": "Models, memos, reconciliation, and spreadsheet forensics.",
+    "Legal": "Redlining, discovery timelines, and compliance prep.",
+    "HR": "Onboarding and people-ops documents.",
+    "Professional": "Cross-functional work: reporting, decks, brand, process.",
+    "Education": "Course materials, syllabi, lit reviews, and practice loops.",
+    "Research": "Literature reviews, feedback synthesis, and stats verification.",
+    "Life Sciences": "Genomic and preclinical study analysis.",
+    "Nonprofits": "Grants, donors, volunteers, programs, and impact reporting.",
+    "Personal": "Everyday builds — apps, guides, plans, and personal systems.",
+    "Claude in Chrome": "Workflows that act in the browser, on live pages.",
+    "Cowork": "Long-running work on real folders and computers, kicked off remotely.",
+}
+
+def one_line(text: str, limit: int = 150) -> str:
+    t = " ".join((text or "").split())
+    if len(t) <= limit:
+        return t
+    return t[:limit].rsplit(" ", 1)[0].rstrip(",.;:") + "…"
+
+def prompt_block(uc) -> str:
+    cs, name = cat_slug(uc["category"]), skill_name(uc["slug"])
+    return "\n".join([
+        "```text",
+        f'Build me a Claude skill for [MY INDUSTRY], modeled on the Anthropic use case "{uc["title"]}".',
+        "",
+        f"Start from this template: {REPO_BLOB}/templates/{cs}/{name}/SKILL.md",
+        "",
+        "My context — industry: [MY INDUSTRY] · role: [MY ROLE] · tools I use: [MY TOOLS] · when it runs: [TRIGGER]",
+        "",
+        "Use the build-skill workflow: interview me on anything missing, resolve every TODO,",
+        "and hand me a finished SKILL.md I can install and run unattended.",
+        "```",
+    ])
+
+def category_block(uc_cat: str, ucs) -> str:
+    kind = CATEGORY_KIND.get(uc_cat, "field")
+    label = f"{uc_cat} ({len(ucs)})" + (" — surface, not an industry" if kind == "surface" else "")
+    out = [f"<details>", f"<summary><strong>{label}</strong> — {CATEGORY_BLURB.get(uc_cat, '')}</summary>", ""]
+    for uc in sorted(ucs, key=lambda u: u["title"].lower()):
+        cs, name = cat_slug(uc["category"]), skill_name(uc["slug"])
+        out += [f"#### {uc['title']}",
+                "",
+                f"{one_line(uc.get('description', ''))}  ",
+                f"[Source]({uc['source_url']}) · [Catalog doc](catalog/{cs}/{uc['slug'].lower()}.md) · "
+                f"[Template](templates/{cs}/{name}/SKILL.md) · {uc['model']}",
+                "",
+                prompt_block(uc),
+                ""]
+    out += ["</details>", ""]
+    return "\n".join(out)
+
+def emit_readme(items):
+    readme = os.path.join(ROOT, "README.md")
+    with open(readme) as f:
+        body = f.read()
+    if README_BEGIN not in body or README_END not in body:
+        raise SystemExit(f"README.md is missing the generated-section markers:\n  {README_BEGIN}\n  {README_END}")
+    by_cat = {}
+    for uc in items:
+        by_cat.setdefault(uc["category"], []).append(uc)
+    unknown = [c for c in by_cat if c not in CATEGORY_ORDER]
+    order = CATEGORY_ORDER + sorted(unknown)
+    lines = ["", f"*{len(items)} use cases across {len(by_cat)} fields, regenerated from `data/raw/` — "
+                 "each one expands to a copy-paste prompt. Click the copy icon on the code block, "
+                 "swap the bracketed placeholders, paste into Claude.*", ""]
+    for cat in order:
+        if cat in by_cat:
+            lines.append(category_block(cat, by_cat[cat]))
+    generated = "\n".join(lines)
+    start = body.index(README_BEGIN) + len(README_BEGIN)
+    end = body.index(README_END)
+    with open(readme, "w") as f:
+        f.write(body[:start] + "\n" + generated + body[end:])
+
 def main():
     for d in (CATALOG, TEMPLATES):
         if os.path.isdir(d):
@@ -295,7 +385,9 @@ def main():
         emit_catalog(uc)
         emit_template(uc)
     emit_indexes(items)
-    print(f"Generated {len(items)} catalog docs, {len(items)} skill templates, INDEX.md")
+    emit_readme(items)
+    print(f"Generated {len(items)} catalog docs, {len(items)} skill templates, "
+          f"INDEX.md, and the README field-prompt section")
 
 if __name__ == "__main__":
     sys.exit(main())
