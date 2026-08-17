@@ -61,11 +61,16 @@
 
 <br>
 
-This repo takes all **94 use cases Anthropic publishes** at
-[claude.com/resources/use-cases](https://claude.com/resources/use-cases) and turns each
-one into a skill you can build for *your* industry: a catalog entry, a ready skill
-template, and a copy-paste prompt that says "build this, but for my field." Plus
-**`build-skill`** — the meta-skill that interviews you and writes the finished SKILL.md.
+**Anthropic publishes 94 things Claude is good at** — analyzing campaign performance,
+reconciling transactions, prepping documents for a compliance audit — at
+[claude.com/resources/use-cases](https://claude.com/resources/use-cases). They're good,
+but they live on a webpage: you read one, copy a prompt, and next week you're typing it
+from memory.
+
+This turns each one into a skill you can actually install. Pick your industry, copy one
+prompt, and Claude builds it for you. And if your workflow isn't one of the 94,
+**`build-skill`** is a skill that builds new skills — or fine-tunes the ones you already
+have — for your industry.
 
 ```mermaid
 flowchart LR
