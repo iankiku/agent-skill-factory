@@ -5,8 +5,10 @@
 Three ways in, from least to most involved:
 
 **No GitHub account, no terminal — copy-paste:** open the public gist
-(https://gist.github.com/iankiku/0366d5701cf8268ee05c24cd30fa366b), click **Raw**,
-select all, copy. That's [`skills/build-skill/build-skill.gist.md`](../skills/build-skill/build-skill.gist.md)
+(https://gist.github.com/iankiku/0366d5701cf8268ee05c24cd30fa366b). It has two files:
+`0-README.md` walks you through this, and **`build-skill.gist.md`** is the skill —
+click **Raw** on that second one, select all, copy. It mirrors
+[`skills/build-skill/build-skill.gist.md`](../skills/build-skill/build-skill.gist.md)
 in this repo — a single self-contained file with the skill body and all four
 reference files inlined. Paste it in as `SKILL.md`:
 - **Claude.ai / Claude Desktop / Cowork:** Settings → Capabilities → Skills → upload

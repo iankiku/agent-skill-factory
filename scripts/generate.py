@@ -336,17 +336,49 @@ def prompt_block(uc) -> str:
         "```",
     ])
 
+# GitHub strips CSS/JS from READMEs, so real tabs are impossible. The closest thing
+# that actually renders everywhere: a shields.io pill strip that jumps to anchored
+# accordions. Fields and surfaces get different colors so the strip reads as two
+# groups at a glance. Keep the palette to these three values.
+ACCENT = "D97757"   # fields
+SURFACE = "6E7781"  # delivery surfaces (Chrome, Cowork)
+INK = "1A1A1A"      # label side of every badge
+
+def badge_text(s: str) -> str:
+    """shields.io escaping: '-' -> '--', '_' -> '__', then URL-encode."""
+    from urllib.parse import quote
+    return quote(s.replace("-", "--").replace("_", "__"), safe="")
+
+def field_anchor(cat: str) -> str:
+    return "field-" + cat_slug(cat)
+
+def pill_strip(by_cat, order) -> str:
+    pills = []
+    for cat in order:
+        if cat not in by_cat:
+            continue
+        color = SURFACE if CATEGORY_KIND.get(cat) == "surface" else ACCENT
+        pills.append(
+            f"[![{cat}](https://img.shields.io/badge/{badge_text(cat)}-{len(by_cat[cat])}-{color}"
+            f"?style=flat-square&labelColor={INK})](#{field_anchor(cat)})")
+    return " ".join(pills)
+
 def category_block(uc_cat: str, ucs) -> str:
     kind = CATEGORY_KIND.get(uc_cat, "field")
-    label = f"{uc_cat} ({len(ucs)})" + (" — surface, not an industry" if kind == "surface" else "")
-    out = [f"<details>", f"<summary><strong>{label}</strong> — {CATEGORY_BLURB.get(uc_cat, '')}</summary>", ""]
+    tag = " · <em>surface, not an industry</em>" if kind == "surface" else ""
+    out = [f'<a id="{field_anchor(uc_cat)}"></a>',
+           "<details>",
+           f"<summary><strong>{uc_cat}</strong> — {CATEGORY_BLURB.get(uc_cat, '')} "
+           f"<code>{len(ucs)}</code>{tag}</summary>",
+           "", "<br>", ""]
     for uc in sorted(ucs, key=lambda u: u["title"].lower()):
         cs, name = cat_slug(uc["category"]), skill_name(uc["slug"])
         out += [f"#### {uc['title']}",
                 "",
                 f"{one_line(uc.get('description', ''))}  ",
-                f"[Source]({uc['source_url']}) · [Catalog doc](catalog/{cs}/{uc['slug'].lower()}.md) · "
-                f"[Template](templates/{cs}/{name}/SKILL.md) · {uc['model']}",
+                f"`{uc['model']}` · [Source]({uc['source_url']}) · "
+                f"[Catalog doc](catalog/{cs}/{uc['slug'].lower()}.md) · "
+                f"[Template](templates/{cs}/{name}/SKILL.md)",
                 "",
                 prompt_block(uc),
                 ""]
@@ -364,9 +396,10 @@ def emit_readme(items):
         by_cat.setdefault(uc["category"], []).append(uc)
     unknown = [c for c in by_cat if c not in CATEGORY_ORDER]
     order = CATEGORY_ORDER + sorted(unknown)
-    lines = ["", f"*{len(items)} use cases across {len(by_cat)} fields, regenerated from `data/raw/` — "
-                 "each one expands to a copy-paste prompt. Click the copy icon on the code block, "
-                 "swap the bracketed placeholders, paste into Claude.*", ""]
+    lines = ["",
+             '<div align="center">', "", pill_strip(by_cat, order), "", "</div>", "",
+             f"*{len(items)} use cases across {len(by_cat)} fields. Expand a field, hit the copy "
+             "button on the prompt, swap the bracketed placeholders, paste into Claude.*", ""]
     for cat in order:
         if cat in by_cat:
             lines.append(category_block(cat, by_cat[cat]))
