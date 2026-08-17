@@ -29,14 +29,6 @@ I always forget stocking stuffers until the last minute and end up panic-buying 
 Can you put this together in a shopping list I can reference?
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-5. Tricks, tips, and troubleshooting
-
 ## Prerequisites (from source page)
 
 - Web Search (optional)

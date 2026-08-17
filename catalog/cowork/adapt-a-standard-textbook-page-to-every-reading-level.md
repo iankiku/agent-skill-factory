@@ -26,7 +26,6 @@ From the textbook spread, build me: 1) One slide deck (8–10 slides) covering t
 1. Describe the task (attach page, standards, rules for each version)
 2. Give Claude context (upload photo/scan, standards/objectives, version rules)
 3. Claude creates the materials (slide deck, handouts, exit ticket)
-4. Follow up with refinement prompts
 
 ## Prerequisites (from source page)
 

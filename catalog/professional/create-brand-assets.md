@@ -32,14 +32,6 @@ I need two things for my coffee shop, Morning Ritual:
 Match my branding guidelines document I've uploaded. Follow the typography, colors, and spacing exactly. The design should feel dawn-inspired with soft watercolor circles, paper grain, and organic dispersion with a premium, hand-crafted feel. Make sure no elements overlap or run off the page. Evaluate and grade your work to make sure all these standards are met. If there is room for improvement in your designs, iterate until you've reached success.
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-5. Tricks, tips, and troubleshooting
-
 ## Prerequisites (from source page)
 
 - Brand/style guidelines document (PDF upload)

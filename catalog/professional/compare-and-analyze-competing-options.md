@@ -27,11 +27,9 @@ This spreadsheet should be extremely well-designed. Think: professional not play
 
 ## How it works (from source page)
 
-1. Describe the task
-2. Give Claude context (upload vendor proposals)
-3. What Claude creates (analysis and spreadsheet)
-4. Follow up prompts (draft decision memo, create vendor call questions, calculate costs)
-5. Tricks, tips, and troubleshooting
+1. Give Claude context (upload vendor proposals)
+2. What Claude creates (analysis and spreadsheet)
+3. Follow up prompts (draft decision memo, create vendor call questions, calculate costs)
 
 ## Prerequisites (from source page)
 

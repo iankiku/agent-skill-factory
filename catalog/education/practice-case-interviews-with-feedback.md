@@ -25,11 +25,9 @@ After I finish my analysis and write my recommendation, I'll share it for feedba
 
 ## How it works (from source page)
 
-1. Describe the task
-2. Give Claude context (upload practice study files)
-3. What Claude creates (financial analysis model and practice guide)
-4. Follow up prompts (compare approaches, dive deeper into frameworks, request reviews)
-5. Tricks, tips, and troubleshooting
+1. Give Claude context (upload practice study files)
+2. What Claude creates (financial analysis model and practice guide)
+3. Follow up prompts (compare approaches, dive deeper into frameworks, request reviews)
 
 ## Prerequisites (from source page)
 

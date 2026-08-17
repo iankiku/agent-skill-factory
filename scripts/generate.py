@@ -51,10 +51,22 @@ def derive_connectors(uc):
             found.add(v)
     return sorted(found)
 
+# Anthropic's pages are laid out under fixed section headings. The extractor captured
+# those headings as `steps` for 51 of 94 use cases. A BARE heading is not a workflow
+# step; the same heading WITH detail appended ("Describe the task (attach page…)") is.
+# Match exactly, so annotated variants survive.
+PAGE_HEADINGS = {
+    "describe the task", "give claude context", "what claude creates",
+    "follow up prompts", "follow up with refinement prompts",
+    "tricks, tips, and troubleshooting",
+}
+
+def real_steps(uc):
+    return [s for s in (uc.get("steps") or []) if s.strip().lower() not in PAGE_HEADINGS]
+
 def validation_defaults(uc):
     cat = uc["category"]
-    base = ["Output matches the outcome statement above (spot-check against the seed prompt's asks)",
-            "Every factual claim is traceable to a provided input, connector record, or cited source"]
+    base = ["Every factual claim traces to a provided input, connector record, or cited source"]
     extra = {
         "Finance": ["All figures reconcile to source statements/workbooks; totals recomputed programmatically, not by eye",
                     "Flag (never silently correct) discrepancies between model and source data"],
@@ -119,9 +131,10 @@ for reference and skill-scaffolding with attribution; not an official Anthropic 
 
 def emit_catalog(uc):
     steps_block = ""
-    if uc.get("steps"):
+    steps = real_steps(uc)
+    if steps:
         steps_block = "\n## How it works (from source page)\n\n" + \
-            "\n".join(f"{i+1}. {s}" for i, s in enumerate(uc["steps"])) + "\n"
+            "\n".join(f"{i+1}. {s}" for i, s in enumerate(steps)) + "\n"
     prereq_block = ""
     if uc.get("prerequisites"):
         prereq_block = "\n## Prerequisites (from source page)\n\n" + \
@@ -142,29 +155,28 @@ TEMPLATE_DOC = """---
 name: {name}
 description: {trigger}
 metadata:
-  status: template — customize all TODO markers before use
+  status: template — resolve every TODO before use
   category: {category}
   recommended_model: {model}
   features: {features}
   surface: {surface}
   source_url: {source_url}
-  source_title: {title}
   retrieved_at: {retrieved}
   attribution: "Seed prompt and workflow © Anthropic PBC (claude.com/resources/use-cases); scaffold original to agent-skill-factory"
 ---
 
 # {title} — skill template
 
-Turn this template into a working skill by resolving every `TODO`. The seed prompt
-below is the published Anthropic example this template was derived from; your skill
-should generalize it for repeated, hands-off use.
+Resolve every `TODO`, then delete this line. Sections that don't apply to your
+version: delete them. A short skill that names its inputs and checks its output
+beats a complete-looking one.
 
 ## Outcome
 
 {description}
 
-TODO: Restate the outcome for YOUR context in one sentence: who runs this, on what
-input, producing what artifact, how often.
+TODO: one sentence for YOUR context — who runs this, on what input, producing what,
+how often.
 
 ## Seed prompt (verbatim from source, © Anthropic PBC)
 
@@ -172,59 +184,47 @@ input, producing what artifact, how often.
 {prompt}
 ```
 
-## Required context and inputs
+## Inputs
 
 {prereqs}
-- TODO: exact file paths / folders / message formats this skill should expect
-- TODO: domain context the model cannot infer (naming conventions, thresholds, house style)
+- TODO: exact paths / folders / formats expected at run time
+- TODO: domain context the model can't infer (conventions, thresholds, house style)
 
-## Tools, connectors, APIs, and authentication
+## Tools and auth
 
 {connectors}
-- TODO: confirm which connectors are enabled in the runtime that will execute this skill
-- Authentication: connectors authenticate via their own OAuth flows — this skill must
-  NEVER ask for, store, or echo credentials, tokens, or API keys. If auth is missing,
-  stop and tell the user which connector to enable.
+- TODO: confirm these are enabled in the runtime that will execute this skill
+- Connector OAuth or env-var NAMES only — never credential values.
 
-## Permissions and sensitive actions
+## Permissions
 
-- Reads: TODO (folders, channels, records this skill may read)
-- Writes: TODO (what it may create/modify, and where)
-- Held back for the primary agent / human: sending external communications, financial
-  transactions, deleting or overwriting originals, submitting web forms{chrome_note}
+- Reads: TODO
+- Writes: TODO
+- Never without a human: external comms, financial transactions, deleting or
+  overwriting originals, submitting web forms{chrome_note}
 
 ## Workflow
 
 {workflow}
 
-## Decision points
+## Output
 
-- TODO: list each point where the skill must choose between paths, with the rule to apply
-- Default rule: prefer the reversible option; when two readings of the input are
-  plausible, surface both rather than picking silently.
+Return the shortest form that carries the result. No preamble, no restating the
+request, no summary of what you just did. Expand only when the user asks for detail.
 
-## Validation criteria
+## Validation
 
 {validation}
-- TODO: add one domain-specific check a reviewer in your org would apply
+- TODO: one domain-specific check a reviewer in your org would apply
 
-## Failure modes and fallbacks
+## Failure modes
 
 {failures}
 
 ## Delegation
 
-Apply the repo's delegation policy (`docs/delegation-policy.md` — bundle or restate
-it if you install this skill outside the repo). Defaults for this template:
-
-- Run single-agent unless a step fans out over independent items (files, records,
-  vendors, channels). Only independent work parallelizes.
-- Each delegated task must ship with: the minimal context slice it needs, an explicit
-  output contract, a validation check the primary agent runs on the result, and a
-  fallback if it returns empty or fails.
-- Final review, synthesis, and every sensitive action listed above stay with the
-  primary agent.
-- TODO: name the concrete subtasks (if any) that qualify for delegation here.
+Runs single-agent. TODO: if a step fans out over independent items (files, records,
+vendors, channels), plan it per `docs/delegation-policy.md` and delete this line.
 
 ## Attribution
 
@@ -234,16 +234,21 @@ workflow content © Anthropic PBC. Scaffold structure original to this repositor
 
 def emit_template(uc):
     name = skill_name(uc["slug"])
-    trigger = (uc.get("description", "") or uc["title"]).strip().rstrip(".")
-    trigger = f"{trigger}. Use for tasks like “{uc['title'].rstrip('.')}” and close variants. TEMPLATE — customize before installing."
+    # The source description is marketing prose about capability. A skill description
+    # must say WHEN to fire, so leave it as an explicit TODO rather than shipping
+    # trigger text that over-fires (validation-checklist enforces this).
+    trigger = (f"TODO — write for triggering: when should this fire, in the user's own "
+               f"words, plus one near-miss it must NOT handle. Seed use case: "
+               f"{uc['title'].rstrip('.')}.")
     prereqs = "\n".join(f"- {p}" for p in uc.get("prerequisites", [])) or "- (source page listed no prerequisites)"
     conns = derive_connectors(uc)
     connectors = "\n".join(f"- {c}" for c in conns) or "- No connectors detected on the source page; base Claude capabilities only"
-    if uc.get("steps"):
-        workflow = "\n".join(f"{i+1}. {s}" for i, s in enumerate(uc["steps"]))
-        workflow += "\n\nTODO: adapt the steps above (from the source page) into imperative instructions for the executing agent, including what to do between steps."
+    steps = real_steps(uc)
+    if steps:
+        workflow = "\n".join(f"{i+1}. {s}" for i, s in enumerate(steps))
+        workflow += "\n\nTODO: rewrite as imperative steps for the executing agent."
     else:
-        workflow = "TODO: decompose the seed prompt into 3–9 imperative steps: gather inputs → process → produce artifact → validate → deliver."
+        workflow = "TODO: 3–9 imperative steps: gather inputs → process → produce artifact → validate → deliver."
     validation = "\n".join(f"- {v}" for v in validation_defaults(uc))
     failures = "\n".join(f"- {v}" for v in failure_defaults(uc))
     chrome_note = ""
@@ -319,7 +324,11 @@ def one_line(text: str, limit: int = 150) -> str:
     t = " ".join((text or "").split())
     if len(t) <= limit:
         return t
-    return t[:limit].rsplit(" ", 1)[0].rstrip(",.;:") + "…"
+    cut = t[:limit]
+    stop = max(cut.rfind(". "), cut.rfind("; "))
+    if stop > limit * 0.5:
+        return cut[:stop + 1]
+    return cut.rsplit(" ", 1)[0].rstrip(",.;:") + "…"
 
 def prompt_block(uc) -> str:
     """Keep every prose line under ~74 chars — GitHub code blocks scroll sideways
@@ -416,6 +425,49 @@ def emit_readme(items):
     with open(readme, "w") as f:
         f.write(body[:start] + "\n" + generated + body[end:])
 
+
+# ---------- gist bundle ----------
+# The public gist's skill file is the SKILL.md plus its reference files inlined, so a
+# reader can install by copying ONE file. Generating it means editing SKILL.md or a
+# reference can never leave the bundle silently stale.
+SKILLDIR = os.path.join(ROOT, "skills", "build-skill")
+GIST_CALLOUT = '> **This is the single-file, standalone bundle of build-skill** — everything it\n> needs (the skill itself plus its four reference files) is inlined below so you\n> can install it by copying this ONE file, no `git clone` or GitHub account\n> required. See "Install" at the very bottom for the two ways to use it.\n>\n> Wherever the instructions below say "read `references/<file>.md`", the content\n> is already inlined in the "Bundled reference files" section further down this\n> same document — there is nothing extra to fetch.\n\n'
+GIST_TEMPLATE_INDEX_NOTE = "### `references/template-index.md`\n\nOne line per template: `path | category | artifact/outcome | inputs & connectors | features`.\nSelect by artifact type first, then input sources, then category. Paths are relative to the repo root.\n\n**Categories covered:** Claude in Chrome, Cowork, Education, Finance, HR, Legal, Life\nSciences, Marketing, Nonprofits, Personal, Professional, Research, Sales — 94\ntemplates total. The full capability-tagged index (all 94 one-line entries) lives at\n`skills/build-skill/references/template-index.md` in the\n[full repo](https://github.com/iankiku/agent-skill-factory) — it's ~140 lines and\nwas left out of this bundle to keep the copy-paste file short. If you're using this\nstandalone bundle without the full index, treat Phase 2 as: ask the user for the\nclosest match to one of the 13 categories above, or fall back to the blank template\nbelow — never stall the draft over a missing index.\n\n"
+GIST_WHAT_GOOD = '## What good looks like\n\nThe full repo ships two end-to-end example transcripts (a connector-heavy business\nskill and a file-processing skill) under `examples/` — not inlined here to keep this\nbundle short; see the "Install" section below for where to find them if you want the\ncomplete repo.\n\n'
+GIST_INSTALL = '## Install\n\nCopy this whole file and save it as `SKILL.md` inside a folder named `build-skill`:\n\n- **Claude Code / Claude CLI:** `~/.claude/skills/build-skill/SKILL.md` (all projects),\n  or `.claude/skills/build-skill/SKILL.md` inside one project.\n- **Claude.ai / Claude Desktop:** Settings → Capabilities → Skills → upload this file\n  (or a `.zip` containing it as `SKILL.md`).\n- **Cowork:** same as Claude Desktop — upload via the Skills settings panel.\n\nWith Node.js, `npx skills add iankiku/agent-skill-factory --skill build-skill` installs\nthe full repo version instead (complete 94-entry template index, two worked examples).\n\nStep-by-step install and the first prompt to run: **`0-README.md`** in the\n[public gist](https://gist.github.com/iankiku/0366d5701cf8268ee05c24cd30fa366b).\nThe other 93 use cases, their templates, and a copy-paste prompt for each:\n**https://github.com/iankiku/agent-skill-factory**\n'
+
+def emit_gist_bundle():
+    src = open(os.path.join(SKILLDIR, "SKILL.md")).read()
+    fm_end = src.index("---", 3) + 3
+    frontmatter, body = src[:fm_end], src[fm_end:].lstrip("\n")
+    # body starts "# build-skill\n\n<intro>"; splice the callout in after the H1
+    h1, rest = body.split("\n", 1)
+    # the bundle carries no examples/ dir, and only a note in place of the full index
+    i = rest.index("## What good looks like")
+    rest = rest[:i] + GIST_WHAT_GOOD + "\n"
+
+    def ref(name):
+        """Verbatim, except heading levels shift down so the bundle keeps one H1."""
+        text = open(os.path.join(SKILLDIR, "references", name)).read().rstrip("\n")
+        return re.sub(r"^(#{1,3}) ", r"#\1 ", text, flags=re.M)
+
+    out = [frontmatter, "", h1, "", GIST_CALLOUT.rstrip("\n"), "", rest.rstrip("\n"), "",
+           "---", "", "## Bundled reference files", "",
+           "These are inlined verbatim so this single file is fully self-contained. In the full",
+           "repo they live at `skills/build-skill/references/<name>.md`.", "",
+           GIST_TEMPLATE_INDEX_NOTE.rstrip("\n"), "",
+           "### `references/blank-skill-template.md`", "", ref("blank-skill-template.md"), "",
+           "### `references/delegation-policy.md`", "", ref("delegation-policy.md"), "",
+           "### `references/validation-checklist.md`", "", ref("validation-checklist.md"), "",
+           "---", "", GIST_INSTALL.rstrip("\n"), ""]
+    open(os.path.join(SKILLDIR, "build-skill.gist.md"), "w").write("\n".join(out))
+
+def check_policy_sync():
+    a = open(os.path.join(ROOT, "docs", "delegation-policy.md")).read()
+    b = open(os.path.join(SKILLDIR, "references", "delegation-policy.md")).read()
+    if a.strip() != b.strip():
+        raise SystemExit("docs/delegation-policy.md and build-skill's copy have diverged")
+
 def main():
     for d in (CATALOG, TEMPLATES):
         if os.path.isdir(d):
@@ -426,8 +478,10 @@ def main():
         emit_template(uc)
     emit_indexes(items)
     emit_readme(items)
+    check_policy_sync()
+    emit_gist_bundle()
     print(f"Generated {len(items)} catalog docs, {len(items)} skill templates, "
-          f"INDEX.md, and the README field-prompt section")
+          f"INDEX.md, the README field-prompt section, and the gist bundle")
 
 if __name__ == "__main__":
     sys.exit(main())

@@ -31,13 +31,6 @@ Create a dashboard and analysis report. I need to know what to do differently ne
 Context: Our target ROI is 300%+. Enterprise customers have 3x higher LTV than SMB. Industry benchmark is 200-250% ROI. I can shift up to 30% of budget based on performance.
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-
 ## Prerequisites (from source page)
 
 - Campaign performance data (XLSX files mentioned as example)

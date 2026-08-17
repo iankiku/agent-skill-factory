@@ -30,8 +30,12 @@ note irreducible gaps as `ASSUMED:` lines or Setup steps.
 - [ ] Every external dependency has a failure mode with retry policy and degraded path
 - [ ] A "stop and report" condition exists (the skill knows when to give up)
 
+## Output economy
+- [ ] Skill instructs concise output: result first, no preamble or work-summary
+- [ ] No section present that doesn't change behavior (no "n/a" filler)
+
 ## Delegation
-- [ ] Delegation section present — even if it's "runs single-agent"
+- [ ] Delegation decided: a fan-out plan with all four contract fields, or the single line "Runs single-agent"
 - [ ] Each delegated task defines all four: context, output, validation, fallback
 - [ ] Only independent work is parallelized; merge/validate follows every fan-out
 - [ ] Final review + all sensitive actions assigned to the primary agent

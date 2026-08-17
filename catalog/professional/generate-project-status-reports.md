@@ -39,13 +39,6 @@ Create an Excel tracker and include these features: visual status indicators, ce
 The tracker should make it obvious at a glance where the problems are and who needs help.
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-
 ## Prerequisites (from source page)
 
 - Connectors: Google Drive, Gmail, Google Calendar, Slack

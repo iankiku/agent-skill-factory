@@ -25,14 +25,6 @@ I've uploaded our NDA playbook, our standard mutual NDA template, and our list o
 Then help me craft optimized project instructions I can paste into the custom instructions field—instructions that tell Claude to reference the standards guide and apply our approach.
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-5. Tricks, tips, and troubleshooting
-
 ## Prerequisites (from source page)
 
 - Upload core reference materials (review playbook, standard template, prohibited terms list)

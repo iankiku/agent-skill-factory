@@ -21,14 +21,6 @@ Build chronologies and identify document patterns across large discovery product
 I'm representing a small software company in a contract dispute with a vendor. We hired them to build a custom inventory management system, but the project failed and we're in litigation. I've got about 40 discovery documents—contracts, change orders, email threads, project status reports, invoices, and technical documentation from the 12-month project timeline. Create a chronological timeline with document citations, analyze patterns around scope changes and deliverables, and identify our strongest evidence and key witnesses for depositions. Generate a professional legal memo with clear sections, proper citations to source documents, and formatting suitable for sharing with co-counsel. This needs to be a top of class legal document with exceptional formatting and structure. Opt for elevated, elegant typography, tight spacing, and muted color instead of using your default styling. Take your time developing an extremely high quality legal document that has coherent structure, and articulate legal expertise throughout.
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-5. Tricks, tips, and troubleshooting
-
 ## Prerequisites (from source page)
 
 - Gmail and Google Drive integrations enabled

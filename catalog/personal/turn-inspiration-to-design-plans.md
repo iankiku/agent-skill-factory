@@ -27,11 +27,9 @@ Create a workbook with: Style guide—color palette with hex codes, signature ma
 
 ## How it works (from source page)
 
-1. Describe the task
-2. Give Claude context (upload inspiration images)
-3. What Claude creates (delivers spreadsheet)
-4. Follow-up prompts (conduct further research, adjust format, implement ideas)
-5. Tricks, tips, and troubleshooting
+1. Give Claude context (upload inspiration images)
+2. What Claude creates (delivers spreadsheet)
+3. Follow-up prompts (conduct further research, adjust format, implement ideas)
 
 ## Prerequisites (from source page)
 

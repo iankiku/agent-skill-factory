@@ -360,7 +360,7 @@ a finished SKILL.md I can install and run unattended.
 
 #### Draft a credit memo from spreads and statements with Claude for Excel
 
-Cowork pulls the borrower's filings and spreads through the S&P Capital IQ connector and reads the underwriting workbook from your deal folder. You…  
+Cowork pulls the borrower's filings and spreads through the S&P Capital IQ connector and reads the underwriting workbook from your deal folder.  
 [Source](https://claude.com/resources/use-cases/draft-a-credit-memo-from-spreads-and-statements-with-claude-for-excel) · [Catalog doc](catalog/finance/draft-a-credit-memo-from-spreads-and-statements-with-claude-for-excel.md) · [Template](templates/finance/draft-a-credit-memo-from-spreads-and-statements-with-claude-for-excel/SKILL.md)
 
 ```text
@@ -460,7 +460,7 @@ a finished SKILL.md I can install and run unattended.
 
 #### Update your financial model after earnings
 
-Cowork pulls the release and transcript from S&P and checks them against your financial model. You take the flags into Claude for Excel to edit the…  
+Cowork pulls the release and transcript from S&P and checks them against your financial model.  
 [Source](https://claude.com/resources/use-cases/update-your-financial-model-after-earnings) · [Catalog doc](catalog/finance/update-your-financial-model-after-earnings.md) · [Template](templates/finance/update-your-financial-model-after-earnings/SKILL.md)
 
 ```text
@@ -480,7 +480,7 @@ a finished SKILL.md I can install and run unattended.
 
 #### Validate reserves and draft filing narrative with Claude for Excel
 
-Cowork reads your reserve workbook from the valuation folder and pulls prior filings and bulletins through the NAIC connector. You take the formula…  
+Cowork reads your reserve workbook from the valuation folder and pulls prior filings and bulletins through the NAIC connector.  
 [Source](https://claude.com/resources/use-cases/validate-reserves-and-draft-filing-narrative-with-claude-for-excel) · [Catalog doc](catalog/finance/validate-reserves-and-draft-filing-narrative-with-claude-for-excel.md) · [Template](templates/finance/validate-reserves-and-draft-filing-narrative-with-claude-for-excel/SKILL.md)
 
 ```text
@@ -596,7 +596,7 @@ a finished SKILL.md I can install and run unattended.
 
 #### Create new hire onboarding guides
 
-Turn standard company information and a new hire's specific details into a personalized welcome guide. Claude organizes logistics, schedules, and key…  
+Turn standard company information and a new hire's specific details into a personalized welcome guide.  
 [Source](https://claude.com/resources/use-cases/create-new-hire-onboarding-guides) · [Catalog doc](catalog/hr/create-new-hire-onboarding-guides.md) · [Template](templates/hr/create-new-hire-onboarding-guides/SKILL.md)
 
 ```text
@@ -664,7 +664,7 @@ a finished SKILL.md I can install and run unattended.
 
 #### Build analysis from browser charts and folder data
 
-Pull your quarterly revenue from scattered board decks, then grab GDP and inflation data from FRED. Cowork creates a comparison chart showing how…  
+Pull your quarterly revenue from scattered board decks, then grab GDP and inflation data from FRED.  
 [Source](https://claude.com/resources/use-cases/build-analysis-from-browser-charts-and-folder-data) · [Catalog doc](catalog/professional/build-analysis-from-browser-charts-and-folder-data.md) · [Template](templates/professional/build-analysis-from-browser-charts-and-folder-data/SKILL.md)
 
 ```text
@@ -1012,7 +1012,7 @@ a finished SKILL.md I can install and run unattended.
 
 #### Chart your data in conversation with Claude before you commit to a reading
 
-Upload a CSV and Claude builds the correlation grid inline, flagging the patterns worth a second look. The flags are a starting point — you click…  
+Upload a CSV and Claude builds the correlation grid inline, flagging the patterns worth a second look.  
 [Source](https://claude.com/resources/use-cases/chart-your-data-before-you-commit) · [Catalog doc](catalog/education/chart-your-data-before-you-commit.md) · [Template](templates/education/chart-your-data-before-you-commit/SKILL.md)
 
 ```text
@@ -1476,7 +1476,7 @@ a finished SKILL.md I can install and run unattended.
 
 #### See why donor retention beats acquisition, in chat with Claude
 
-Claude builds a five-year donor projection with sliders for retention and acquisition. Drag either one and the curve redraws, and it becomes clear…  
+Claude builds a five-year donor projection with sliders for retention and acquisition.  
 [Source](https://claude.com/resources/use-cases/see-why-donor-retention-beats-acquisition) · [Catalog doc](catalog/nonprofits/see-why-donor-retention-beats-acquisition.md) · [Template](templates/nonprofits/see-why-donor-retention-beats-acquisition/SKILL.md)
 
 ```text
@@ -1912,7 +1912,7 @@ a finished SKILL.md I can install and run unattended.
 
 #### Clean up promotional emails
 
-Claude in Chrome can scan your inbox, identify promotional and marketing emails, and flag them for your review. You decide what to delete in bulk…  
+Claude in Chrome can scan your inbox, identify promotional and marketing emails, and flag them for your review.  
 [Source](https://claude.com/resources/use-cases/clean-up-promotional-emails) · [Catalog doc](catalog/claude-in-chrome/clean-up-promotional-emails.md) · [Template](templates/claude-in-chrome/clean-up-promotional-emails/SKILL.md)
 
 ```text
@@ -1952,7 +1952,7 @@ a finished SKILL.md I can install and run unattended.
 
 #### Log sales calls to your CRM
 
-Claude in Chrome can read your calendar, match attendees to Salesforce contacts, and draft activity logs for each call. You add notes and approve…  
+Claude in Chrome can read your calendar, match attendees to Salesforce contacts, and draft activity logs for each call.  
 [Source](https://claude.com/resources/use-cases/log-sales-calls-to-your-crm) · [Catalog doc](catalog/claude-in-chrome/log-sales-calls-to-your-crm.md) · [Template](templates/claude-in-chrome/log-sales-calls-to-your-crm/SKILL.md)
 
 ```text
@@ -2012,7 +2012,7 @@ a finished SKILL.md I can install and run unattended.
 
 #### Pull metrics from analytics dashboards
 
-Claude in Chrome can navigate your analytics dashboards, extract the numbers you need, and compile them into a summary. No exports, no tab-switching…  
+Claude in Chrome can navigate your analytics dashboards, extract the numbers you need, and compile them into a summary.  
 [Source](https://claude.com/resources/use-cases/pull-metrics-from-analytics-dashboards) · [Catalog doc](catalog/claude-in-chrome/pull-metrics-from-analytics-dashboards.md) · [Template](templates/claude-in-chrome/pull-metrics-from-analytics-dashboards/SKILL.md)
 
 ```text

@@ -1,6 +1,6 @@
 ---
 name: build-skill
-description: Turn a narrow, domain-specific outcome into an executable Claude skill. Use when the user wants to create a new skill, automate a recurring workflow, package a process for reuse, or says things like "make this repeatable", "build me a skill for X", or "turn what we just did into a skill". Interviews the user with targeted questions, selects the closest template from the bundled catalog of 94 Anthropic-published use cases, then drafts and iteratively refines a complete SKILL.md with tools, auth, validation, failure modes, and a delegation plan.
+description: Build a new Claude skill (SKILL.md) for one recurring workflow. Use when the user says "build me a skill", "make this repeatable as a skill", "turn what we just did into a skill", or wants an installable skill for their industry or team. Interviews the user, starts from the closest of 94 Anthropic-published use-case templates, and delivers a complete SKILL.md. Not for one-off automations, scripts, or cron jobs that need no SKILL.md.
 ---
 
 # build-skill
@@ -13,6 +13,7 @@ description: Turn a narrow, domain-specific outcome into an executable Claude sk
 > Wherever the instructions below say "read `references/<file>.md`", the content
 > is already inlined in the "Bundled reference files" section further down this
 > same document — there is nothing extra to fetch.
+
 
 You are helping the user turn ONE narrow, domain-specific outcome into an executable
 skill. Optimize for a skill that runs correctly unattended, not for an impressive
@@ -30,6 +31,12 @@ stop beats a long one that assumes.
 - Ask questions with the AskUserQuestion tool when available, at most 3–4 per round,
   each with concrete options. Never interrogate; every question must change what you
   build.
+- Lean by default, in both directions. The skill you write should be the shortest one
+  that runs correctly — cut any section that doesn't change behavior — and it should
+  instruct its own runtime output to be concise: deliver the result, not a preamble, a
+  restatement of the request, or a summary of the work. Verbosity is opt-in, either
+  because the skill asks the user a question or because the user asked for detail.
+
 - **"I don't know" protocol:** when the user can't answer a question, immediately
   re-ask it as 2–4 concrete options with a recommended default. If they still can't
   choose after a total of THREE attempts on the same decision (original question +
@@ -51,6 +58,11 @@ meeting <bar>."** Ask targeted questions until you can fill all four slots:
 Also establish scope edges: what near-miss requests should this skill REFUSE or route
 elsewhere? A skill that triggers too broadly is worse than no skill.
 
+Before moving on, write a 10-line skeleton — name, draft description, the outcome
+sentence, 3–5 workflow steps, a first-guess validation check — and show it. Every
+later question edits that skeleton instead of a blank page; it is much easier for a
+user to correct something concrete than to answer an abstract question.
+
 ## Phase 2 — Select the closest template
 
 Read `references/template-index.md` (compact, capability-tagged index of the 94
@@ -62,11 +74,6 @@ say so and build from `references/blank-skill-template.md` instead — do not fo
 bad template. If this skill is installed standalone and the `templates/` bodies
 aren't readable in your environment, use the index entry's summary plus the blank
 template — never fail the run over a missing template file.
-
-**Standalone-bundle note:** the inlined `template-index.md` below still names every
-template by path and one-line summary, so you can pick a category and describe the
-shape of the recommended approach even without the full `templates/` tree present —
-just say so and build from the blank template's structure.
 
 ## Phase 3 — Specify the machinery
 
@@ -96,38 +103,20 @@ defaults second, targeted questions third (the "I don't know" protocol applies):
 - **Failure modes & fallbacks:** for each dependency (connector, file, site, API):
   what failure looks like, the retry policy (default: once), the degraded path, and
   when to stop and report instead of improvising.
+- **Delegation:** if a step fans out over independent items, plan it per
+  `references/delegation-policy.md` — every delegated task defines context, output,
+  validation, and fallback; final review and sensitive actions stay with the primary
+  agent. Otherwise the section is one line: "Runs single-agent." Don't delegate when
+  unsure.
 
-## Phase 4 — Delegation plan
+## Phase 4 — Draft, validate, refine
 
-Every generated skill must include a `## Delegation` section that decides, per
-workflow step, primary-agent execution vs. delegation to a capability-matched model
-or sub-agent. Apply the delegation policy (bundled below as
-`references/delegation-policy.md`):
-
-- Delegate only self-contained steps; route mechanical/high-volume work to smaller
-  models, judgment-heavy work to stronger ones; when unsure, don't delegate.
-- Every delegated task defines all four contract fields: **context** (minimal input
-  slice), **output** (exact deliverable/format), **validation** (the check the
-  primary runs on the result), **fallback** (retry once / do inline / surface).
-- Parallelize only independent work — per-item fan-out with no shared mutable state.
-  The primary merges and validates after every fan-out.
-- Final review, synthesis, and all sensitive actions stay with the primary agent,
-  unconditionally.
-
-If no step qualifies for delegation, the section says so explicitly ("runs
-single-agent; no step meets the delegation bar") — absence of the section is not
-allowed.
-
-## Phase 5 — Draft, validate, refine
-
-1. Write the complete draft skill: frontmatter (`name`, `description` written for
-   TRIGGERING — what requests should invoke it, in the user's vocabulary, including
-   negative scope), then Outcome, Assumptions (if any), Required context, Inputs,
-   Tools & auth, Permissions, Workflow, Decision points, Validation, Failure modes,
-   Delegation, and a Setup section listing every connector/file the user must
-   provision before first run.
-2. Self-check the draft against `references/validation-checklist.md` (bundled below).
-   Fix what fails.
+1. Write the draft using `references/blank-skill-template.md` for structure (or the
+   chosen template's). The `description` is written for TRIGGERING — what requests
+   should invoke it, in the user's vocabulary, including negative scope. Include only
+   the sections that change behavior; omit the rest rather than filling them with
+   "n/a".
+2. Self-check the draft against `references/validation-checklist.md`. Fix what fails.
 3. **Dry-run:** walk one realistic input through the workflow ON PAPER, step by step,
    and show the user the trace — where each decision point fires, what validation
    catches, what the output looks like. This is the fastest way to expose gaps.
@@ -170,9 +159,13 @@ below — never stall the draft over a missing index.
 
 ### `references/blank-skill-template.md`
 
+## Blank skill template
+
 Use when no catalog template matches the outcome on artifact type OR input sources.
-Every section is mandatory; a section that doesn't apply must say why instead of
-being deleted.
+Required: Outcome, Inputs, Workflow, Validation, Permissions (what it must never do
+without a human), Setup. Everything else is included only when it changes behavior —
+delete it otherwise. A section reading "n/a" is worse than no section: it costs the
+runtime tokens and teaches the model that empty structure is acceptable.
 
 ```markdown
 ---
@@ -181,45 +174,50 @@ description: <What it produces and WHEN to invoke it, in the user's vocabulary.
   Include negative scope: "Do NOT use for <near-miss>.">
 ---
 
-# <Skill title>
+## <Skill title>
 
-## Outcome
+### Outcome
 When <trigger>, produce <artifact> from <inputs>, meeting <bar>.
 
-## Assumptions
+### Assumptions
 <Only if the interview left decisions open. Each line: "ASSUMED: <decision> — <why>".
 Delete the section when empty.>
 
-## Required context
+### Required context
 <Domain facts the model can't infer: conventions, thresholds, house style, jargon.>
 
-## Inputs
+### Inputs
 <Exact paths/folders/formats expected at run time; behavior when missing/malformed.>
 
-## Tools, connectors, APIs & authentication
+### Tools, connectors, APIs & authentication
 <Each tool + what it's for + how it authenticates (connector OAuth / env-var NAME /
 pre-authenticated CLI). Never credential values. Missing auth = stop and instruct.>
 
-## Permissions
+### Permissions
 Reads: <...>  Writes: <...>
 Never without human approval: <external sends, system-of-record writes, deletions,
 payments, form submissions — plus skill-specific items>.
 
-## Workflow
+### Workflow
 1. <gather> → 2. <process> → ... → n-1. <validate> → n. <deliver>
 <Each step names its inputs and outputs.>
 
-## Decision points
+### Decision points
 <Each fork + the rule that decides it. Default: prefer reversible; surface ambiguity.>
 
-## Validation
+### Output
+
+Shortest form that carries the result. No preamble, no restating the request, no
+summary of the work performed. Expand only on request.
+
+### Validation
 <Checks run on the skill's OWN output before delivery. At least one mechanical check.>
 
-## Failure modes & fallbacks
+### Failure modes & fallbacks
 <Per dependency: failure signature → retry policy → degraded path → when to stop
 and report.>
 
-## Delegation
+### Delegation
 <Per the delegation policy (bundled with build-skill as
 references/delegation-policy.md; restate the relevant rules inline so the generated
 skill is self-contained). Either the per-step plan with the four contract
@@ -227,19 +225,21 @@ fields (context, output, validation, fallback) for each delegated task, or:
 "Runs single-agent; no step meets the delegation bar." Parallelize only independent
 work. Final review and sensitive actions stay with the primary agent.>
 
-## Setup
+### Setup
 <Everything the user must provision before first run: connectors to enable, files
 to place, folder access to grant, env vars to set (names only).>
 ```
 
 ### `references/delegation-policy.md`
 
+## Delegation policy
+
 Every skill generated in this repository embeds a delegation decision: when does the
 primary agent do the work itself, and when does it hand a task to a capability-matched
 model or sub-agent? This document is the single source of truth; generated skills
 reference it and specialize its defaults.
 
-**The decision, in order**
+### The decision, in order
 
 1. **Does the step require trust the sub-agent can't carry?** Sensitive actions —
    sending external communications, writing to systems of record, financial
@@ -259,7 +259,9 @@ reference it and specialize its defaults.
    domain reasoning) to the strongest available model. Default: inherit the primary's
    model when unsure.
 
-**The contract every delegated task must define**
+### The contract every delegated task must define
+
+A skill that delegates MUST specify, per delegated task — no exceptions:
 
 | Field | Meaning |
 |---|---|
@@ -268,7 +270,7 @@ reference it and specialize its defaults.
 | **Validation** | The check the PRIMARY agent runs on the returned result before using it (schema-valid? count matches? spot-check passes?). |
 | **Fallback** | What happens when the task fails or returns empty: retry once, degrade to primary doing it inline, or surface to the user. |
 
-**Parallelization**
+### Parallelization
 
 - Parallelize **only independent work**: tasks that share no mutable state and whose
   outputs don't feed each other. Per-item fan-out (one task per file/vendor/channel)
@@ -278,7 +280,7 @@ reference it and specialize its defaults.
 - After a parallel fan-out, the primary agent merges, dedupes, and validates the
   results before anything downstream uses them.
 
-**What stays with the primary agent — always**
+### What stays with the primary agent — always
 
 - Final review of the assembled deliverable against the skill's validation criteria
 - All sensitive actions (list above), each behind explicit user approval when the
@@ -290,43 +292,49 @@ reference it and specialize its defaults.
 
 ### `references/validation-checklist.md`
 
+## Draft-skill validation checklist
+
 Run every item against the draft before showing it to the user. Fix failures first;
 note irreducible gaps as `ASSUMED:` lines or Setup steps.
 
-**Triggering**
+### Triggering
 - [ ] `description` says when to INVOKE the skill in the user's vocabulary, not what the skill is
 - [ ] Negative scope present: at least one near-miss the skill should NOT handle
 - [ ] `name` is kebab-case, unique in the target environment
 
-**Outcome & inputs**
+### Outcome & inputs
 - [ ] Outcome sentence fills all four slots: trigger, artifact, inputs, bar
 - [ ] Every input has an expected location/format AND a missing/malformed behavior
 - [ ] Required context contains no facts the model could infer on its own (bloat)
 
-**Tools & auth**
+### Tools & auth
 - [ ] Every workflow step's tool appears in the Tools section — and vice versa (no orphans)
 - [ ] Zero credential VALUES anywhere; env vars referenced by name only
 - [ ] Each connector marked enabled/needs-setup; needs-setup items appear under Setup
 
-**Safety & permissions**
+### Safety & permissions
 - [ ] Sensitive-action list present and specific (not just the generic five)
 - [ ] Nothing irreversible happens before the validation step passes
 - [ ] No instruction tells the agent to bypass review, approval, or its own guidelines
 
-**Workflow quality**
+### Workflow quality
 - [ ] 3–9 steps, each imperative, each naming inputs and outputs
 - [ ] Every decision point has a deciding rule (no "use judgment" forks)
 - [ ] At least one validation check is mechanical (count, recompute, schema) — not vibes
 - [ ] Every external dependency has a failure mode with retry policy and degraded path
 - [ ] A "stop and report" condition exists (the skill knows when to give up)
 
-**Delegation**
-- [ ] Delegation section present — even if it's "runs single-agent"
+### Output economy
+- [ ] Skill instructs concise output: result first, no preamble or work-summary
+- [ ] No section present that doesn't change behavior (no "n/a" filler)
+
+### Delegation
+- [ ] Delegation decided: a fan-out plan with all four contract fields, or the single line "Runs single-agent"
 - [ ] Each delegated task defines all four: context, output, validation, fallback
 - [ ] Only independent work is parallelized; merge/validate follows every fan-out
 - [ ] Final review + all sensitive actions assigned to the primary agent
 
-**Attribution & hygiene**
+### Attribution & hygiene
 - [ ] If derived from a catalog template: source URL + © Anthropic PBC attribution retained
 - [ ] Assumptions section lists every default you chose for the user, labeled `ASSUMED:`
 - [ ] Setup section is complete enough that a colleague could provision from it alone

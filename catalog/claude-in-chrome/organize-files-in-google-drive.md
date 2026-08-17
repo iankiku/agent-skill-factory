@@ -29,14 +29,6 @@ What to do:
 Before moving files: Show me your proposed folder structure and any files you're uncertain about. I'll review before you finalize.
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-5. Tricks, tips, and troubleshooting
-
 ## Prerequisites (from source page)
 
 - Logged into Google Drive in Chrome

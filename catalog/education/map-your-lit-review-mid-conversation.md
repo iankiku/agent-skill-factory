@@ -23,10 +23,9 @@ I've read 20 papers on AI in K-12 and I've lost the thread. Can you map out who'
 
 ## How it works (from source page)
 
-1. Describe the task
-2. Give Claude context (attach papers or notes)
-3. Claude creates argument clusters with blind-spot analysis
-4. Follow up prompts to refine, expand, or explore further
+1. Give Claude context (attach papers or notes)
+2. Claude creates argument clusters with blind-spot analysis
+3. Follow up prompts to refine, expand, or explore further
 
 ## Prerequisites (from source page)
 

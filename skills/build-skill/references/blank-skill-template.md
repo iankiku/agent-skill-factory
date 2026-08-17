@@ -1,8 +1,10 @@
 # Blank skill template
 
 Use when no catalog template matches the outcome on artifact type OR input sources.
-Every section is mandatory; a section that doesn't apply must say why instead of
-being deleted.
+Required: Outcome, Inputs, Workflow, Validation, Permissions (what it must never do
+without a human), Setup. Everything else is included only when it changes behavior —
+delete it otherwise. A section reading "n/a" is worse than no section: it costs the
+runtime tokens and teaches the model that empty structure is acceptable.
 
 ```markdown
 ---
@@ -41,6 +43,11 @@ payments, form submissions — plus skill-specific items>.
 
 ## Decision points
 <Each fork + the rule that decides it. Default: prefer reversible; surface ambiguity.>
+
+## Output
+
+Shortest form that carries the result. No preamble, no restating the request, no
+summary of the work performed. Expand only on request.
 
 ## Validation
 <Checks run on the skill's OWN output before delivery. At least one mechanical check.>

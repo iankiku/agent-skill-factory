@@ -25,10 +25,7 @@ Create an interactive artifact where I can explore each persona and see their jo
 
 ## How it works (from source page)
 
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts (create written report, identify revenue opportunity, find quick wins)
+1. Follow up prompts (create written report, identify revenue opportunity, find quick wins)
 
 ## Prerequisites (from source page)
 

@@ -27,14 +27,6 @@ Design: This needs to look like a world-class iOS app. Clean, intentional graphi
 Include: Experiences by category; saving certain experiences to 'My List'; toggles between browsing and viewing saved items, satisfying interactions when selecting items. Populate it with beautiful life experiences to browse. Then, add in some additional fun surprises!
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-5. Tricks, tips, and troubleshooting
-
 ## Prerequisites (from source page)
 
 - Extended Thinking feature recommended

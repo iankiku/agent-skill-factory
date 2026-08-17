@@ -23,10 +23,9 @@ Create a weekly digest for Oct 14-20 for my company. Pull information from relev
 
 ## How it works (from source page)
 
-1. Describe the task
-2. Give Claude context (enable required integrations)
-3. Claude creates the digest output
-4. Follow up with additional prompts to expand or refine
+1. Give Claude context (enable required integrations)
+2. Claude creates the digest output
+3. Follow up with additional prompts to expand or refine
 
 ## Prerequisites (from source page)
 

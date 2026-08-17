@@ -31,13 +31,6 @@ All content should feel cohesive to my brand but fitting for the platform. To be
 Create a beautiful interactive artifact first so I can review everything in one place. Match the design style that I included in the attached screenshots. Also, provide individual files for each format.
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-
 ## Prerequisites (from source page)
 
 - Google Drive integration (required for accessing source content and brand examples)

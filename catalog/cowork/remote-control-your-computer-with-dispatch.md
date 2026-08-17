@@ -25,10 +25,9 @@ Put together a report with one section per competitor: what they have changed si
 
 ## How it works (from source page)
 
-1. Describe the task
-2. Give Claude context (connectors and required/optional integrations)
-3. Claude creates the output
-4. Follow up prompts to refine or expand results
+1. Give Claude context (connectors and required/optional integrations)
+2. Claude creates the output
+3. Follow up prompts to refine or expand results
 
 ## Prerequisites (from source page)
 

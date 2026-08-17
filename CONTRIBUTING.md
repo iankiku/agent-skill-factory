@@ -19,11 +19,21 @@ To change anything on the left, edit `scripts/generate.py` (structure, defaults,
 wording) or `data/raw/*.json` (use-case content), then run:
 
 ```bash
-python3 scripts/generate.py
+make generate   # rebuild everything
+make check      # rebuild, then fail if anything is stale or a secret slipped in
 ```
 
 It's idempotent — running it twice produces the same bytes. Commit the regenerated
-output along with your source change.
+output along with your source change; CI runs `make check` on every PR and will fail
+if you forget.
+
+## Your first contribution, in five minutes
+
+The `validation_defaults()` and `failure_defaults()` tables in `scripts/generate.py`
+decide what checks and failure modes all 94 templates ship with, per category and per
+feature. They are opinionated and some are certainly wrong for your domain. Fix one,
+run `make check`, open a PR. That's a real improvement to 94 files from a two-line
+change.
 
 ## Common contributions
 
@@ -56,11 +66,14 @@ Without that it still builds, but it sorts to the end with no description.
 travel with them:
 
 - `docs/delegation-policy.md` is canonical and is inlined verbatim into
-  `skills/build-skill/references/delegation-policy.md`. Change one, change both.
-- `skills/build-skill/build-skill.gist.md` is the single-file copy-paste bundle with
-  every reference inlined. If you change the skill or its references, that bundle is
-  stale until you re-inline it. It and `build-skill.gist-README.md` mirror the two
-  files in the [public gist](https://gist.github.com/iankiku/0366d5701cf8268ee05c24cd30fa366b).
+  `skills/build-skill/references/delegation-policy.md`. Change one, change both —
+  `make check` fails if they diverge.
+- `skills/build-skill/build-skill.gist.md` is the single-file copy-paste bundle. It is
+  **generated** by `make generate` from SKILL.md plus the references, so it can't go
+  stale — but it does need pushing to the
+  [public gist](https://gist.github.com/iankiku/0366d5701cf8268ee05c24cd30fa366b)
+  after a change (maintainer step). `build-skill.gist-README.md` is the gist's landing
+  page and is hand-written.
 
 ## Non-negotiables
 
@@ -76,20 +89,10 @@ travel with them:
   fast and make the repo look stale. `data/raw/` and the catalog frontmatter keep the
   value as provenance — what the source page said on the retrieval date — but the
   README and `INDEX.md` don't display it.
-- **Keep prompt lines short.** Prose lines in the generated prompt blocks stay under
-  ~74 characters so GitHub doesn't scroll them sideways and hide the placeholders.
-
-## README structure
-
-If you're touching the README, keep the four conventions borrowed from
-[Best-README-Template](https://github.com/othneildrew/Best-README-Template): the
-`readme-top` anchor at the top, the collapsible Table of Contents, a
-`back to top ↑` link closing every `##` section, and reference-style badge
-definitions at the bottom.
-
-There are no tabs, and there can't be — GitHub strips `<style>` and `<script>` from
-rendered markdown. The pill strip plus anchored `<details>` accordions is the closest
-thing that works for every reader. Extend those rather than reaching for a widget.
+- **Skills stay lean.** A skill should be the shortest thing that runs correctly, and
+  should instruct its own output to be concise — result first, no preamble, no summary
+  of the work. A section that doesn't change behavior gets deleted, not filled with
+  "n/a". This applies to `build-skill`, the 94 templates, and anything they generate.
 
 ## Pull requests
 
@@ -101,13 +104,9 @@ thing that works for every reader. Extend those rather than reaching for a widge
 3. Open a PR that says **why** in a sentence or two, not just what.
 4. Squash-merge once it's green.
 
-Before you push, a 30-second self-check:
-
-- [ ] `python3 scripts/generate.py` runs clean and a second run changes nothing
-- [ ] No hand-edits left in `catalog/`, `templates/`, `INDEX.md`, or the generated README block
-- [ ] Anthropic content still verbatim, with source URL and retrieval date intact
-- [ ] No secrets, and no machine-specific absolute paths
-- [ ] Any link you added actually resolves
+Before you push: `make check`. It regenerates everything, fails if the tree is stale,
+fails if the delegation policy has diverged from its bundled copy, and greps for
+secret-shaped strings. The PR template carries the rest of the checklist.
 
 ## Reporting something instead
 

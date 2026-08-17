@@ -27,11 +27,9 @@ Make this a sophisticated financial dashboard with a 'quiet luxury', editorial a
 
 ## How it works (from source page)
 
-1. Describe the task
-2. Give Claude context (upload spreadsheet/CSV with invoice data)
-3. What Claude creates (organized data with spreadsheet features)
-4. Follow-up prompts (request additions/revisions; update with new data)
-5. Tricks, tips, and troubleshooting
+1. Give Claude context (upload spreadsheet/CSV with invoice data)
+2. What Claude creates (organized data with spreadsheet features)
+3. Follow-up prompts (request additions/revisions; update with new data)
 
 ## Prerequisites (from source page)
 
