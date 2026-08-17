@@ -273,12 +273,12 @@ def emit_indexes(items):
     for cat in sorted(by_cat):
         lines.append(f"## {cat} ({len(by_cat[cat])})")
         lines.append("")
-        lines.append("| Use case | Model | Features | Catalog | Skill template |")
-        lines.append("|---|---|---|---|---|")
+        lines.append("| Use case | Features | Catalog | Skill template |")
+        lines.append("|---|---|---|---|")
         for uc in sorted(by_cat[cat], key=lambda u: u["title"].lower()):
             cs, name = cat_slug(cat), skill_name(uc["slug"])
             lines.append(
-                f"| [{uc['title']}]({uc['source_url']}) | {uc['model']} | "
+                f"| [{uc['title']}]({uc['source_url']}) | "
                 f"{', '.join(uc.get('features', [])) or '—'} | "
                 f"[doc](catalog/{cs}/{uc['slug'].lower()}.md) | "
                 f"[template](templates/{cs}/{name}/SKILL.md) |")
@@ -322,17 +322,24 @@ def one_line(text: str, limit: int = 150) -> str:
     return t[:limit].rsplit(" ", 1)[0].rstrip(",.;:") + "…"
 
 def prompt_block(uc) -> str:
+    """Keep every prose line under ~74 chars — GitHub code blocks scroll sideways
+    past that, which hides the placeholders the reader is supposed to edit. The
+    template URL is the one unavoidable long line."""
     cs, name = cat_slug(uc["category"]), skill_name(uc["slug"])
     return "\n".join([
         "```text",
-        f'Build me a Claude skill for [MY INDUSTRY], modeled on the Anthropic use case "{uc["title"]}".',
+        "Build me a Claude skill for [MY INDUSTRY].",
         "",
-        f"Start from this template: {REPO_BLOB}/templates/{cs}/{name}/SKILL.md",
+        f'Model it on the Anthropic use case "{uc["title"]}":',
+        f"{REPO_BLOB}/templates/{cs}/{name}/SKILL.md",
         "",
-        "My context — industry: [MY INDUSTRY] · role: [MY ROLE] · tools I use: [MY TOOLS] · when it runs: [TRIGGER]",
+        "Industry:   [MY INDUSTRY]",
+        "Role:       [MY ROLE]",
+        "Tools:      [MY TOOLS]",
+        "Runs when:  [TRIGGER]",
         "",
-        "Use the build-skill workflow: interview me on anything missing, resolve every TODO,",
-        "and hand me a finished SKILL.md I can install and run unattended.",
+        "Interview me on anything missing, resolve every TODO, and hand me",
+        "a finished SKILL.md I can install and run unattended.",
         "```",
     ])
 
@@ -376,7 +383,7 @@ def category_block(uc_cat: str, ucs) -> str:
         out += [f"#### {uc['title']}",
                 "",
                 f"{one_line(uc.get('description', ''))}  ",
-                f"`{uc['model']}` · [Source]({uc['source_url']}) · "
+                f"[Source]({uc['source_url']}) · "
                 f"[Catalog doc](catalog/{cs}/{uc['slug'].lower()}.md) · "
                 f"[Template](templates/{cs}/{name}/SKILL.md)",
                 "",
