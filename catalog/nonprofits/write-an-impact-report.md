@@ -36,11 +36,7 @@ Make this board-ready and donor-worthy. Use sophisticated design that matches th
 
 ## How it works (from source page)
 
-1. Describe the task
-2. Give Claude context (upload raw program data)
-3. What Claude creates
-4. Follow up prompts
-5. Tricks, tips, and troubleshooting
+1. Give Claude context (upload raw program data)
 
 ## Prerequisites (from source page)
 

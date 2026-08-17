@@ -34,14 +34,6 @@ Don't flag:
 Output: Show me the list organized by sender so I can review before deleting.
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-5. Tricks, tips, and troubleshooting
-
 ## Prerequisites (from source page)
 
 - Logged into your Gmail account before starting the Claude in Chrome session

@@ -21,14 +21,6 @@ Claude in Chrome reads the specs from multiple product pages you have open, norm
 I'm trying to decide between a few laptops and I have the product pages open in different tabs. Can you look at each one, pull out the specs, and put them in a Google Doc so I can compare them side by side? I care most about: processor, RAM, storage, screen size, battery life, and weight. Let me know which one wins on each category.
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-5. Tricks, tips, and troubleshooting
-
 ## Prerequisites (from source page)
 
 - Claude in Chrome extension installed

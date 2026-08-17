@@ -25,14 +25,6 @@ For the design direction, I want something sophisticated and editorial—think h
 After you create it, walk me through publishing it live on the internet. Assume I've never deployed a website—I need exact steps that don't require any coding knowledge.
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-5. Tricks, tips, and troubleshooting
-
 ## Prerequisites (from source page)
 
 - Resume (PDF upload)

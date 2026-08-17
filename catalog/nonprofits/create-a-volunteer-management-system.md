@@ -53,13 +53,6 @@ Our volunteers range from college students to retirees. Most commit 2-4 hours pe
 Create professional, comprehensive documents that make our volunteer program feel organized and legitimate. Use clear formatting, maintain a warm but professional tone, and include practical guidance that both volunteers and staff can follow easily. Make these documents detailed enough to use immediately without extensive revision.
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-
 ## Prerequisites (from source page)
 
 - Optional: Google Drive and Gmail integrations

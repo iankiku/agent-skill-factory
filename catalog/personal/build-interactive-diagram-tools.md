@@ -32,7 +32,6 @@ Add tabbed information panels, physical-feeling sound feedback, and content rich
 1. Describe the task (what to learn, how to interact, data sources, aesthetic standards)
 2. Give Claude context (enable file creation; optionally enable Extended Thinking)
 3. Claude creates a fully functional React application
-4. Follow up with refinement prompts
 
 ## Prerequisites (from source page)
 

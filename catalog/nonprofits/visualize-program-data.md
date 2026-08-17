@@ -32,13 +32,6 @@ The board cares most about program satisfaction, completion rates, and demonstra
 Design these with consulting-firm quality and use colors that feel professional but warm (we're a health nonprofit, not a corporate consultancy).
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-
 ## Prerequisites (from source page)
 
 - Excel/XLSX or CSV data file with quarterly program metrics

@@ -21,13 +21,6 @@ Claude builds a five-year donor projection with sliders for retention and acquis
 Everyone keeps telling me donor retention matters more than acquisition and I understand the argument but I don't really get it. Show me. Start with 100 donors and let me play with the numbers. I want to drag things and watch what happens.
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-
 ## Prerequisites (from source page)
 
 - No files required to upload

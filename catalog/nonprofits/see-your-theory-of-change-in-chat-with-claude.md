@@ -21,13 +21,6 @@ Describe your program and Claude draws the causal chain inline, inputs through i
 I run a youth mentoring program. We pair high schoolers with adult mentors for weekly meetings over a year, and the goal is higher graduation rates. Show me our theory of change, and I want to be able to click the arrows between boxes to see what assumption each one is riding on. Where are the weak links?
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-
 ## Prerequisites (from source page)
 
 - No files required to upload

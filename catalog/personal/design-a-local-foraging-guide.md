@@ -29,14 +29,6 @@ What it should do:
 Design: Quiet and organic. Warm cream, muted sage, soft olive. Think field journal meets editorial magazine—sophisticated but approachable. Smooth transitions, rounded corners, good type hierarchy.
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-5. Tricks, tips, and troubleshooting
-
 ## Prerequisites (from source page)
 
 - Enable Artifacts in settings

@@ -25,13 +25,6 @@ Can you pull in our Q1 planning doc because I need to remember where we landed o
 Can you please look through the doc, do some competitor research on their onboarding flows, find any good onboarding stats, and prep me for later? Thanks.
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-
 ## Prerequisites (from source page)
 
 - Enable web search

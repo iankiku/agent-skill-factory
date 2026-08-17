@@ -29,10 +29,9 @@ Add some visual elements so I can see the trends at a glance—data bars on the 
 
 ## How it works (from source page)
 
-1. Describe the task
-2. Give Claude context (upload spreadsheet)
-3. Review what Claude creates
-4. Follow up with additional prompts (changelog, variance analysis)
+1. Give Claude context (upload spreadsheet)
+2. Review what Claude creates
+3. Follow up with additional prompts (changelog, variance analysis)
 
 ## Prerequisites (from source page)
 

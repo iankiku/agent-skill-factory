@@ -31,10 +31,9 @@ Organize everything into a beautifully designed Word document that serves as my 
 
 ## How it works (from source page)
 
-1. Describe the task
-2. Give Claude context (connect tools, enable features)
-3. What Claude creates (output)
-4. Follow up prompts (validation, contradiction investigation, gap searching)
+1. Give Claude context (connect tools, enable features)
+2. What Claude creates (output)
+3. Follow up prompts (validation, contradiction investigation, gap searching)
 
 ## Prerequisites (from source page)
 

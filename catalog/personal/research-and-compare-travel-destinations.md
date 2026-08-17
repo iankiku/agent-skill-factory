@@ -29,11 +29,7 @@ Make it look really polished and professional - something I'd feel confident sha
 
 ## How it works (from source page)
 
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts (refinement options provided)
-5. Tricks, tips, and troubleshooting
+1. Follow up prompts (refinement options provided)
 
 ## Prerequisites (from source page)
 

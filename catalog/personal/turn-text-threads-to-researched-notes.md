@@ -23,10 +23,7 @@ I just got a text from Sarah asking me to bring dessert to Saturday's potluck—
 
 ## How it works (from source page)
 
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow-up prompts
+1. Follow-up prompts
 
 ## Prerequisites (from source page)
 

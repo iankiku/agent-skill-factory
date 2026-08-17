@@ -35,7 +35,6 @@ Make the spreadsheet well-designed and easy to navigate - professional formattin
 2. Give Claude context: upload manuscript and data files
 3. What Claude creates: comprehensive audit workbook with statistical verification
 4. Follow up prompts: optional refinements and deeper analysis
-5. Tricks, tips, and troubleshooting
 
 ## Prerequisites (from source page)
 

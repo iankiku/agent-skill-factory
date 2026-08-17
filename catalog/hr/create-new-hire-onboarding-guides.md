@@ -33,14 +33,6 @@ To find relevant information, search my Google Calendar for onboarding events, h
 Make it information-dense but beautifully organized—a senior designer should look at this and think "they have great taste here." Use sophisticated typography and layout, not generic HR formatting. She should be able to scan it quickly but find everything she needs.
 ```
 
-## How it works (from source page)
-
-1. Describe the task
-2. Give Claude context
-3. What Claude creates
-4. Follow up prompts
-5. Tricks, tips, and troubleshooting
-
 ## Prerequisites (from source page)
 
 - Google Calendar integration (required)

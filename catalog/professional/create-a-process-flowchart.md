@@ -27,11 +27,9 @@ Create a Sankey flow diagram with organic curved paths. Make it screenshot-worth
 
 ## How it works (from source page)
 
-1. Describe the task
-2. Give Claude context (upload procedure document)
-3. What Claude creates (interactive Sankey diagram)
-4. Follow up prompts (export formats, add detail, adjust visuals)
-5. Tricks, tips, and troubleshooting
+1. Give Claude context (upload procedure document)
+2. What Claude creates (interactive Sankey diagram)
+3. Follow up prompts (export formats, add detail, adjust visuals)
 
 ## Prerequisites (from source page)
 
