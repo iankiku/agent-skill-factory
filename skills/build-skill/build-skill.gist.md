@@ -336,26 +336,18 @@ note irreducible gaps as `ASSUMED:` lines or Setup steps.
 
 ## Install
 
-**This exact file is also published as a public gist — no GitHub account needed to
-view or copy it:**
-https://gist.github.com/iankiku/0366d5701cf8268ee05c24cd30fa366b
-(open it, click "Raw", select all, copy)
+Copy this whole file and save it as `SKILL.md` inside a folder named `build-skill`:
 
-**Option A — copy-paste, no GitHub account needed:** select and copy everything in
-this file, then save it as `SKILL.md` inside a new folder named `build-skill`:
-- **Claude Code / Claude CLI:** save to `~/.claude/skills/build-skill/SKILL.md`
-  (or `.claude/skills/build-skill/SKILL.md` inside one project, if you only want it
-  there).
-- **Claude.ai / Claude Desktop:** Settings → Capabilities → Skills → upload this
-  file (or a `.zip` containing it as `SKILL.md`).
+- **Claude Code / Claude CLI:** `~/.claude/skills/build-skill/SKILL.md` (all projects),
+  or `.claude/skills/build-skill/SKILL.md` inside one project.
+- **Claude.ai / Claude Desktop:** Settings → Capabilities → Skills → upload this file
+  (or a `.zip` containing it as `SKILL.md`).
 - **Cowork:** same as Claude Desktop — upload via the Skills settings panel.
 
-**Option B — technical / CLI install:** if you have Node.js, run:
-```bash
-npx skills add iankiku/agent-skill-factory --skill build-skill
-```
-This pulls the full repo version (with the complete 94-entry template index and the
-two worked examples) instead of this trimmed single-file bundle.
+With Node.js, `npx skills add iankiku/agent-skill-factory --skill build-skill` installs
+the full repo version instead (complete 94-entry template index, two worked examples).
 
-Full repo, catalog, and the two worked example transcripts:
-https://github.com/iankiku/agent-skill-factory
+Step-by-step install and the first prompt to run: **`0-README.md`** in the
+[public gist](https://gist.github.com/iankiku/0366d5701cf8268ee05c24cd30fa366b).
+The other 93 use cases, their templates, and a copy-paste prompt for each:
+**https://github.com/iankiku/agent-skill-factory**

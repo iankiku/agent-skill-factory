@@ -19,9 +19,28 @@ Regenerates `catalog/`, `templates/`, `INDEX.md`, and the README's 94 field prom
 - **Build artifacts (never edit directly):** `catalog/`, `templates/`, `INDEX.md`, and the README section between the field-prompt markers. Any manual edit is lost on the next `generate.py` run. To change them, edit `scripts/generate.py` (scaffold structure, validation/failure defaults, connector heuristics, prompt wording in `prompt_block` / `category_block`, ordering in `CATEGORY_ORDER`, blurbs in `CATEGORY_BLURB`) or `data/raw/*.json` (use-case content), then regenerate.
 - **Hand-written:** `skills/build-skill/` (SKILL.md, `references/`, `examples/`), `docs/`, `README.md` *outside* the markers, `ATTRIBUTION.md`, `data/raw/` + `data/manifest.json`.
 
+## The public gist (two files, mirrored in this repo)
+
+https://gist.github.com/iankiku/0366d5701cf8268ee05c24cd30fa366b holds exactly two files, displayed alphabetically:
+
+| Gist file | Repo mirror | Role |
+|---|---|---|
+| `0-README.md` | `skills/build-skill/build-skill.gist-README.md` | Landing page: install per surface, first prompt, link back to the repo |
+| `build-skill.gist.md` | `skills/build-skill/build-skill.gist.md` | The skill itself — self-contained, all four reference files inlined |
+
+Edit the repo copy first, then push both with `gh gist edit <id> -f <gist-filename> <local-path>`. They must stay byte-identical (trailing newline aside). Changing `skills/build-skill/SKILL.md` or its `references/` means the bundle is stale — re-inline and re-push.
+
 ## README contract
 
-The README is the front door and follows a deliberate ladder: thesis → three-step start → universal prompt → the 94 per-use-case prompts (generated) → install paths → repo map → design decisions. Each generated entry is one `####` heading, a one-line description, source/catalog/template links, and a single fenced `text` block so GitHub renders a one-click copy button. Placeholders are `[BRACKETED]` and uppercase. Adding a category to `data/raw/` without adding it to `CATEGORY_ORDER`/`CATEGORY_BLURB` still works (it sorts to the end, blurb blank) — but add it.
+The README is the front door and follows a deliberate ladder: banner → badges → nav pills → collapsible TOC → quick start → universal prompt → the 94 per-use-case prompts (generated) → install paths → repo map → design decisions. Each generated entry is one `####` heading, a one-line description, source/catalog/template links, and a single fenced `text` block so GitHub renders a one-click copy button. Placeholders are `[BRACKETED]` and uppercase. Adding a category to `data/raw/` without adding it to `CATEGORY_ORDER`/`CATEGORY_BLURB` still works (it sorts to the end, blurb blank) — but add it.
+
+Structural conventions borrowed from [othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template): `<a id="readme-top">` at line 1, a collapsible Table of Contents, a `back to top ↑` link closing every `##` section, and reference-style badge definitions in a block at the very bottom. Keep all four when editing.
+
+**There are no tabs.** GitHub strips `<style>` and `<script>` from READMEs, so tab widgets cannot work — every "tabbed README" in the wild is badges plus anchors plus `<details>`, which is what this one is. Don't try to add real tabs; extend the pill strip or the accordions instead.
+
+## Banner assets
+
+`.github/assets/banner-{dark,light}.svg` are hand-maintained (not generated), embedded via `<picture>` with `prefers-color-scheme` so the header follows the viewer's theme. The right-hand grid is 94 squares — one per use case — so it must be regenerated if the count changes. Palette: `#D97757` accent, `#14130F`/`#FAF8F5` grounds. Verify a change by rendering it, e.g. `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --screenshot=/tmp/b.png --window-size=1220,320 file://$PWD/.github/assets/banner-dark.svg` — QuickLook (`qlmanage`) distorts the aspect ratio and is not a valid check.
 
 `data/raw/` is the source of truth: one JSON per use case (slug, title, category, model, features, surface, description, verbatim prompt, steps, prerequisites, source_url, retrieved_at, extraction_status).
 
